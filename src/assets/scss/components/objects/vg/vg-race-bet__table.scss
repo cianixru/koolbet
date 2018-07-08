@@ -11,8 +11,7 @@
         }
     }
     .head {
-        @extend .table__row--subhead;
-        // padding-top: 5px;
+        @extend .table__row--subhead; // padding-top: 5px;
         font-size: rem-calc(12);
     }
     .row:not(.head) {
@@ -20,16 +19,19 @@
         border-bottom: 1px solid #222;
     }
     .button-bet {
-        padding: 0!important;
+        padding: 0 !important;
         .specialoddvalue-text {
-            @extend .bet-button--style1;
-            // max-width: 60px;
+            @extend .bet-button--style1; // max-width: 60px;
             margin: 0 auto;
         }
     }
     .team--details__cell {
         @extend .grid-container--nowrap;
         align-items: center;
+        @include breakpoint(small down) {
+            width: 100%;
+            flex: none;
+        }
         .number {}
         .silk {
             img {
@@ -42,6 +44,9 @@
             }
         }
         .rating {
+            @include breakpoint(large) {
+                display: none;
+            }
             svg {
                 fill: #fff !important;
                 opacity: .75;
@@ -52,6 +57,21 @@
     .last5__cell div {
         width: 100px;
         text-align: center;
+        @include breakpoint(medium down) {
+            display: none;
+        }
+    }
+    .rating__cell {
+        @include breakpoint(medium down) {
+            display: none;
+        }
+        div {
+            width: 200px;
+            text-align: center;
+            svg {
+                height: 12px;
+            }
+        }
     }
     .last5__list {
         .Form5 {
