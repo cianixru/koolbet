@@ -29,7 +29,7 @@
 $height-arr: 8px;
 $bottom-mg: 4px;
 $ml-b: -7px;
-$active-bg-color: #51545e;
+$active-bg-color: #fff;
 .nav-tabs__item {
     height: 100%;
     min-height: 30px;
@@ -54,7 +54,7 @@ $active-bg-color: #51545e;
         cursor: pointer;
     }
     &.active {
-        color: #fff;
+        color: #000;
         font-weight: 500;
         position: relative;
         >div {
@@ -71,7 +71,7 @@ $active-bg-color: #51545e;
             width: 0;
             border-left: $height-arr solid transparent;
             border-right: $height-arr solid transparent;
-            border-top: $height-arr solid #848484;
+            border-top: $height-arr solid transparent;
             background: transparent;
             z-index: -2;
             content: "";

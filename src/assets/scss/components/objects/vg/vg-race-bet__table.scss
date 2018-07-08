@@ -4,7 +4,7 @@
         align-items: center;
         .cell {
             font-size: rem-calc(14);
-            padding: 5px 0;
+            padding: 5px 5px;
             >div {
                 padding: 0 10px;
             }
@@ -12,12 +12,20 @@
     }
     .head {
         @extend .table__row--subhead;
-        padding-top: 25px;
+        // padding-top: 5px;
         font-size: rem-calc(12);
     }
     .row:not(.head) {
         border-top: 1px solid rgba(87, 88, 101, 0.35);
         border-bottom: 1px solid #222;
+    }
+    .button-bet {
+        padding: 0!important;
+        .specialoddvalue-text {
+            @extend .bet-button--style1;
+            // max-width: 60px;
+            margin: 0 auto;
+        }
     }
     .team--details__cell {
         @extend .grid-container--nowrap;

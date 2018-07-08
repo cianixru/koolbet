@@ -1,6 +1,7 @@
 .race-bet__tab {
     margin-top: 30px;
     text-transform: uppercase;
+    background: $global-dark-bg;
     >ul {
         display: flex;
         align-items: center;
@@ -15,6 +16,7 @@
             padding: 10px 0; 
             color: rgba(255, 255, 255, .7);
             letter-spacing: .1px;
+            border-right: 1px solid $body-background;
             &:after {
                 background: #ffbf00;
                 content: '';
