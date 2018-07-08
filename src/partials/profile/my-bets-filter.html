@@ -1,0 +1,55 @@
+<div class="bets-filter switch-controls">
+    <div class="cell date">
+        <div class="profile__label">Date</div>
+        <div class="hide-for-medium">
+            <div class="mobile-app-toggle" data-mobile-app-toggle>
+                <button class="button is-active">TODAY</button>
+                <button class="button">THIS WEEK</button>
+                <button class="button">THIS MONTH</button>
+                <button class="button">PERIOD</button>
+            </div>
+        </div>
+        <div class="hide-for-small">
+            <select class="control-select" name="period">
+                <option value="">TODAY</option>
+                <option value="">THIS WEEK</option>
+                <option value="">THIS MONTH</option>
+                <option value="">PERIOD</option>
+            </select>
+        </div>
+    </div>
+    <div class="cell period">
+        <div class="profile__label">Period</div>
+        <div class="period-switcher">
+            <div class="datepicker-input">
+                <i class="datepicker__icon"></i>
+                <input readonly value="01.01.2018" class="hasDatepicker">
+            </div>
+            <div class="datepicker__delimiter">–</div>
+            <div class="datepicker-input">
+                <i class="datepicker__icon"></i>
+                <input readonly value="01.01.2018" class="hasDatepicker">
+            </div>
+        </div>
+    </div>
+    <div class="cell date">
+        <div class="profile__label">State</div>
+        <div class="hide-for-small">
+            <select class="control-select" name="state">
+                <option value="OPEN">OPEN</option>
+                <option value="OPEN">WON</option>
+                <option value="OPEN">LOST</option>
+                <option value="OPEN">CANCELLED</option>
+            </select>
+        </div>
+        <div class="hide-for-medium">
+            <div class="mobile-app-toggle" data-mobile-app-toggle>
+                <button class="button is-active">ALL</button>
+                <button class="button">OPEN</button>
+                <button class="button">WON</button>
+                <button class="button">LOST</button>
+                <button class="button">CANCELLED</button>
+            </div>
+        </div>
+    </div>
+</div>

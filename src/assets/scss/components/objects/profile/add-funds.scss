@@ -1,0 +1,69 @@
+.payment-systems {
+    padding: 10px 0;
+    h2 {
+        margin-bottom: $profile-section-margin;
+        border-bottom: 1px solid rgba(255, 255, 255, .2);
+        padding-bottom: 5px;
+        @include breakpoint(medium down) {
+            margin-bottom: 10px;
+            &:not(:first-child) {
+                margin-top: 20px;
+            }
+        }
+    }
+    .row {
+        @include xy-grid();
+        margin: 0 0px;
+        @include breakpoint(small down) {
+            margin: 0 -4px;
+        }
+        @include breakpoint(medium) {
+            margin: 0 -0.9375rem;
+        }
+        &:not(:last-child) {
+            // margin-bottom: $profile-section-margin;
+        }
+    }
+    .cell {
+        @include breakpoint(medium) {
+            margin-bottom: 1.875rem;
+        }
+        @include breakpoint(xlarge) {
+            @include xy-cell(1 of 4);
+        }
+        @include breakpoint(large) {
+            @include xy-cell(1 of 4);
+        }
+        @include breakpoint(medium down) {
+            @include xy-cell(1 of 3);
+        }
+        @include breakpoint(small only) {
+            width: calc(50% - 10px);
+            margin: 5px;
+        }
+    }
+    .pay-system__card {
+        background-color: $profile-button-bg-color;
+        border: 2px solid transparent;
+        border-radius: $global-radius;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 120px;
+        text-align: center;
+        transition: border .3s ease-out;
+        width: 100%;
+        padding: 10px;
+        box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.2);
+        img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        &:hover {
+            border-color: $primary-color;
+        }
+    }
+}

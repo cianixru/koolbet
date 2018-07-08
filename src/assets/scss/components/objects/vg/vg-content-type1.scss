@@ -1,0 +1,19 @@
+.vg-meeting--info {
+    line-height: 1.15;
+}
+.vg-meeting--details {
+
+}
+.vg-meeting--time {
+    color: rgba(255,255,255,.5);
+}
+.vg-meeting--title {
+    font-size: rem-calc(28);
+    font-weight: 500;
+    margin: 0;
+    color: $primary-color;
+}
+.vg-meeting--id {
+    color: rgba(255,255,255,.5);
+    font-size: rem-calc(13);
+}

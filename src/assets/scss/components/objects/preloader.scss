@@ -1,0 +1,47 @@
+.loading {
+    overflow: hidden;
+    backface-visibility: hidden;
+    height: 100%;
+    left: 0;
+    outline: none;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 44px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transition-property: opacity,-webkit-transform;
+    transition-property: transform,opacity;
+    transition-property: transform,opacity,-webkit-transform;
+    white-space: normal;
+    width: 100%;
+    z-index: $loading-z-index;
+    background: $loading-background;
+    // display: none;
+    &::after {
+        animation: load .65s infinite linear;
+        background: transparent;
+        border: $loading-border-size solid hsla(0,0%,39%,.8);
+        border-radius: 100%;
+        border-top-color: $primary-color;
+        left: 50%;
+        margin: -30px 0 0 -30px;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        height: $loading-size;
+        width: $loading-size;
+        z-index: $loading-z-index;
+        content: '';
+    }
+}
+@keyframes load {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg)
+	}
+	to {
+		-webkit-transform: rotate(359deg);
+		transform: rotate(359deg)
+	}
+}

@@ -1,0 +1,97 @@
+.tournament-odd-group {
+    @include xy-grid;
+    //transition: max-height .4s ease, margin .4s ease, opacity .4s ease;
+    overflow: hidden;
+    max-height: 1000px;
+    margin-top: 5px;
+    @include breakpoint(medium down) {
+        max-height: 32px;
+        overflow: hidden;
+    } 
+    .item {
+        @include xy-cell(1 of 8, $gutter-type: margin, $gutters: 4px, $gutter-position: top bottom left right);
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        border-radius: 3px;
+        letter-spacing: .2px;
+        text-transform: uppercase;
+        padding: 4px 2px;
+        white-space: nowrap;
+        line-height: 1.4;
+        cursor: pointer;
+        font-size: rem-calc(12);
+        font-weight: 300;
+        background: rgba(255, 255, 255, .12);
+        // background-image: linear-gradient(to bottom, rgba(54, 57, 66, 0), rgba(255, 255, 255, 0.07) 100%);
+        background-image: linear-gradient(to bottom, rgba(54, 57, 66, 0), rgba(255, 255, 255, 0.12) 100%);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        &:hover {
+            border: 1px solid rgba(255,255,255,.35);
+            background: rgba(255, 255, 255, 0.23);
+            background-image: linear-gradient(to bottom, rgba(66, 69, 82, 0.63), rgba(156, 108, 0, 0) 100%);
+        }
+        &.active {
+            background: $primary-color;
+            border-color: $primary-color;
+            color: #000;
+            font-weight: 500;
+        }
+        @include breakpoint(large down) {
+            @include xy-cell(1 of 6, $gutter-type: margin, $gutters: 4px, $gutter-position: top bottom left right);
+        }
+        @include breakpoint(medium only) {
+            @include xy-cell(1 of 5, $gutter-type: margin, $gutters: 4px, $gutter-position: top bottom left right);
+        }
+        @include breakpoint(small only) {
+            @include xy-cell(1 of 3, $gutter-type: margin, $gutters: 4px, $gutter-position: top bottom left right);
+        }
+    }
+}
+.btn-toggle-hide__container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+.btn-toggle-hide {
+    @extend .ico;   
+    background: rgba(0, 0, 0, .7);
+    border-radius: 0 0 5px 5px;
+    width: 50px;
+    text-align: center;
+    margin: 0 auto;
+    line-height: .8;
+    margin-top: 7px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.16) 100%);
+    @include breakpoint(large) {
+        display: none;
+    }
+    &:after {
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        display: block;
+        top: -5px;
+        left: 0;
+        content: '';
+        line-height: 0;
+        border-top: 5px solid rgba(0, 0, 0, .7);
+        margin: 0;
+    }
+    &:before {
+        line-height: .5;
+        color: $primary-color;
+        margin: 0;
+        text-align: center;
+        font-size: rem-calc(16);
+        content: '\E80D';
+        transform: rotate(-90deg);
+        font-weight: 700;
+    }
+    &.collapse-tournaments:before {
+        transform: rotate(90deg)!important;
+    }
+}
+
+

@@ -1,0 +1,289 @@
+{{> header}}
+
+<div class="page__container">
+    <div class="page-grid">
+
+        <div class="page-grid__item main scroll" data-scrollbar>
+            <div class="scroll_wrap">
+                <h1 class="sport-header results">Results</h1>
+                <div class="filter__wrapper">
+                    <div class="filter__container resuts-filter">
+                        <div class="cell">
+                            <button class="select-size-1" data-toggle="changePeriod">Today</button>
+                            <ul class="select-size-1__container dropdown-pane bottom" id="changePeriod" data-dropdown data-close-on-click="true" data-v-offset="0">
+                                <li class="select__item active">Today</li>
+                                <li class="select__item">2 days</li>
+                                <li class="select__item">3 days</li>
+                                <li class="select__item">1 week</li>
+                                <li class="select__item">1 month</li>
+                            </ul>
+                        </div>
+                        <div class="cell">
+                            <button class="select-size-1" data-toggle="changeCategory">Soccer</button>
+                            <ul class="select-size-1__container dropdown-pane bottom" id="changeCategory" data-dropdown data-close-on-click="true" data-v-offset="0">
+                                <li class="select__item">Tennis</li>
+                                <li class="select__item">Volleyball</li>
+                                <li class="select__item">Basketball</li>
+                                <li class="select__item">Ice Hockey</li>
+                                <li class="select__item">Rugby</li>
+                                <li class="select__item">Soccer</li>
+                                <li class="select__item">Handball</li>
+                                <li class="select__item">Futsal</li>
+                                <li class="select__item">Motorsport</li>
+                                <li class="select__item">Baseball</li>
+                                <li class="select__item">Aussie rules</li>
+                                <li class="select__item">American Football</li>
+                                <li class="select__item">Table tennis</li>
+                                <li class="select__item">Finnish baseball</li>
+                                <li class="select__item">Darts</li>
+                                <li class="select__item">Water polo</li>
+                                <li class="select__item">Badminton</li>
+                                <li class="select__item">Cycling</li>
+                                <li class="select__item">Beach Volleyball</li>
+                                <li class="select__item">Golf</li>
+                                <li class="select__item">Beach Soccer</li>
+                            </ul>
+                        </div>
+                        <div class="cell">
+                            <button class="select-size-1" data-toggle="changeCountry">All countries</button>
+                            <ul class="select-size-1__container dropdown-pane bottom" id="changeCountry" data-dropdown data-close-on-click="true" data-v-offset="0">
+                                <li class="select__item active">All coutries</li>
+                                <li class="select__item">Other country</li>
+                                <li class="select__item">Nigeria</li>
+                                <li class="select__item">Gibraltar</li>
+                                <li class="select__item">Russia</li>
+                                <li class="select__item">Czech Republic</li>
+                                <li class="select__item">Rwanda</li>
+                                <li class="select__item">Romania</li>
+                                <li class="select__item">Brazil</li>
+                                <li class="select__item">Ecuador</li>
+                                <li class="select__item">Spain</li>
+                                <li class="select__item">Austria</li>
+                                <li class="select__item">Egypt</li>
+                                <li class="select__item">Denmark</li>
+                                <li class="select__item">Uganda</li>
+                                <li class="select__item">Sweden</li>
+                                <li class="select__item">Hungary</li>
+                                <li class="select__item">China</li>
+                                <li class="select__item">Australia</li>
+                                <li class="select__item">South Korea</li>
+                                <li class="select__item">Indonesia</li>
+                                <li class="select__item">Finland</li>
+                                <li class="select__item">Lithuania</li>
+                                <li class="select__item">Ireland</li>
+                                <li class="select__item">Malaysia</li>
+                                <li class="select__item">Slovakia</li>
+                                <li class="select__item">Tanzania</li>
+                                <li class="select__item">Uruguay</li>
+                                <li class="select__item">Poland</li>
+                                <li class="select__item">Ukraine</li>
+                                <li class="select__item">Thailand</li>
+                                <li class="select__item">Germany</li>
+                                <li class="select__item">Colombia</li>
+                                <li class="select__item">Uzbekistan</li>
+                                <li class="select__item">Kosovo</li>
+                                <li class="select__item">Slovenia</li>
+                                <li class="select__item">Serbia</li>
+                                <li class="select__item">Portugal</li>
+                                <li class="select__item">Bosnia &amp; Herzegovina</li>
+                                <li class="select__item">Croatia</li>
+                                <li class="select__item">Bulgaria</li>
+                                <li class="select__item">Estonia</li>
+                                <li class="select__item">Vietnam</li>
+                                <li class="select__item">Azerbaijan</li>
+                                <li class="select__item">England</li>
+                                <li class="select__item">Moldova</li>
+                                <li class="select__item">Norway</li>
+                                <li class="select__item">Georgia</li>
+                                <li class="select__item">Latvia</li>
+                                <li class="select__item">Belarus</li>
+                                <li class="select__item">Greece</li>
+                                <li class="select__item">Singapore</li>
+                                <li class="select__item">Macedonia</li>
+                                <li class="select__item">Montenegro</li>
+                                <li class="select__item">Belgium</li>
+                                <li class="select__item">Japan</li>
+                                <li class="select__item">Israel</li>
+                                <li class="select__item">Chile</li>
+                                <li class="select__item">USA</li>
+                                <li class="select__item">Italy</li>
+                                <li class="select__item">Netherlands</li>
+                                <li class="select__item">Armenia</li>
+                                <li class="select__item">Switzerland</li>
+                                <li class="select__item">Faroe Islands</li>
+                                <li class="select__item">Iceland</li>
+                                <li class="select__item">Philippines</li>
+                                <li class="select__item">Kenya</li>
+                                <li class="select__item">Angola</li>
+                                <li class="select__item">Ghana</li>
+                                <li class="select__item">Albania</li>
+                                <li class="select__item">Myanmar</li>
+                                <li class="select__item">Paraguay</li>
+                                <li class="select__item">Kazakhstan</li>
+                                <li class="select__item">Scotland</li>
+                                <li class="select__item">Peru</li>
+                                <li class="select__item">France</li>
+                                <li class="select__item">Ivory Coast</li>
+                                <li class="select__item">Zimbabwe</li>
+                                <li class="select__item">Canada</li>
+                                <li class="select__item">Hong Kong</li>
+                                <li class="select__item">Zambia</li>
+                                <li class="select__item">Argentina</li>
+                                <li class="select__item">Luxembourg</li>
+                                <li class="select__item">Wales</li>
+                                <li class="select__item">Guatemala</li>
+                                <li class="select__item">Costa Rica</li>
+                                <li class="select__item">El Salvador</li>
+                                <li class="select__item">Mexico</li>
+                                <li class="select__item">Turkey</li>
+                                <li class="select__item">Bolivia</li>
+                                <li class="select__item">South Africa</li>
+                                <li class="select__item">Senegal</li>
+                                <li class="select__item">Oman</li>
+                                <li class="select__item">Morocco</li>
+                                <li class="select__item">San Marino</li>
+                                <li class="select__item">Cameroon</li>
+                                <li class="select__item">Venezuela</li>
+                                <li class="select__item">Nicaragua</li>
+                                <li class="select__item">Congo</li>
+                            </ul>
+                        </div>
+                        <div class="cell">
+                            <button class="select-size-1" data-toggle="changeTournament" disabled>League</button>
+                            <ul class="select-size-1__container dropdown-pane bottom" id="changeTournament" data-dropdown data-close-on-click="true"
+                                data-v-offset="0">
+                                <li class="select__item active">Premier Division</li>
+                                <li class="select__item">First Division, Relegation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Results content -->
+                <div class="results">
+
+                    <div class="result__item">
+                        <div class="result__group">
+                            <h3 class="date">Monday, June 18, 2018</h3>
+                            <div class="league">
+                                <div class="cell">
+                                    <i class="soccer league__icon"></i>
+                                    Brasileiro Serie C, Group A
+                                </div>
+                                <div class="cell">
+                                    Result
+                                </div>
+                            </div>
+                            <div class="event__row">
+                                <div class="time">3:45 AM</div>
+                                <div class="a">Sampaio Correa MA - ABC RN</div>
+                                <div class="s score">1:0</div>
+                            </div>
+                            <div class="event__row">
+                                <div class="time">3:45 AM</div>
+                                <div class="a">Sampaio Correa MA - ABC RN</div>
+                                <div class="s score">1:0</div>
+                            </div>
+                            <div class="event__row">
+                                <div class="time">3:45 AM</div>
+                                <div class="a">Sampaio Correa MA - ABC RN</div>
+                                <div class="s score">1:0</div>
+                            </div>
+                            <div class="event__row">
+                                <div class="time">3:45 AM</div>
+                                <div class="a">Sampaio Correa MA - ABC RN</div>
+                                <div class="s score">1:0</div>
+                            </div>
+                            <div class="event__row">
+                                <div class="time">3:45 AM</div>
+                                <div class="a">Sampaio Correa MA - ABC RN</div>
+                                <div class="s score">1:0</div>
+                            </div>
+                            <div class="event__row">
+                                <div class="time">3:45 AM</div>
+                                <div class="a">Sampaio Correa MA - ABC RN</div>
+                                <div class="s score">1:0</div>
+                            </div>
+                            <div class="event__row">
+                                <div class="time">3:45 AM</div>
+                                <div class="a">Sampaio Correa MA - ABC RN</div>
+                                <div class="s score">4:0 (2:0)</div>
+                            </div>
+                            <div class="league">
+                                <div class="cell">
+                                    <i class="volleyball league__icon"></i>
+                                    Brasileiro Serie C, Group A
+                                </div>
+                                <div class="cell">
+                                    Result
+                                </div>
+                            </div>
+                            <div class="event__row">
+                                <div class="time">3:45 AM</div>
+                                <div class="a">Sampaio Correa MA - ABC RN</div>
+                                <div class="s score">1:1 (1:0-0:1)</div>
+                            </div>
+                            <div class="event__row">
+                                <div class="time">3:45 AM</div>
+                                <div class="a">Sampaio Correa MA - ABC RN</div>
+                                <div class="s score">1:1 (1:0-0:1)</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="result__item">
+                        <div class="result__group">
+                            <h3 class="date">Monday, June 18, 2018</h3>
+                            <div class="league">
+                                <div class="cell">
+                                    <i class="soccer league__icon"></i>
+                                    Brasileiro Serie C, Group A
+                                </div>
+                                <div class="cell">
+                                    Result
+                                </div>
+                            </div>
+                            <div class="event__row">
+                                <div class="time">3:45 AM</div>
+                                <div class="a">Sampaio Correa MA - ABC RN</div>
+                                <div class="s  score">1:1 (1:0-0:1)</div>
+                            </div>
+                            <div class="event__row">
+                                <div class="time">3:45 AM</div>
+                                <div class="a">Sampaio Correa MA - ABC RN</div>
+                                <div class="s  score">1:1 (1:0-0:1)</div>
+                            </div>
+                            <div class="league">
+                                <div class="cell">
+                                    <i class="soccer league__icon"></i>
+                                    Brasileiro Serie C, Group A
+                                </div>
+                                <div class="cell">
+                                    Result
+                                </div>
+                            </div>
+                            <div class="event__row">
+                                <div class="time">3:45 AM</div>
+                                <div class="a">Sampaio Correa MA - ABC RN</div>
+                                <div class="s score">1:0</div>
+                            </div>
+                            <div class="event__row">
+                                <div class="time">3:45 AM</div>
+                                <div class="a">Sampaio Correa MA - ABC RN</div>
+                                <div class="s score">1:0</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /Results content -->
+
+            </div>
+        </div>
+        <div class="page-grid__item betslip-area" id="betslipArea" data-off-canvas>
+            {{> betslip-area}}
+        </div>
+    </div>
+</div>
+
+{{> footer_menu--live}} {{> profile-left-menu}}

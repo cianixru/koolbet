@@ -1,0 +1,27 @@
+.grid-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+.grid-container--nowrap {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.grid_col--shrink {
+    flex: 0 0 auto;
+    width: auto;
+}
+.grid_col--auto {
+    flex: 1 1 0;
+    width: auto;
+}
+
+.grid-container,
+.grid-container--nowrap {
+    .s {
+        @extend .grid_col--shrink;
+    }
+    .a {
+        @extend .grid_col--auto;
+    }
+}

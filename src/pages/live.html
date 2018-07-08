@@ -1,0 +1,43 @@
+{{> header}}
+
+<div class="page__container">
+    <div class="page-grid">
+        <div class="page-grid__item categories-menu" id="categoriesMenu" data-off-canvas data-transition-time="1">
+            {{> categories_menu--live}}
+        </div>
+        <div class="page-grid__item main scroll" data-scrollbar>
+            <div class="scroll_wrap">
+                {{> categories_tabs-menu--live}}
+
+                <section>
+                    <div class="category-live__container">
+                        {{> category-name--live}}
+                        <div id="odd-group-382" data-toggler=".collapse-tournaments">
+                        {{> table--live_1}}
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="category-live__container">
+                        {{> category-name--live_2}}
+                        <div id="odd-group-383" data-toggler=".collapse-tournaments">
+                            {{> table--live_2}}
+                            {{> table--live_2}}
+                        </div>
+                    </div>
+                </section>
+
+                {{> starting_soon}}
+
+                <br><br><br>
+            </div>
+         </div>
+        <div class="page-grid__item betslip-area" id="betslipArea" data-off-canvas>
+            {{> betslip-area}}
+        </div>
+    </div>
+</div>
+
+{{> footer_menu--live}}
+{{> profile-left-menu}}

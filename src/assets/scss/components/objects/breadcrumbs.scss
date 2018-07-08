@@ -1,0 +1,108 @@
+.tournament-filter__breadcrumbs {
+    padding: 0 0 0 $global-padding;
+    height: 48px;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 5px 5px 0 0;
+    @extend .header-sports-gradient;
+    @include xy-grid(horizontal, false);
+    .cell {
+        @include xy-cell(shrink, false);       
+    }
+    .title-cell {
+        @include xy-cell(auto, false);
+        font-size: rem-calc(15);
+        line-height: 1;
+        letter-spacing: .15px;
+        font-weight: 500;
+        color: $primary-color;       
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 10px;
+        text-transform: uppercase;
+    }
+    .catName {
+        @include breakpoint(medium down) {
+            display: none;
+        }
+    }
+    .icon-cell {
+        @extend .ico;
+        margin: 0;
+        padding-right: 8px;
+        cursor: default;
+        &:before {
+            color: $primary-color;
+            margin: 0;
+            text-align: left;
+            font-size: rem-calc(28);
+        }
+    }
+    .controls-cell {       
+        height: 100%;
+        @include xy-grid(horizontal, false);
+        align-items: center;
+        padding: 0 5px;
+        >div {
+            @include xy-cell(shrink, false);
+            cursor: pointer;
+            margin: 0 5px;
+            padding: 0 5px;
+            &:before {
+                line-height: 10px;
+                text-align: center;
+                width: auto;
+            }
+        }
+        .close:before {
+            content: '\E829';
+            font-size: rem-calc(10);
+            line-height: 33px;
+            font-weight: 600;
+        }
+        .reload:before {
+            content: '\E825';
+            font-size: rem-calc(13);
+        }
+        .hide-block {
+            &:before {
+                content: '\E80D';
+                font-size: rem-calc(16);
+                line-height: 33px;
+                transition: all ($global-transition * 2) ease;
+                transform: rotate(90deg);
+            }
+            &.arr-up:before {
+                transform: rotate(270deg)!important;
+            }
+            @include breakpoint(medium down) {
+                display: none;
+            }
+        }
+        .hide-block.live {
+            @include breakpoint(medium down) {
+                display: block;
+            }
+        }
+        .hide-viewer {
+            padding: 0;
+            background: #fff;
+            height: 20px;
+            &:before {
+                // background: #fff;
+                content: '\E860';
+                font-size: rem-calc(35);
+                line-height: 10px;
+                margin-left: -5px;
+                color:  #fb8585;
+            }
+            &.active:before {
+                color: red;
+            }
+            &:hover:before {
+
+            }
+        }
+    }
+}

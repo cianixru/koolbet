@@ -1,0 +1,165 @@
+/* Checkboxes */
+input[type=checkbox] { display:none; }
+input[type=checkbox] + label:before {
+  font-family: fontello;
+  color: $body-font-color;
+  display: inline-block;
+}
+
+input[type=checkbox] + label:before {
+    content: "\F0C8";
+    letter-spacing: 6px;
+} /* unchecked icon */
+
+input[type=checkbox]:checked + label:before {
+    content: "\E81A";
+    color: $body-font-color;
+    letter-spacing: 6px;
+} /* checked icon */
+
+
+// /* Radio buttons */
+input[type=radio] { display:none; }
+input[type=radio] + label:before {
+  font-family: fontello;
+  color: #333;
+  display: inline-block;
+}
+
+input[type=radio] + label:before {
+    content: "\F10C";
+    letter-spacing: 6px;
+} /* unchecked icon */
+
+input[type=radio]:checked + label:before {
+    content: "\F192";
+    color: #333;
+    letter-spacing: 6px;
+} /* checked icon */
+
+
+/* label */
+label {
+    color: $body-font-color;
+    &::-moz-selection {
+        background: transparent;
+    }
+    &::selection {
+        background: transparent;
+    }
+}
+
+
+.button {
+    letter-spacing: $button-letter-spacing;
+    text-transform: $button-text-transform;
+    font-weight: 500;
+    transition-property: all;
+}
+
+.icon-button {
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+    &::before {
+        color: $body-font-color;
+        display: block;
+        width: 100%;
+        height: 100%;
+        font-size: rem-calc(24);
+        padding: 5px;
+        margin: 0;
+    }
+}
+
+.change-period__container {
+    position: relative;
+    z-index: 1;
+    padding: 7px 10px;
+    background: rgba(255, 255, 255, 0.02);
+    @include breakpoint(medium down) {
+        background: rgba(255, 255, 255, 0.055);
+    }
+}
+
+.button.green {
+    background-color: $green-color-button;
+    color: #fff;
+    &:hover {
+        background-color: scale-color($green-color-button, $lightness: -23%);
+        color: #fff;
+    }
+}
+
+// mobile-app-toggler
+$mobile-app-toggle-radius: rem-calc(4);
+$mobile-app-toggle-color: $primary-color;
+$mobile-app-toggle-border-color: rgba(255,255,255,.2);
+$mobile-app-toggle-border-color: transparent;
+.mobile-app-toggle {
+    display: flex;
+    width: 100%;
+    border: 1px solid $mobile-app-toggle-border-color;
+    border-radius: $mobile-app-toggle-radius;
+    overflow: hidden;
+    .button {
+        // background: transparent;
+        background: $switch-input-color;;
+        height: 34px;
+        color: $mobile-app-toggle-color;
+        margin-bottom: 0;
+        flex: 1 0 0;
+        line-height: rem-calc(12);
+        border-radius: 0;
+        font-size: 12px;
+        letter-spacing: .6px;
+        @include breakpoint(small down) {
+            letter-spacing: 0;
+            padding: 2px;
+            font-size: 11px;
+        }
+        &:nth-child(n+1) {
+            // border-left: 1px solid $mobile-app-toggle-border-color;
+            margin-left: 1px;
+            color: #fff;
+        }
+        &.is-active {
+            background: $mobile-app-toggle-color;
+            color: #000;
+        }
+        & {
+            &:first-child {
+                border-radius: 4px 0 0 4px;
+            }
+            &:last-child {
+                border-radius: 0 4px 4px 0;
+            }
+        }
+    }
+}
+
+.micro__button {
+    font-size: rem-calc(11);
+    letter-spacing: .2px;
+    display: inline-block;
+    color: $balance-info-button-color;
+    text-decoration: none;
+    line-height: 1.4;
+    background: $profile-button-bg-color;
+    padding: 3px 10px;
+    border-radius: $global-input-radius;
+    text-transform: uppercase;
+    cursor: pointer;
+    [class$="__icon"]:before,
+    [class$="__icon"]:after {
+        color: $balance-info-button-color;
+    }
+    &:hover {
+        color: $profile-button-color--hover;
+        background-color: $profile-button-bg--hover;
+        [class$="__icon"]:before,
+        [class$="__icon"]:after {
+            color: $profile-button-color--hover;
+        }
+    }
+}

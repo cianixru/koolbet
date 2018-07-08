@@ -1,0 +1,212 @@
+{{> header}}
+<div class="page__container profile">
+    <div class="page-grid">
+        <!-- profile__sidebar -->
+        {{> profile-left-menu}}
+        <!-- /.profile__sidebar -->
+        <div class="page-grid__item main profile-grid scroll" data-scrollbar>
+            <div class="scroll_wrap">
+
+                <!-- PROFILE -->
+                <div class="profile">
+                    <!-- .profile -->
+                    <div class="profile__container">
+                        <!-- main-section -->
+                        <div class="profile__main">
+                            <div class="header-nav--small h2--small">
+                                <i class="back__icon"></i>
+                                <span>My wallet</span>
+                            </div>
+                            <div class="profile__wrapper">
+                                <div class="profile__inner">
+
+                                    <div class="affiliate__container">
+                                        <div class="cell">
+                                            <!--  -->
+                                            <div class="affiliate-main">
+                                                <div class="switch-controls affiliate-control">
+                                                    <div class="cell period">
+                                                        <div class="profile__label">Month</div>
+                                                        <div class="period-switcher">
+                                                            <div class="datepicker-input">
+                                                                <i class="datepicker__icon"></i>
+                                                                <input readonly value="01.2018" class="hasDatepicker">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="cell date">
+                                                        <div class="profile__label">Year</div>
+                                                        <select class="affiliate-year control-select">
+                                                            <option value="2017">2017</option>
+                                                            <option value="2018">2018</option>
+                                                        </select>
+                                                    </div>
+
+
+                                                    <div class="cell date">
+                                                        <div class="profile__label">Type</div>
+                                                        <select class="control-select" name="type">
+                                                            <option value="1">All types</option>
+                                                            <option value="1">Single</option>
+                                                        </select>
+                                                    </div>
+
+
+                                                </div>
+
+
+
+                                                <div class="affiliate-chart">
+                                                    <div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+                                                        <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                                            <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div>
+                                                        </div>
+                                                        <div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                                            <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="aChart"></div>
+                                                </div>
+
+                                            </div>
+                                            <!--  -->
+
+                                        </div>
+                                        <div class="cell affiliate-details">
+
+                                            <div class="affiliate-details__title">Income details (8/6/2018)</div>
+
+                                            <div class="affiliate__row--details">
+                                                <div class="col num">
+                                                    8
+                                                </div>
+                                                <div class="col details">
+                                                    <div class="cell">
+                                                        <span class="">Multiple x5 (2.5%)</span>
+                                                    </div>
+                                                    <div class="cell">
+                                                        336 XAF
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="affiliate__row--details">
+                                                <div class="col num">
+                                                    6
+                                                </div>
+                                                <div class="col details">
+                                                    <div class="cell">
+                                                        <span class="">Multiple x5 (2.5%)</span>
+                                                    </div>
+                                                    <div class="cell">
+                                                        336 XAF
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="affiliate__row--details">
+                                                <div class="col num">
+                                                    4
+                                                </div>
+                                                <div class="col details">
+                                                    <div class="cell">
+                                                        <span class="">Multiple x5 (2.5%)</span>
+                                                    </div>
+                                                    <div class="cell">
+                                                        336 XAF
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="affiliate__row--details">
+                                                <div class="col num">
+                                                    24
+                                                </div>
+                                                <div class="col details">
+                                                    <div class="cell">
+                                                        <span class="">Multiple x5 (2.5%)</span>
+                                                    </div>
+                                                    <div class="cell">
+                                                        336 XAF
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- CAHRT.JS -->
+                                <style>
+                                    canvas {
+                                        -moz-user-select: none;
+                                        -webkit-user-select: none;
+                                        -ms-user-select: none;
+                                    }
+
+                                    .chart-container {
+                                        width: 85%;
+                                        margin-left: 40px;
+                                        margin-right: 40px;
+                                        margin-bottom: 40px;
+                                    }
+
+                                    .container {
+                                        display: flex;
+                                        flex-direction: row;
+                                        flex-wrap: wrap;
+                                        justify-content: center;
+                                    }
+                                </style>
+
+                                <script src="http://www.chartjs.org/dist/2.7.2/Chart.bundle.js"></script>
+                                <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+                                <script>
+                                    function createConfig() {
+                                        return {
+                                            type: 'line',
+                                            data: {
+                                                labels: ['January', 'February', 'March', 'April', 'May', 'June',
+                                                    'July', 'August', 'September', 'October'
+                                                ],
+                                                datasets: [{
+                                                    label: '-',
+                                                    borderColor: window.chartColors.yellow,
+                                                    backgroundColor: window.chartColors.yellow,
+                                                    data: [0, 30, 46, 12, 18, 20, 40],
+                                                    fill: false,
+                                                }]
+                                            },
+                                            options: {
+                                                responsive: true,
+                                            }
+                                        };
+                                    }
+                                    window.onload = function () {
+                                        var container = document.querySelector('.aChart');
+                                        var div = document.createElement('div');
+                                        div.classList.add('chart-container');
+
+                                        var canvas = document.createElement('canvas');
+                                        div.appendChild(canvas);
+                                        container.appendChild(div);
+
+                                        var ctx = canvas.getContext('2d');
+                                        var config = createConfig();
+                                        new Chart(ctx, config);
+                                    };
+                                </script>
+                                <!-- / CAHRT.JS -->
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.main-section -->
+                </div>
+                <!-- /.profile -->
+            </div>
+            <!-- /PROFILE -->
+
+        </div>
+    </div>
+</div>
+</div>

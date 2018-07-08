@@ -1,0 +1,209 @@
+.registration__wrapper {
+    @include breakpoint(medium down) {
+        padding-bottom: 50px;
+    }
+}
+
+.registration-form {
+    margin: 30px auto 0;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 3%;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    color: #000;
+    padding: 30px 10px;
+    background-color: #FFF;
+    width: 400px;
+    @include breakpoint(medium down) {
+        width: auto;
+        padding-top: 15px;
+        margin-top: 0;
+        border-radius: 0;
+    }
+    li .input-container.dub,
+    li .inputSection.dub {
+        width: 50%;
+    }
+    .control-group__birthday {
+        .input {
+            margin: 0;
+            &:first-child input,
+            &:first-child select {
+                border-right: 0 !important;
+            }
+            &:last-child input,
+            &:last-child select {
+                border-left: 0;
+            }
+        }
+    }
+    h3 {
+        color: #000;
+        text-transform: uppercase;
+        font-size: rem-calc(28);
+        text-align: center;
+        font-weight: 700;
+        margin: 0 0 10px;
+        font-size: rem-calc(22);
+        margin-bottom: 15px;
+        @include breakpoint(medium down) {
+            margin-bottom: 10px;
+        }
+    }
+    label {
+        font-size: rem-calc(16);
+        color: #1a4880;
+        display: block;
+        margin: 0 0 3px;
+        float: left;
+        font-weight: 700;
+        letter-spacing: .1px;
+    }
+    label.requiredAsterix {
+        color: #AD1514;
+        margin-left: 1px;
+    }
+    select {
+        height: 2.4375rem;
+        margin: 0 0 1rem;
+        padding: 0.5rem;
+        appearance: none;
+        border: 1px solid #cacaca;
+        border-radius: 0;
+        background-color: #fefefe;
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: normal;
+        line-height: 1.5;
+        color: #0a0a0a;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28138, 138, 138%29'></polygon></svg>");
+        background-origin: content-box;
+        background-position: right -1rem center;
+        background-repeat: no-repeat;
+        background-size: 9px 6px;
+        padding-right: 1.5rem;
+        box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+    }
+    .labelContainer {
+        width: 100%;
+        display: flex;
+    }
+    .inputSection {
+        position: relative;
+    }
+    ul {
+        margin: 0 24px;
+        @include breakpoint(small only) {
+            margin: 0 0px;
+        }
+    }
+    input[type=text],
+    input[type=email],
+    input[type=password] {
+        @extend .input-w;
+    }
+    .control-select {
+        text-transform: none;
+    }
+    .open-account-button {
+        width: 100%;
+        height: 44px;
+        font-size: rem-calc(18);
+        background-color: $primary-color;
+        border-radius: 4px;
+        text-align: center;
+        color: #000;
+        font-weight: 700;
+        border: 0;
+        cursor: pointer;
+        @include breakpoint(medium down) {
+            font-size: rem-calc(16);
+            height: 38px;
+            max-width: 350px;
+        }
+    }
+    .social-registration {
+        text-align: center;
+        position: relative;
+        padding-top: 30px;
+        height: 100px;
+        @include breakpoint(medium down) {
+            padding-top: 20px;
+        }
+    }
+    .open-account-button-facebook {
+        @extend .ico;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: auto;
+        font-size: rem-calc(16);
+        cursor: pointer;
+        color: #fff;
+        background: #4464a2;
+        border: 0;
+        display: inline-block;
+        white-space: nowrap;
+        padding: 5px 15px;
+        font-size: rem-calc(16);
+        font-weight: 500;
+        border-radius: 4px;
+        .facebook__icon {
+            display: inline-block;
+            font-size: rem-calc(20);
+            margin-right: 3px;
+            &:before {
+                font-size: rem-calc(19);
+                margin-right: 5px;
+            }
+        }
+    }
+    .checkbox__blk {
+        display: flex;
+        flex-flow: row nowrap;
+        margin-top: 10px;
+        justify-content: space-around;
+        label {
+            box-sizing: border-box;
+            margin: 0 0 0 10px;
+            font-weight: normal;
+            color: #333;
+            cursor: pointer;
+            font-size: rem-calc(15);
+            line-height: 1;
+            font-weight: 500;
+            letter-spacing: 0;
+            margin: 0;
+            &:before {
+                color: #000 !important;
+                font-size: rem-calc(18);
+            }
+        }
+    }
+    .submit-area {
+        margin: 15px 0 0;
+        text-align: center;
+    }
+    .f-password {
+        text-align: right;
+        a {
+            color: $anchor-color;
+        }
+    }
+    .control-group {
+        @extend .grid-container;
+        >div:first-child {
+            margin-right: 10px;
+        }
+        >div:last-child {
+            @extend .a;
+        }
+        .countrycode {
+            width: 80px;
+        }
+    }
+}
+
+.form-control {
+    padding: 10px;
+    background-color: #FFF;
+}

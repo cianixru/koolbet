@@ -1,0 +1,170 @@
+.tournament__title {
+    padding: 0 0 0 $global-padding;
+    height: 48px;
+    align-items: center;
+    // border-radius: 5px 5px 0 0;
+    @extend .header-sports-gradient;
+    @include xy-grid(horizontal, false);
+    &.soccer {
+        border-top: 2px solid #A9C144;
+    }
+    &.american_football {
+        border-top: 2px solid #A9C144;
+    }
+    &.baseball {
+        border-top: 2px solid #A9C144;
+    }
+    &.basketball {
+        border-top: 2px solid #A9C144;
+    }
+    &.darts {
+        border-top: 2px solid #A9C144;
+    }
+    &.handball {
+        border-top: 2px solid #A9C144;
+    }
+    &.ice_hockey {
+        border-top: 2px solid #A9C144;
+    }
+    &.rugby {
+        border-top: 2px solid #EE6531;
+    }
+    &.snooker {
+        border-top: 2px solid #A9C144;
+    }
+    &.tennis {
+        border-top: 2px solid #A9C144;
+    }
+    &.volleyball {
+        border-top: 2px solid #A9C144;
+    }
+    .cell {
+        @include xy-cell(shrink, false);       
+    }
+    .title-cell {
+        @include xy-cell(auto, false);
+        font-size: rem-calc(16);
+        line-height: 1;
+        letter-spacing: .15px;
+        color: $primary-color;       
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 10px;
+        text-transform: uppercase;
+    }
+    .catName {
+        @include breakpoint(medium down) {
+            display: none;
+        }
+    }
+    .icon-cell {
+        @extend .ico;
+        margin: 0;
+        padding-right: 8px;
+        cursor: default;
+        &:before {
+            color: $primary-color;
+            margin: 0;
+            text-align: left;
+            font-size: rem-calc(28);
+        }
+    }
+    .controls-cell {
+        height: 100%;
+        @include xy-grid(horizontal, false);
+        align-items: center;
+        padding: 0 5px;
+        >div {
+            @include xy-cell(shrink, false);
+            cursor: pointer;
+            margin: 0 5px;
+            padding: 0 5px;
+            &:before {
+                line-height: 10px;
+                text-align: center;
+                width: auto;
+            }
+        }
+        .close:before {
+            content: '\E829';
+            font-size: rem-calc(10);
+            line-height: 33px;
+            font-weight: 600;
+        }
+        .reload:before {
+            content: '\E825';
+            font-size: rem-calc(13);
+        }
+        .hide-block {
+            &:before {
+                content: '\E80D';
+                font-size: rem-calc(16);
+                line-height: 33px;
+                transition: all ($global-transition * 2) ease;
+                transform: rotate(-90deg);
+            }
+            &.arr-up:before {
+                transform: rotate(270deg)!important;
+            }
+            &.expanded:before {
+                transform: rotate(180deg)!important;
+            }
+            @include breakpoint(medium down) {
+                display: none;
+            }
+        }
+        .hide-block.live {
+            @include breakpoint(medium down) {
+                display: block;
+            }
+        }
+        .count {
+            color: rgba(255,255,255,.85);
+        }
+    }
+}
+.tournament-live-group-name {
+    @extend .tournament-group-name;
+    line-height: 1.5;
+    font-size: rem-calc(12);
+    padding: 3px 10px;
+    border-radius: 0;
+    line-height: 1.8;
+    color: $body-font-color;
+    letter-spacing: .55px;
+    @include breakpoint(medium down) {
+        padding: 3px 25px;
+        width: 100%;
+        text-align: center;
+    }
+    @include breakpoint(large) {
+        border-top: 1px solid #4e4f5d;
+        border-bottom: 1px solid #4e4f5d;
+    }
+}
+.tournament-live__icon {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    line-height: 12px;
+    background: #fff;
+    height: 12px;
+    width: 19px;
+    margin-right: 3px;
+    border-radius: 5px;
+    &::before {       
+        content: '\E830';
+        font-size: 21px;
+        line-height: 1px;
+        left: -1px;
+        top: 1px;
+        position: absolute;
+        color: $primary-color;
+        color: red;
+        line-height: 12px;
+        height: 12px;
+    
+    }
+}

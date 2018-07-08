@@ -1,0 +1,102 @@
+.timeline__wp {
+    background: $global-dark-bg;
+}
+
+.timeline {
+    margin-bottom: 0 !important;
+}
+
+.vg-meeting--info {
+    margin-top: 15px;
+}
+
+.vg-meeting--details {
+    padding: 0 15px 20px;
+}
+
+.nav-tabs {
+    white-space: nowrap;
+    overflow: hidden;
+    list-style: none;
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+$height-arr: 8px;
+$bottom-mg: 4px;
+$ml-b: -7px;
+$active-bg-color: #51545e;
+.nav-tabs__item {
+    height: 100%;
+    min-height: 30px;
+    position: relative;
+    text-align: left;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, .5);
+    font-size: rem-calc(16);
+    font-weight: 300;
+    padding-left: 5px;
+    padding: 0 0 12px;
+    >div {
+        padding: 10px 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        border-left: 1px solid rgba(255, 255, 255, 0.3);
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        background: $body-background;
+        letter-spacing: .2px;
+    }
+    &:hover {
+        color: #fff;
+        cursor: pointer;
+    }
+    &.active {
+        color: #fff;
+        font-weight: 500;
+        position: relative;
+        >div {
+            background: $active-bg-color;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            opacity: 1;
+            bottom: $bottom-mg;
+            left: 0;
+            margin-left: $ml-b;
+            height: 0;
+            width: 0;
+            border-left: $height-arr solid transparent;
+            border-right: $height-arr solid transparent;
+            border-top: $height-arr solid #848484;
+            background: transparent;
+            z-index: -2;
+            content: "";
+            position: absolute;
+            left: 50%;
+            z-index: -1;
+            transform-style: preserve-3d;
+            user-select: none;
+        }
+        &:after {
+            bottom: ($bottom-mg + 2);
+            left: 0;
+            margin-left: 12px;
+            margin-left: ($ml-b - 1);
+            height: 0;
+            width: 0;
+            border-left: ($height-arr + 1) solid transparent;
+            border-right: ($height-arr + 1) solid transparent;
+            border-top: ($height-arr + 1) solid $active-bg-color;
+            transition: bottom .4s ease-in-out, opacity .3s ease-in-out;
+            content: "";
+            position: absolute;
+            left: 50%; // z-index: -1;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+    }
+}

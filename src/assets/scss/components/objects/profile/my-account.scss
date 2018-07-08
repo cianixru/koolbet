@@ -1,0 +1,502 @@
+.profile__sidebar,
+.profile__main {
+    background-color: $profile-bg-color; 
+    // border: 1px solid rgba(255, 255, 255, .15);
+}
+.profile__sidebar.off-canvas.is-transition-overlap {
+    z-index: 100;
+    background: $mobile-menu-bg;
+    margin: 0;
+}
+
+.profile__label {
+    text-transform: uppercase;
+    font-size: rem-calc(13);
+    color: rgba(255, 255, 255, .7);
+    font-weight: 700;
+    letter-spacing: .3px;
+    font-weight: normal;
+}
+.control-select {
+    text-transform: uppercase;
+    option {
+        border:1px solid #fff!important;
+        line-height: 120px;
+    }
+}
+
+.js-off-canvas-overlay.is-closable
+{
+    &::before {
+        @extend .ico;
+        content: '\E829';
+        font-size: 20px;
+        font-weight: 700;
+        right: 235px;
+        position: absolute;
+        top: 10px;
+    }
+}
+.js-off-canvas-overlay {
+    z-index: 99;
+}
+.profile__sidebar {
+    .sidebar__menu {
+        ul {
+            margin-left: 0;
+            li {
+                border: 0;
+                background: rgba(0, 0, 0, .2);
+                a { 
+                    padding: 10px 5px 10px 50px;
+                }
+            }
+        }
+        li {
+            border-bottom: 1px solid $mobile-menu-list-border-color;
+            &:not(:hover) {
+                [class$="__icon"]:before {
+                    color: rgba(255, 255, 255, .75);
+                }
+            }
+            a {
+                padding: 13px 14px;
+                display: flex;
+                align-items: center;
+                text-transform: uppercase;
+                color: $profile-menu-color;
+                color: #fff;
+                text-decoration: none;
+                font-size: rem-calc(13);
+                &:not(.is-active):hover {
+                    background-color: rgba(255, 255, 255, .07);
+                    color: $profile-menu-active-color;
+                }
+                &.is-active {
+                    color: #fff;
+                    background: $switch-input-color;
+                }
+                i {
+                    margin-right: rem-calc(13);
+                    width: 23px;
+                }
+            }
+        }
+    }
+}
+
+
+.profile {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-weight: 500;
+        text-transform: uppercase;
+        margin: 0;
+        display: block;
+        width: 100%;
+        clear: both;
+    }
+    h2 {
+        margin-bottom: 5px;
+        font-size: rem-calc(26);
+        @include breakpoint(xlarge down) {
+            font-size: rem-calc(25);
+        }
+        @include breakpoint(medium down) {
+            font-size: rem-calc(24);
+        }
+    }
+    .h2--small {
+        font-size: rem-calc(22);
+
+        @include breakpoint(large) {
+            display: none;
+        }
+    }
+    h4 {
+        margin-bottom: 5px;
+        font-size: rem-calc(18);
+        color: rgba(255, 255, 255, .75);
+        letter-spacing: .5px;
+        font-weight: 300
+    }
+    .profile__container {
+        @include xy-grid(horizontal, false);
+    }
+    .profile__sidebar {
+        @include xy-cell(shrink, false);
+        margin: 5px 0 0;
+        // margin-right: 10px;
+        &.off-canvas
+        {
+            margin-right:0;
+        }
+    }
+    .sidebar__inner {
+        width: 220px;
+    }
+    .profile__main {
+        @include xy-cell(auto, false);
+        padding: 20px;
+        @include breakpoint(medium down) {
+            padding: 0px;
+        }
+    }
+    .personal {
+        @extend .grid-container;
+        padding-bottom: $profile-section-padding;
+        border-bottom: 1px solid $sport-table-border-color; // margin-bottom: 25px;
+    }
+    .avatar__container {
+        @include xy-cell(shrink, false);
+        margin-right: 30px;
+        @include breakpoint(medium down) {
+            display: none;
+        }
+    }
+    .personal-info {
+        @include xy-cell(auto, false);
+    }
+    .personal-info-name {
+        font-size: rem-calc(22);
+    }
+}
+
+.profile__wrapper {
+    padding: 10px;
+    @include breakpoint(medium down) {
+        padding: 20px;
+    }
+}
+
+.avatar__icon {
+    width: $avatar-icon-size;
+    height: $avatar-icon-size;
+    background: $avatar-bg-color;
+    border-radius: 50%;
+    &:before {
+        content: '\E91A';
+        width: $avatar-icon-size;
+        height: $avatar-icon-size;
+        font-size: ($avatar-icon-size / 1.45);
+        line-height: $avatar-icon-size;
+        color: #fff;
+        text-align: center;
+        display: block;
+    }
+}
+
+.user-current-funds {
+    margin-top: 20px;
+    font-size: rem-calc(28);
+    @include breakpoint(medium down) {
+        font-size: rem-calc(20);
+    }
+    .title {
+        @extend .profile__label;
+    }
+    span {
+        color: $primary-color;
+    }
+    [class$="__cell"] {
+        display: inline-block;
+        &:not(:first-child) {
+            @include breakpoint(large) {
+                padding-left: $profile-gutters-size;
+            }
+        }
+        &:not(:last-child) {
+            @include breakpoint(medium down) {
+                margin-bottom: 10px;
+            }
+            padding-right: 30px;
+            position: relative;
+            @include breakpoint(large) {
+                &:after {
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    bottom: 6px;
+                    display: block;
+                    width: 1px;
+                    height: 25px;
+                    background: #4e4f5d;
+                }
+            }
+        }
+    }
+}
+
+.funds-refresh__icon {
+    padding: 0 5px;
+    text-align: center;
+    display: inline-block;
+    &:before {
+        content: '\E825';
+        color: #76767c;
+        text-align: center;
+        margin: 0;
+        line-height: 1;
+    }
+    &:hover {
+        &:before {
+            color: #ccc;
+        }
+        background-color: rgba(255, 255, 255, .1);
+        border-radius: $global-input-radius;
+        cursor: pointer;
+    }
+}
+
+.account-bonus__section {
+    margin-top: $profile-section-margin;
+    @include breakpoint(large) {
+        @include xy-grid(horizontal, false);
+    }
+    @include breakpoint(medium down) {
+        @include xy-grid(vertical, false);
+    }
+    >div {
+        @include breakpoint(large) {
+            @include xy-cell(50%, false);
+            // position: relative;
+            &:nth-child(1) {
+                border-right: 1px solid #4e4f5d;
+                padding-right: 30px;
+            }
+            &:nth-child(2) {
+                padding-left: 30px;
+            }
+        }
+        @include breakpoint(medium down) {
+            &:nth-child(1) {
+                padding-bottom: $profile-gutters-size;
+            }
+            &:nth-child(2) {
+                padding-top: $profile-gutters-size;
+                border-top: 1px solid #4e4f5d;
+            }
+        }
+        .row {
+            margin-top: $profile-gutters-size;
+        }
+    }
+    .progress {
+        margin: 5px 0;
+        max-width: 380px;
+        background-color: #76767c;
+    }
+    .progress-meter {
+        border-radius: $progress-radius;
+    }
+}
+
+.detailed-balance__wrapper {
+    p {
+        font-size: rem-calc(16);
+        letter-spacing: .4px;
+        color: #fff;
+        span {
+            color: $primary-color;
+        }
+    }
+}
+
+.edit__button {
+    letter-spacing: .8px;
+    font-size: 12px;
+    padding: 4px 8px;
+}
+
+.edit__icon::after {
+    content: '\E84F';
+    margin-right: 5px;
+}
+
+.balance-info__button {
+    margin-top: 5px;
+}
+
+.balance-info__icon {
+    &:before {
+        color: $balance-info-button-color;
+        content: "\E851";
+        letter-spacing: 6px;
+        font-size: 13px;
+    }
+}
+
+.primary-color {
+    color: $primary-color;
+}
+
+.account-details__section {
+    @extend .grid-container;
+    border-top: 1px solid $sport-table-border-color;
+    margin-top: $profile-section-margin;
+    padding: $profile-section-padding 0;
+}
+.personal-data {
+    margin-top: 20px;
+    @include breakpoint(large) {
+        @include xy-grid(horizontal, false);
+    }
+    @include breakpoint(medium down) {
+        @include xy-grid(vertical, false);
+    }
+    width: 100%;
+    >.cell {
+        width: 50%;
+        @include breakpoint(medium down) {
+            width: 100%;
+        }
+        &:nth-child(2) {
+            @include breakpoint(medium down) {
+                margin-top: $profile-gutters-size;
+            }
+            @include breakpoint(large) {
+                padding-left: 30px;
+            }
+        }
+    }
+}
+
+.form-layout {
+    @include xy-grid(horizontal, true);
+    h4 {
+        margin-bottom: $profile-gutters-size;
+        display: flex;
+        align-items: center;
+        .edit__button {
+            margin-left: 20px;
+        }
+    }
+    @include breakpoint(large) {
+        .edit__button {
+            opacity: .2;
+        }
+        &:hover {
+            .edit__button {
+                opacity: 1;
+            }
+        }
+    }
+    .form-layout__row {
+        display: flex;
+        flex-flow: row wrap;
+        @include breakpoint(medium) {
+            padding-right: 40px;
+            width: 100%;
+            flex-flow: row nowrap;
+            .form-layout__cell {
+                width: 50%;
+            }
+            .label__cell {
+                width: 200px;
+            }
+        }
+        @include breakpoint(large only) {
+            padding-right: 0;
+            .label__cell {
+                width: 30%;
+            }
+            .form-layout__cell {
+                width: 70%;
+            }
+        }
+        @include breakpoint(small down) {
+            width: 100%;
+            flex-flow: row wrap;
+            .form-layout__cell {
+                width: 100%;
+            }
+            .label__cell {
+                width: 100%;
+            }
+        }
+        label {
+            font-size: rem-calc(15);
+            line-height: 2;
+        }
+        input,
+        select {
+            border: 0;
+            font-size: rem-calc(15);
+            letter-spacing: .3px;
+            background-color: #fff;
+            color: #000;
+            border-radius: $global-input-radius;
+            &[disabled] {
+                background-color: rgba(255, 255, 255, .1);
+                color: rgba(255, 255, 255, .75);
+            }
+        }
+    }
+    .verify-button {
+        margin-top: -20px;
+        @include breakpoint(large) {
+            font-size: 11px;
+        }
+    }
+}
+
+.change-password {
+    padding: 10px 10px;
+    min-width: 175px;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: 700;
+    color: #fff;
+    &:hover {
+        background: #fff;
+        color: #000;
+    }
+}
+
+/* BIRTHDAY GROUP */
+.control-group__birthday {
+    display: flex;
+    flex-flow: row nowrap;
+    select {
+        border-radius: 0!important;
+    }
+    .select {
+        width: 50%;
+    }
+    .input {
+        width: 25%;
+        &:first-of-type {
+            margin-right: 2px;
+            input {
+                border-radius: $global-input-radius 0 0 $global-input-radius;
+            }
+        }
+        &:last-of-type {
+            margin-left: 2px;
+            input {
+                border-radius: 0 $global-input-radius $global-input-radius 0;
+            }
+        }
+    }
+}
+
+/* /BIRTHDAY GROUP */
+.confirm-area {
+    @include breakpoint(medium down) {
+        text-align: center;
+        min-width: 60%
+    }
+}
+.confirm-button {
+    padding: 7px 10px;
+    min-width: 180px;
+    font-size: rem-calc(15);
+    @include breakpoint(medium down) {
+        min-width: 60%
+    }
+    @include breakpoint(small only) {
+        min-width: 100%
+    }
+}

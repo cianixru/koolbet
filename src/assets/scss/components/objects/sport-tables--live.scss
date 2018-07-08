@@ -1,0 +1,304 @@
+.live-table .row:not(.head):not(.subhead):not(.date) {
+    &:hover {
+        background: none;
+    }
+}
+
+.live-table {
+    @include breakpoint(large) {
+        border: 0;
+    }
+    @include breakpoint(medium down) {
+        margin-top: 5px;
+    }
+    .market-odds .cell {
+        font-size: rem-calc(11);
+    }
+    .row {
+        .specialoddvalue-text {
+            line-height: 2.1;
+            font-size: rem-calc(13);
+        }
+    }
+}
+
+.scoreboard__row--team {
+    &:not(:first-child):not(.head) {
+        border-top: 1px solid rgba(87, 88, 101, 0.31);
+    }
+    &:not(:last-child) {
+        border-bottom: 1px solid #1d1e27;
+    }
+}
+
+.match-info__time {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: rem-calc(11);
+    padding: 3px;
+    width: 100%;
+    font-weight: 500;
+    @include breakpoint(medium) {
+        height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+    span {
+        text-align: center;
+        width: 100%;
+        // display: block;
+    }
+    span:not(:last-of-type) {
+        @include breakpoint(small only) {
+            margin-right: 1rem;
+        }
+
+    }
+    &.red {
+        background-image: linear-gradient(to right, rgba(54, 54, 54, 0) 0%, rgb(195, 55, 55) 100%);
+    }
+    &.yellow {
+        background-image: linear-gradient(to right, rgba(54, 54, 54, 0) 0%, rgb(245, 225, 62) 100%);
+    }
+    &.green {
+        background-image: linear-gradient(to right, rgba(54, 54, 54, 0) 0%, rgb(120, 181, 86) 100%);
+    }
+    &.gray {
+        background-image: linear-gradient(to right, rgba(54, 54, 54, 0) 0%, rgb(196, 196, 191) 100%);
+    }
+}
+
+.live-event-details__wrap {
+    @include breakpoint(large) {
+        @include xy-grid($wrap: true);
+    }
+    >div {
+        &.coll-s {
+            @include xy-cell(shrink, false);
+        }
+        &.coll-a {
+            @include xy-cell(auto, false);
+        }
+        &.coll-s,
+        &.coll-a {
+            @include breakpoint(medium down) {
+                width: 100%
+            }
+        }
+        &.go-to-all-markets {
+            @include breakpoint(large) {
+                padding: 0;
+                font-size: rem-calc(15);
+                border-left: 1px solid $sport-table-border-color;
+                &:hover {
+                    background-color: rgba(226, 226, 226, 0.09);
+                    cursor: pointer;
+                }
+                >div {
+                    width: 25px;
+                    font-weight: 300;
+                }
+            }
+            @include breakpoint(medium down) {
+                margin-top: 2px;
+                background: scale-color($sport-table-dark-bg, $lightness: -20%);
+            }
+        }
+        .go-to-all-markets__button {
+            @include breakpoint(medium down) {
+                color: $primary-color;
+                margin: 0 auto;
+                line-height: 2.3;
+                font-size: rem-calc(14);
+                text-transform: uppercase;
+                span {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .row.head {
+        background: none;
+    }
+    .row.subhead {
+        border-top: 0;
+        border-bottom: 0;
+    }
+    .row.odds,
+    .row.odds:hover {
+        @include breakpoint(medium down) {
+            background: $sport-table-dark-bg!important;
+        }
+    }
+}
+
+.match-info {
+    @extend .grid-container;
+    justify-content: center;
+    height: 100%;
+    @include breakpoint(small only) {
+        flex-flow: column nowrap;
+    }
+    @include breakpoint(medium down) {
+        background-color: $sport-table-dark-bg;
+        margin-bottom: 1px;
+        background-color: rgba(0,0,0,.4);
+    }
+}
+
+.match-info__wrap {
+    @include breakpoint(large) {
+        @include xy-grid($wrap: true);
+        flex-flow: column wrap;
+    }
+    height: 100%;
+    @include breakpoint(medium) {
+        width: 50px;
+    }
+    >div {
+        line-height: rem-calc(14);
+        @include breakpoint(large) {
+            display: flex;
+            flex: 1 1 auto;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+        }
+    }
+}
+
+.scoreboard__table {
+    height: 100%;
+    margin-bottom: 0;
+    border-right: 1px solid $sport-table-border-color;
+    @include breakpoint(medium down) {
+        border-right: 0;
+    }
+}
+
+.scoreboard__row--team {
+    @extend .table-container;
+    font-size: rem-calc(14);
+    height: 50%;
+}
+
+.scoreboard__item {
+    @extend .table-container;
+    align-items: center;
+    padding: $sport-table-live-cell-padding;
+    text-align: center;
+    justify-content: space-between;
+    @include breakpoint(small only) {
+        padding: rem-calc(5);
+    }
+    @include breakpoint(small only) {
+        @include xy-cell(auto, false);
+    }
+}
+
+.scoreboard__item--total {
+    color: $primary-color;
+    font-weight: 700;
+    >div {
+        border-right: 1px solid rgba(255,255,255,.15);
+        padding-right: ($sport-table-live-cell-padding * 2);
+    }
+}
+
+.scoreboard__item-inner {
+    min-width: 18px;
+    display: block;
+    text-align: center;
+}
+
+.scoreboard__item--team {
+    width: 140px;
+    @include breakpoint(small only) {
+        line-height: 1;
+        @include xy-cell(shrink, false);
+        width: 130px;
+    }
+}
+
+.scoreboard__item--team--name {
+    text-align: left;
+    line-height: 1.1;
+    letter-spacing: .3px;
+    @include breakpoint(small only) {
+        width: 100px;
+        line-height: 1;
+    }
+}
+.scoreboard__item--team--cards {
+	display: flex;
+    flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: center;
+}
+[class$="-card"] {
+    border-radius: 2px;
+    width: 9px;
+    height: 13px;
+    margin-left: 5px;
+}
+.red-card {
+    background-image: linear-gradient( 36deg, rgb(202,37,10) 0%, rgb(255,88,61) 100%);
+}
+.yellow-card {
+    background: #fadf60;
+}
+
+/* Starting soon */
+.starting-soon__header {
+    padding: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 20px;
+    @include breakpoint(xxlarge) {
+        margin-top: 30px;
+    }
+    @include breakpoint(small only) {
+        justify-content: center;
+    }
+}
+.starting-soon__icon:before {
+    content: '\E906';
+    font-size: rem-calc(24);
+    margin-right: 10px;
+}
+
+.live-time__title {
+    padding: 0!important;
+    >div {
+        padding: 0 0 0 10px;
+    }
+}
+.live-time {
+    padding: 0!important;
+     > div {
+        @extend .match-info__time;
+        background-image: linear-gradient( to right, rgba(54, 54, 54,0) 0%, rgb(69,95,119) 100%);
+     }
+}
+
+.indicator:before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 7px;
+    background-color: rgba(114, 122, 112, .5);
+}
+[class*="indicator--"].active:before {
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+.indicator--tennis.active:before {
+    background-color: #fbfc00;
+    background-image: radial-gradient(ellipse at center, rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%);
+}
+.indicator--volleyball.active:before {
+    background-color: #e07373;
+    background-image: radial-gradient(ellipse at center, rgba(254,252,234,1) 0%, #e07373 100%);
+}

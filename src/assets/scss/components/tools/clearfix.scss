@@ -1,0 +1,17 @@
+.clearfix {
+    @include clearfix;
+}
+
+*:focus {
+    outline: none;
+}
+
+.scroll section{
+    max-width: 99.9%;
+}
+
+.betslip-area__inner{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }

@@ -1,0 +1,405 @@
+// Colors
+// ---------
+$body-background: #333340;
+$body-background: #313242;
+$body-background: #343642;
+$body-background: #363a4b;
+$body-background: #333647;
+$body-background: #343749;
+$body-background: #343649;
+
+$wrap-body-background: $body-background;
+$header-background: scale-color($body-background, $lightness: -70%);
+$columns-background-color: scale-color($body-background, $lightness: -32%);
+$body-font-color: #fff;
+$primary-color: #FFC400;
+$primary-color: #ffbf00;
+$secondary-color: #767676;
+$third-color: scale-color($body-font-color, $lightness: -25%);
+$primary-link-color: #ecad19;
+$secondary-link-color: #fff;
+$third-link-color: scale-color($body-background, $lightness: 90%);
+$primary-icon-color: scale-color($body-background, $lightness: 82%);
+$global-button-text-color: #000;
+$global-button-background-color: $primary-color;
+$border-color: scale-color($secondary-link-color, $lightness: -70%);
+$header-border: scale-color($border-color, $lightness: -20%);
+$menu-color: scale-color($body-background, $lightness: 3%);
+$menu-active-color: scale-color($body-background, $lightness: 10%);
+$loading-background: rgba(26, 23, 33, 0.9);
+$profile-menu-color: scale-color($secondary-link-color, $lightness: -23%);
+$profile-menu-active-color: $secondary-link-color;
+$switch-input-color: #434553;
+$green-color-button: #53a642;
+$global-dark-bg: #21222f;
+
+// Global
+// ---------
+$global-width: rem-calc(1920);
+$global-width: rem-calc(1600);
+$global-min-width: rem-calc(300);
+$global-lineheight: 1.3;
+$global-margin: 1rem;
+$global-padding: 10px;
+$global-el-padding: 15px;
+$global-position: 1rem;
+$global-menu-padding: 0.7rem 1rem;
+$global-menu-nested-margin: 1rem;
+$global-button-cursor: pointer;
+$global-radius: 4px;
+$global-input-radius: 3px;
+$global-transition: 0;
+$anchor-color: #1a4880;
+$anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
+
+
+// Fonts
+// ---------
+$body-font-family: 'Roboto Condensed', Arial, sans-serif;
+$global-font-size: 100%;
+$global-weight-normal: 500;
+$global-weight-bold: bold;
+
+
+// Breakpoints
+// --------------
+
+$breakpoints: (
+  small: 0,
+  medium: 640px,
+  large: 899px,
+  xlarge: 1180px,
+  xxlarge: 1440px,
+  xxxlarge: 1650px,
+);
+$print-breakpoint: large;
+$breakpoint-classes: (small medium large);
+
+
+// The Grid
+// -----------
+$grid-row-width: $global-width;
+$grid-column-count: 12;
+$grid-column-gutter: (
+  small: 20px,
+  medium: 30px,
+);
+$grid-column-align-edge: true;
+$grid-column-alias: 'columns';
+$block-grid-max: 8;
+$left-right-column-width: 250px;
+$page-grid-gutters: 12px;
+$columns-gutters: 5px;
+$columns-padding: 5px;
+$sport-tbl-gutters: 1rem;
+
+//  Header
+// ---------
+$header-background-color: $header-background;
+$header-height--large: 70px;
+$header-height--small: 50px;
+$header-menu-color: $secondary-link-color;
+$header-menu-active-color: $header-menu-color;
+$header-menu-font-weight: 400;
+$header-menu-font-size: rem-calc(15);
+$header-menu-font-size--small: rem-calc(14);
+$header-top-bottom-padding: rem-calc(10);
+$header-logo-heght--large: ($header-height--large - 26px);
+$header-logo-heght--medium: ($header-height--small - 20px);
+$header-z-index: 20;
+
+// Button
+// ----------
+$button-sizes: (
+  tiny: 0.6rem,
+  small: 0.75rem,
+  default: rem-calc(13),
+  large: rem-calc(13),
+);
+$button-font-family: inherit;
+$button-fill: solid;
+$button-background: $global-button-background-color;
+$button-background-hover: scale-color($button-background, $lightness: -15%);
+$button-color: $global-button-text-color;
+$button-color-alt: $black;
+$button-radius: $global-radius;
+$button-hollow-border-width: 1px;
+$button-opacity-disabled: 0.25;
+$button-background-hover-lightness: -20%;
+$button-hollow-hover-lightness: -50%;
+$button-transition: background-color 0.25s ease-out, color 0.25s ease-out;
+$button-border: 1px solid #fff !default;
+$button-margin: 0;
+$button-letter-spacing: .03em;
+$button-padding: 9px 18px;
+$button-padding: 0.55em 1.08em;
+$button-text-transform: uppercase;
+$button-text-weight: 500;
+
+
+// Off-canvas
+// --------------
+$offcanvas-sizes: (
+  small: 220px,
+  medium: 250px,
+  );
+  $offcanvas-vertical-sizes: (
+    //small: calc(100% - 84px),
+    small: 100%,
+    medium: 100%,
+);
+$offcanvas-background: $body-background;
+$offcanvas-shadow: 0 0 10px rgba($black, 0);
+$offcanvas-inner-shadow-size: 0;
+$offcanvas-inner-shadow-color: rgba($black, 0.25);
+$offcanvas-overlay-zindex: 11;
+$offcanvas-push-zindex: 12;
+$offcanvas-overlap-zindex: 13;
+$offcanvas-reveal-zindex: 12;
+$offcanvas-transition-length: 0.15s;
+$offcanvas-transition-timing: ease;
+$offcanvas-fixed-reveal: true;
+$offcanvas-exit-background: rgba($black, 0.55);
+$maincontent-class: 'off-canvas-content';
+
+
+// Drilldown
+// -------------
+$drilldown-transition: transform 0.15s linear;
+$drilldown-arrows: false;
+$drilldown-padding: 0.7rem 20px;
+$drilldown-nested-margin: 0;
+$drilldown-background: $header-background;
+$drilldown-submenu-padding: $drilldown-padding;
+$drilldown-submenu-background: $header-background;
+$drilldown-arrow-color: $primary-color;
+$drilldown-arrow-size: 6px;
+
+// Forms
+// ---------
+$fieldset-border: 1px solid rgba(255,255,255,.2);
+$fieldset-padding: rem-calc(20);
+$fieldset-margin: rem-calc(18 0);
+$legend-padding: rem-calc(0 3);
+$form-spacing: rem-calc(16);
+$helptext-color: $black;
+$helptext-font-size: rem-calc(13);
+$helptext-font-style: italic;
+$input-prefix-color: $black;
+$input-prefix-background: $light-gray;
+$input-prefix-border: 1px solid $medium-gray;
+$input-prefix-padding: 1rem;
+$form-label-color: $black;
+$form-label-font-size: rem-calc(14);
+$form-label-font-weight: $global-weight-normal;
+$form-label-line-height: 1.8;
+$select-background: transparent;
+$select-triangle-color: rgba(255,255,255,.2);
+$select-radius: $global-radius;
+$input-color: $body-font-color;
+$input-placeholder-color:  scale-color($body-font-color, $lightness: -45%);
+$input-font-family: inherit;
+$input-font-size: rem-calc(14);
+$input-font-weight: $global-weight-normal;
+$input-line-height: $global-lineheight;
+$input-background: $header-background;
+$input-background-focus: $header-background;
+$input-background-disabled: $light-gray;
+$input-border: 1px solid rgba(255,255,255,.2);
+$input-border-focus: 1px solid $dark-gray;
+$input-padding: $form-spacing / 2;
+$input-shadow: none;
+$input-shadow-focus: none;
+$input-cursor-disabled: not-allowed;
+$input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+$input-number-spinners: true;
+$input-radius: 3px;
+$form-button-radius: $global-radius;
+
+
+// Sport Tables
+// ---------
+$table-stack-breakpoint: medium;
+$sport-table-background: rgba(0, 0, 0, .26);
+$sport-table-background: #242630;
+$sport-table-background-hover: #41414f;
+$sport-table-background-hover: rgba(255,255,255,.04);
+$table-border-color: scale-color($header-background, $lightness: 50%);
+$go-to-all-markets-bg: #383843;
+$sport-table-border-color: #4e4f5d;
+$row-border-bottom-color: #222;
+$row-border-top-color: rgba(87, 88, 101, 0.35);
+$subhead-bg-color: rgba(0, 0, 0, 0.35);
+$go-to-all-markets-padding: 0 7px;
+$table-row-head-color: #434553;
+$table-date-value-bg-gradient: linear-gradient(to right, rgba(255, 255, 255, 0.05) 0%, $subhead-bg-color 20%);
+$sport-table-bg-color: none;
+
+// Sport Tables -- LIVE
+// ---------
+$sport-table-dark-bg: darken($body-background, 5%);
+$sport-table-live-cell-padding: rem-calc(6);
+
+
+// Dropdown
+// ------------
+$dropdown-padding: 1rem;
+$dropdown-background: scale-color($body-background, $lightness: -75%);
+$dropdown-hover: rgba(255, 255, 255, 0.1);
+$dropdown-border: none;
+$dropdown-font-size: 1rem;
+$dropdown-width: ($left-right-column-width - 10 * 2);
+$dropdown-radius: 0px;
+$dropdown-sizes: (
+  tiny: 100px,
+  small: 200px,
+  large: 400px,
+);
+
+// Dropdown select 
+// ------------
+$dropdown-select-width: 100%;
+$dropdown-select-container-width: calc(100% - 20px);
+$dropdown-select-font-size: rem-calc(15);
+$dropdown-select-font-weight: 300;
+$dropdown-select-letter-spacing: .5px;
+$dropdown-select-line-height: rem-calc(20);
+$dropdown-select-text-align: left;
+$dropdown-select-padding: 5px 10px;
+$dropdown-select-background: #4e4f58;
+$dropdown-select-icon-size: rem-calc(12);
+
+// Loading
+// ------------
+$loading-background-color: $loading-background;
+$loading-z-index: 19;
+$loading-size: 50px;
+$loading-border-size: 5px;
+
+// Betslip
+// ------------
+$betslip-bg-color-1: rgba(255, 255, 255, 0.01);
+$betslip-bg-color-2: #1c1f29;
+$betslip-bg-color-3: #fffff4;
+$betslip-padding-lr: 15px;
+$betslip-bg-color-dark: #14151d;
+
+// Live
+// ------------
+$tab-carousel-border-left-width: 55px;
+$tab-carousel-border-left-width--small: 55px;
+$tab-carousel-border-left-right: 15px;
+$tab-carousel-border-left-right--small: 8px;
+
+$live-toolbar-color-active: $body-font-color;
+$live-toolbar-color: rgba(255,255,255,.6);
+$live-toolbar-bg-color: #17181f;
+
+
+// <Table>
+// ---------
+
+$table-background: transparent;
+$table-color-scale: 5%;
+$table-border: 0;
+$table-padding: rem-calc(8 10 10);
+$table-hover-scale: 2%;
+$table-row-hover: darken($table-background, $table-hover-scale);
+$table-row-stripe-hover: darken($table-background, $table-color-scale + $table-hover-scale);
+$table-is-striped: true;
+$table-striped-background: smart-scale($table-background, $table-color-scale);
+$table-stripe: even;
+$table-head-background: #434553;
+$table-head-row-hover: darken($table-head-background, $table-hover-scale);
+$table-foot-background: smart-scale($table-background, $table-color-scale);
+$table-foot-row-hover: darken($table-foot-background, $table-hover-scale);
+$table-head-font-color: $body-font-color;
+$table-foot-font-color: $body-font-color;
+$show-header-for-stacked: false;
+$table-stack-breakpoint: medium;
+
+
+// Grid
+// -----------
+
+$grid-column-gutter: (
+  small: 20px,
+  medium: 30px,
+);
+// Profile
+// -----------
+$profile-bg-color: #22232e;
+$profile-section-padding: 25px;
+$profile-section-margin: 25px;
+$profile-gutters-size: rem-calc(25);
+$profile-button-bg--hover: #fff;
+$profile-button-color--hover: #000;
+$avatar-bg-color: #464750;
+$profile-button-bg-color: #464750;
+$avatar-icon-size: 70px;
+$balance-info-button-color: #fff;
+$balance-info-button-bg-color: #5f6065;
+
+// Profile: Bets cards
+// -----------
+$bets-card-border-color: #464750;
+$bets-card-bg: #20212b;
+
+// Progress Bar
+// ----------------
+$progress-height: 12px;
+$progress-background: $medium-gray;
+$progress-margin-bottom: $global-margin;
+$progress-meter-background: $primary-color;
+$progress-radius: 2px;
+
+
+// Mobile Off-canvas menu
+// ----------------
+$mobile-menu-bg: #303038;
+$mobile-menu-list-border-color: rgba(255, 255, 255, 0.1);
+
+
+// Pagination
+// --------------
+$pagination-font-size: rem-calc(16);
+$pagination-margin-bottom: $global-margin;
+$pagination-item-color: $body-font-color;
+$pagination-item-padding: rem-calc(3 10);
+$pagination-item-spacing: rem-calc(1);
+$pagination-radius: 3px;
+$pagination-item-background-hover: $switch-input-color;
+$pagination-item-background-current: $primary-color;
+$pagination-item-color-current: $global-button-text-color;
+$pagination-item-color-disabled: rgba(255,255,255,.5);
+$pagination-ellipsis-color: $body-font-color;
+$pagination-mobile-items: true;
+$pagination-mobile-current-item: false;
+$pagination-arrows: false;
+
+// Modals (Reveal)
+// ----------
+$reveal-background: scale-color($body-background, $lightness: -20%);;
+$reveal-width: 98%;
+$reveal-max-width: $global-width;
+$reveal-padding: $global-padding;
+$reveal-border: 1px solid $medium-gray;
+$reveal-radius: $global-radius;
+$reveal-zindex: 1005;
+$reveal-overlay-background: rgba($black, 0.9);
+
+// Burger button
+// ----------
+$burger-color: $body-font-color;
+
+// Scrollbar
+// ----------
+$scrollbar-thumb-color: #62646b;
+
+
+// Footer toolbar
+// ----------
+$footer-toolbar-bg-color: #171b1c;
+$footer-toolbar-active-color: #353737;
+$footer-toolbar-height: 50px;
+$betslip-counter-bg-color: #e94b35;

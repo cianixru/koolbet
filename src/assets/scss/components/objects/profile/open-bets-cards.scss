@@ -1,0 +1,289 @@
+.my-bets {
+    margin-top: $profile-section-margin;
+    @include breakpoint(small down) {
+        margin: 10px 0;
+    }
+}
+.my-bets__title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.my-bets__cards {
+    display: flex;
+    @include breakpoint(medium) {
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+    .my-bets__item {
+        border-radius: 3px;
+        border: 1px solid $bets-card-border-color;
+        width: 200px;
+        height: 225px;
+        margin: 5px;
+        padding: 15px 15px 12px;
+        border-bottom: 2px solid #aaa;
+        cursor: pointer;
+        background-color: $bets-card-bg;
+        background-image: linear-gradient(to bottom, rgba(54, 57, 66, 0), rgba(255, 255, 255, 0.065) 100%);
+        box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.2);
+        @include breakpoint(small down) {
+            width: calc(50% - 5px);
+            min-width: 135px;
+            &:nth-child(odd) {
+                margin-right: 10px;
+            }
+            margin: 0;
+            margin-bottom: 10px;
+        }
+        &:hover {
+            border-color: rgba(255, 255, 255, .3);
+            .detail-button,
+            .detail-button__icon::after {
+                color: #fff;
+            }
+        }
+        &.cancelled {
+            border-bottom-color: #444;
+        }
+        &.pending {
+            border-bottom-color: #ffdb4d;
+        }
+        &.lost {
+            border-bottom-color: #cc181e;
+        }
+        &.won {
+            border-bottom-color: #42d916;
+        }
+        &.open {
+            border-bottom-color: #fff;
+        }
+    }
+}
+
+.my-bets__cards {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.ticket-number {
+    padding-bottom: 5px;
+    border-bottom: 1px solid $bets-card-border-color;
+}
+
+.ticket__label {
+    font-size: rem-calc(9);
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    color: rgba(255, 255, 255, .6);
+}
+
+.ticket-number__volue {
+    font-size: rem-calc(17);
+    @include breakpoint(small down) {
+        font-size: rem-calc(13);
+        letter-spacing: -.3px;
+    }
+}
+
+.last-date-list__wrapper {
+    margin-top: 10px;
+}
+
+.last-date-list {
+    font-size: rem-calc(12);
+    li {
+        font-weight: 300;
+        padding: 1px 0;
+        letter-spacing: 0.4px;
+    }
+}
+
+.my-bets__item {
+    display: flex;
+    flex-flow: column nowrap;
+    .last-date-list__wrapper {
+        order: 0;
+        flex: 1 1 auto;
+        align-self: auto;
+    }
+    .ticket-detail {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        font-size: rem-calc(14);
+        text-transform: uppercase;
+        border-top: 1px solid #464750;
+        padding-top: 5px;
+        @include breakpoint(small only) {
+            font-size: rem-calc(12);
+        }
+    }
+    .detail-button,
+    .detail-button__icon::after {
+        color: rgba(255, 255, 255, 0.6);
+        font-weight: 300;
+    }
+    .detail-button__icon {
+        position: relative;
+        padding-right: 16px;
+        display: inline-block;
+    }
+    .detail-button,
+    .detail-button__icon {
+        display: inline-block;
+    }
+    .detail-button__icon::after {
+        content: '\E816';
+        position: absolute;
+        bottom: -1px;
+        right: 0;
+        font-size: 10px;
+        height: 12px;
+        width: 15px;
+        line-height: 11px;
+        transform: rotate(-90deg);
+    }
+    .lost {
+        color: #ff2500;
+    }
+    .won {
+        color: #42d916;
+    }
+    .cancelled {
+        color: #ccc;
+    }
+    .open {
+        color: #fff;
+    }
+    .pending {
+        color: #edcc4b;
+    }
+}
+
+.ticket-stake-info {
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: rem-calc(14);
+    padding: 10px 0 5px;
+    >div:not(:last-child) {
+        margin-right: 13px;
+    }
+}
+
+/* my bets filter */
+.bets-filter {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 820px;
+    .cell {
+        @include breakpoint(medium down) {
+            // width: calc(50% - 30px);
+            // margin-right: 30px;
+        }
+        @include breakpoint(small only) {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        @include breakpoint(medium) {
+            &.date {
+                @include xy-cell(auto, false);
+            }
+            &.period {
+                @include xy-cell(shrink, false);
+            }
+            &:not(:first-child) {
+                padding-left: $profile-section-padding;
+            }
+        }
+    }
+}
+
+.period-switcher {
+    border-radius: 4px;
+    display: flex;
+    flex-flow: row nowrap;
+
+}
+.datepicker-input {
+    position: relative;
+    border-radius: 4px;
+    background-color: transparent;
+    border: 1px solid rgba(255,255,255,.2);
+    height: 36px;
+    cursor: pointer;
+    width: 115px;
+    align-items: center;
+    display: flex;
+    &:hover {
+        border-color: rgba(255,255,255,.3)
+    }
+    .datepicker__icon {
+        padding: 0 10px;
+        &::before {
+            content: '\E814';
+            color: #fff;
+        }
+    }
+    input {
+        position: absolute;
+        padding-left: 40px;
+        padding-top: 2px;
+        width: 100%;
+        border: 0;
+        font-size: rem-calc(14);
+        color: #fff;
+        background: transparent;
+        // height: 40px;
+        overflow: hidden;
+        cursor: pointer;        
+    }
+}
+
+.datepicker__delimiter {
+    line-height: 38px;
+    text-align: center;
+    width: 20px;
+    height: 34px;
+}
+
+.switch-controls {
+    .profile__label {
+        margin-bottom: 2px;
+    }
+    select,
+    .datepicker-input {
+        background-color: $switch-input-color;
+        border: 0;
+        height: 34px;
+        cursor: pointer;
+    }
+    select,
+    input {
+        font-weight: 300;
+        margin: 0;
+        letter-spacing: .5px;
+    }
+    select option {
+        background: #0C0D11;
+    }
+}
+
+/* MODAL-INFO */
+.mybet__header {
+    @extend .grid-container;
+    justify-content: space-between;
+    margin: 20px 0;
+    .cell {
+        @include xy-cell(shrink, false);
+        
+    }
+}
+
+.close-button {
+    line-height: 10px;
+    float: right;
+    color: #fff;
+    font-size: 40px;
+}

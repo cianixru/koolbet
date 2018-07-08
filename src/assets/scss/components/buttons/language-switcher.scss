@@ -1,0 +1,32 @@
+.lang-switcher {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: rem-calc(15);
+    @include breakpoint(small only) {
+        margin-right: 5px;
+        line-height: 1;
+    }
+    /* .flag {
+        display: inline-block;
+        margin-top: -1px;
+        height: 17px;
+        width: 29px;
+        background-size: 29px 17px;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+    } */
+    .icon-arrow:before {
+        content: '\E80F';
+        transform: rotate(-90deg);
+        font-size: rem-calc(22);
+        width: 22px;
+        color: #fff;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 0;
+        @include breakpoint(medium down) {
+            margin: 0;
+        }
+    }
+}

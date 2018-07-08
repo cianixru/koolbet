@@ -1,0 +1,94 @@
+.resuts-filter {
+    @include breakpoint(small only) {
+        .cell {
+            flex: 0 0 100%;
+        }
+    }
+}
+.results {
+    .result__group {
+        padding: 20px 0;
+
+    }
+    .date {
+        font-size: rem-calc(20);
+        text-transform: uppercase;
+        margin: 0;
+        margin-bottom: 10px;
+        font-weight: 300;
+        padding-left: 10px;
+        @include breakpoint(small only) {
+            padding: 0 10px;
+            font-size: rem-calc(16);
+            font-weight: 500;
+        }
+    }
+    .league {
+        border-width: 1px 0;
+        padding: 8px 10px;    
+        background: #000;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        font-weight: 500;
+        font-size: rem-calc(14);
+        text-transform: uppercase;
+        color: $primary-color;
+        border: 1px solid $sport-table-border-color;
+        border-width: 1px 0;
+        align-items: center;
+        @include breakpoint(medium down) {
+            font-size: rem-calc(13);
+            text-transform: uppercase;
+        }
+        &:not(:first-of-type) {
+            border-top: 0;
+        }
+        i {
+            margin-right: 3px;
+            font-size: rem-calc(20);
+            &:before {
+                color: $primary-color;
+            }
+        }
+    }
+    .event__row {
+        @extend .grid-container--nowrap;
+        font-weight: 300;
+        align-items: center;
+        padding: 8px 0;
+        font-size: rem-calc(14);
+        line-height: 1.15;
+        background: $profile-bg-color;
+        border-top: 1px solid rgba(78, 79, 93, 0.4);
+        &:not(:last-child) {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+        }
+        &:nth-child(odd) {
+            
+        }
+        &:hover {
+            background: rgba(255,255,255,.04);
+            border-color: transparent;
+        }
+        .time {
+            width: 70px;
+        }
+        .score {
+            font-weight: 500;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 5px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        >div {
+            padding-left: 10px; 
+            padding-right: 10px; 
+        }
+        @include breakpoint(medium down) {
+            font-size: rem-calc(13);
+        }
+    }
+}
+
+

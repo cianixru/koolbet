@@ -1,0 +1,589 @@
+.table-container {
+    @include xy-grid($wrap: false);
+}
+
+.sport-table {
+    font-weight: 300;
+    @include breakpoint(large) {
+        border: 1px solid $sport-table-border-color;
+        border-top: 0;
+        &:not(.live-table):not(.bets-block) .row:not(.head):not(.subhead):not(.date) {
+            border-top: 1px solid $row-border-top-color;
+            &:not(:last-child) {
+                border-bottom: 1px solid $row-border-bottom-color;
+            }
+            &:hover {
+                border-color: transparent;
+            }
+        }
+    }
+    .row {
+        @extend .table-container;
+        font-size: rem-calc(14);
+        @include breakpoint(xxlarge down) {
+            font-size: rem-calc(12);
+        }
+        &.head {
+            @extend .table__row--head;
+        }
+        &.subhead {
+            @extend .table__row--subhead;
+        }
+        @include breakpoint(large) {
+            .specialoddvalue-text {
+                color: $body-font-color;
+                border-radius: 2px;
+                box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.5);
+                box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
+                // background-color: rgba(226, 226, 226, .28);
+                background-color: #555566;
+                // background-image: linear-gradient(to bottom, rgba(54, 57, 66, 0), rgba(255, 255, 255, 0.12) 100%);
+                background-image: linear-gradient(to bottom, rgba(54, 57, 66, 0), rgba(255, 255, 255, 0.07) 100%);
+
+                border: 1px solid transparent;
+                border: 1px solid rgba(255, 255, 255, 0.12);
+                margin: 2px 5px;
+                line-height: 1.7;
+                line-height: 1.8;
+                @include breakpoint(xxxlarge only) {
+                    margin: 2px 5px;
+                }
+                @include breakpoint(xxlarge down) {
+                    margin: 2px 3px;
+                    line-height: 1.6;
+                }
+            }
+            &:not(.head):not(.subhead):not(.date):not(.bets-block__body):hover {
+                background: rgba(0, 0, 0, 0.15);
+            }
+            .specialoddvalue-text:not(.btn-unavailable) {
+                // background: rgba(255, 255, 255, 0.35);
+                &:not(.btn-unavailable):not(.btn-active):hover {
+                    cursor: pointer;
+                    background: rgba(255, 255, 255, 0.4);
+                    color: $body-font-color;
+                }
+            }
+        }
+        @include breakpoint(medium down) {
+            flex-flow: row wrap;
+            &.head,
+            &.subhead {
+                display: none;
+            }
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .cell-s {
+        @include xy-cell(shrink, false);
+        padding: 0 10px;
+        @include breakpoint(medium down) {
+            background: $header-background;
+            font-size: rem-calc(13);
+            line-height: 2;
+            flex-flow: row nowrap !important;
+        }
+    }
+    .cell-a .cell {
+        @include breakpoint(large) {
+            padding: 5px 0;
+        }
+    }
+    .match-start-time-value,
+    .match-start-time-value--live {
+        display: flex;
+        align-items: center;
+        @include breakpoint(xxlarge down) {
+            width: 65px;
+            @include breakpoint(medium down) {
+                width: auto;
+            }
+        }
+        >div {
+            width: 60px;
+            @include breakpoint(medium down) {
+                width: auto;
+            }
+        }
+    }
+    .match-team-value {
+        display: flex;
+        align-items: center;
+        >div {
+            width: 160px;
+            font-weight: 500;
+            @include breakpoint(xxxlarge) {
+                width: 220px;
+            }
+            text-overflow: ellipsis;
+            overflow: hidden;
+            line-height: 1;
+        }
+        @include breakpoint(medium down) {
+            padding: 3px 0;
+            >div {
+                width: 100%;
+                text-align: center;
+                font-size: rem-calc(15);
+                color: $primary-color;
+            }
+            @include xy-cell(auto, false);
+        }
+    }
+    &.x-size {
+        .match-team-value {
+            >div {
+                @include breakpoint(xxlarge only) {
+                    width: 110px;
+                }
+            }
+        }
+        .specialoddvalue-text {
+            margin: 2px 1px;
+        }
+    }
+    .combo-market-teams {
+        display: flex;
+        align-items: center;
+        width: 170px;
+        flex-wrap: wrap;
+        >div {
+            width: 160px;
+            @include breakpoint(xxxlarge) {
+                width: 260px;
+            }
+            text-overflow: ellipsis;
+            overflow: hidden;
+            line-height: 1;
+        }
+        @include breakpoint(medium down) {
+            display: none;
+        }
+    }
+    .go-to-all-markets {
+        align-items: center;
+        display: flex;
+        padding: $go-to-all-markets-padding;
+        >div {
+            width: 20px;
+            text-align: center;
+            @extend .ico;
+            position: relative;
+            cursor: pointer;
+            @include breakpoint(medium down) {
+                width: auto;
+            }
+        }
+    }
+    .match-specialoddvalue-value {
+        @include breakpoint(large) {
+            @include xy-cell(auto, false);
+        }
+        @include breakpoint(medium down) {
+            width: 100%;
+            order: 5;
+        }
+        >div {
+            @include breakpoint(large) {
+                @include xy-grid($wrap: false);
+            }
+            @include breakpoint(medium down) {
+                padding-bottom: 5px;
+            }
+        }
+    }
+}
+
+.match-group {
+    @include xy-cell(auto, false);
+    @include breakpoint(medium down) {
+        padding: 0px;
+        width: 100%;
+    }
+    .cell {
+        @include xy-cell(auto, false);
+        justify-content: center;
+        text-align: center;
+        line-height: 1.1;
+        @include breakpoint(medium down) {
+            font-size: rem-calc(14);
+        }
+    }
+    @include breakpoint(medium down) {
+        &:before {
+            content: attr(group-label);
+            line-height: 1.1;
+            font-size: rem-calc(13);
+            text-align: center;
+            display: block;
+            text-transform: uppercase;
+            margin: 10px;
+            font-weight: 500;
+        }
+    }
+}
+
+.market-odds {
+    @extend .table-container;
+    height: 100%;
+    @include breakpoint(large) {
+        margin: 0 3px;
+    }
+    @include breakpoint(medium down) {
+        flex-wrap: wrap;
+    }
+    @include breakpoint(xxlarge) {
+        margin: 0 5px;
+    }
+    @include breakpoint(xxxlarge) {
+        margin: 0 5px;
+    }
+    .cell {
+        @include breakpoint(large) {
+            align-self: center;
+        }
+        @include breakpoint(medium down) {
+            @include xy-gutters($gutters: $page-grid-gutters, $gutter-type: margin);
+            max-width: 100%;
+            line-height: 2;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            text-align: center;
+            min-width: 130px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            .specialoddvalue-text {
+                border: 1px solid $secondary-color;
+                line-height: 2;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                text-align: center;
+            }
+            .specialoddvalue-text:before {
+                content: attr(data-oddtag);
+                font-size: rem-calc(11);
+                display: block;
+                background: rgba(255, 255, 255, .18);
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                text-align: center;
+                background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.018), rgba(255, 255, 255, 0.17) 100%);
+            }
+            .specialoddvalue-text.active {
+                border: 1px solid $primary-color;
+                &:before {
+                    background: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+.sport-table .row:not(.head):not(.subhead) .go-to-all-markets {
+    padding: $go-to-all-markets-padding;
+    cursor: pointer;
+    @include breakpoint(large) {
+        border-left: 1px solid rgba(255, 255, 255, .09);
+        &:hover {
+            background-color: rgba(226, 226, 226, .09);
+        }
+    }
+}
+
+.go-to-all-markets.active {
+    background: $go-to-all-markets-bg;
+    color: $primary-color;
+    & .go-to-all-markets__button {
+        color: $primary-color;
+    }
+}
+
+.specialoddvalue-text.btn-unavailable {
+    opacity: .5;
+    color: rgba(255, 255, 255, .7) !important;
+    border-color: rgba(255, 255, 255, .05) !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    cursor: default;
+    @include breakpoint(medium down) {
+        background-image: none !important;
+        background-color: rgba(0, 0, 0, 0.5) !important;
+        border-color: rgba(255, 255, 255, .3) !important;
+    }
+}
+
+.specialoddvalue-text.btn-active {
+    cursor: pointer;
+    @include breakpoint(large) {
+        background-color: $primary-color !important;
+        
+        color: #000 !important;
+    }
+    @include breakpoint(medium down) {
+        border-color: scale-color($primary-color, $lightness: 40%) !important;
+        &:before {
+            color: #000;
+            font-weight: 700;
+            content: attr(data-oddtag);
+            font-size: rem-calc(11);
+            display: block;
+            background: $primary-color !important;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            text-align: center;
+        }
+    }
+}
+
+.date-value {
+    font-weight: 500;
+    padding: 3px 10px;
+    font-size: rem-calc(13);
+    background: rgba(69, 70, 80, 0.3);
+    width: 100%;
+    color: $primary-color;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    
+    @include breakpoint(large) {
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.05) 0%, $subhead-bg-color 20%);
+        line-height: 1.2;
+    }
+    @include breakpoint(medium down) {
+        text-align: center;
+        background: rgba(255, 255, 255, 0.22);
+        padding: 3px 10px;
+        font-size: 0.8125rem;
+        background: rgba(69, 70, 80, 0.3);
+        border-top: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        width: 100%;
+        color: $body-font-color;
+        
+    }
+}
+
+.category-live__container {
+    border: 1px solid #4e4f5d;
+    border-top: 0;
+    .sport-table {
+        border: 0;
+    }
+    &:not(:last-of-type) {
+        border-bottom: 0;
+    }
+}
+
+.tournament-group-name__container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    @include breakpoint(medium down) {
+        justify-content: center;
+        border-bottom: 1px solid #000;
+        margin-top: 5px;
+    }
+}
+
+.tournament-group-name {
+    width: 100%;
+    flex: 0 1 auto;
+    align-self: auto;
+    background: #000;
+    padding: 5px 10px;
+    font-size: rem-calc(13);
+    
+    color: $primary-color;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    border-radius: $global-radius $global-radius 0 0;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.12) 100%);
+    @include breakpoint(medium down) {
+        padding: 5px 25px;
+        width: 100%;
+        text-align: center;
+        font-weight: 500;
+    }
+}
+
+@include breakpoint(medium down) {
+    .hide-4-small {
+        display: none;
+    }
+}
+
+/* all-markets */
+.all-markets {
+    // button
+    @include breakpoint(large) {
+        background: $go-to-all-markets-bg
+    }
+}
+
+.all-markets-sport-table {
+    max-height: 0;
+    margin: 0;
+    opacity: 0;
+    &.expanded {
+        opacity: 1;
+        max-height: 10000px;
+        overflow: hidden;
+    }
+    margin: 0 auto;
+    justify-content: center;
+    @include xy-grid;
+    @include breakpoint(large) {
+        //max-width: 500px;
+        padding: 0;
+        @include xy-grid-layout(3, '.coll', $gutters: 10px, $gutter-position: left right);
+        .match-group {
+            margin: 10px 0;
+            &:hover:before {
+                background-color: $sport-table-background-hover;
+            }
+        }
+    }
+    @include breakpoint(medium down) {
+        .coll {
+            width: 100%;
+        }
+        padding-bottom: 5px;
+    }
+}
+
+.all-markets-sport-table__wrapper {
+    .match-group {
+        @include xy-cell(auto, false);
+        position: relative;
+        @include breakpoint(medium down) {
+            background: $body-background;
+            border: 1px solid $sport-table-background;
+        }
+        padding: 0;
+        width: 100%;
+        @include breakpoint(large) {
+            cursor: pointer;
+            background: $sport-table-background;
+        }
+        .cell {
+            @include xy-cell(auto, false);
+            justify-content: center;
+            text-align: center;
+            line-height: 1.1;
+            font-size: rem-calc(14);
+        }
+        &:after {
+            content: '\E834';
+            position: absolute;
+            font-family: "fontello";
+            font-style: normal;
+            font-weight: normal;
+            speak: none;
+            line-height: 1.3;
+            right: 10px;
+            top: 0;
+            @include breakpoint(medium down) {
+                line-height: 2;
+            }
+        }
+        &:before {
+            content: attr(group-label);
+            line-height: 2.5;
+            white-space: nowrap;
+            font-size: rem-calc(14);
+            text-align: center;
+            display: block;
+            text-transform: uppercase;
+            @include breakpoint(large) {
+                text-align: left;
+                padding: 0 10px;
+                background: #17181f;
+                line-height: 1.8;
+                font-size: rem-calc(12);
+            }
+        }
+    }
+    .market-odds {
+        @extend .table-container;
+        height: 100%;
+        flex-wrap: wrap;
+        max-height: 0;
+        overflow: hidden;
+        &.expanded {
+            max-height: 10000px;
+        }
+        .cell {
+            @include xy-gutters($gutters: $page-grid-gutters, $gutter-type: margin);
+            max-width: 100%;
+            line-height: 2;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            text-align: center;
+            min-width: 70px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            @include breakpoint(large) {
+                margin: 0;
+                padding: 5px 4px;
+            }
+            .specialoddvalue-text {
+                @include breakpoint(medium down) {
+                    border: 1px solid $secondary-color;
+                }
+                line-height: 2;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                text-align: center;
+                @include breakpoint(large) {
+                    span {
+                        display: block;
+                        margin: 0;
+                        color: #fff;
+                        border-radius: 2px;
+                        line-height: 1.6;
+                        -webkit-box-shadow: 1px 2px 1px 0px rgba(0, 0, 0, 0.28);
+                        box-shadow: 1px 2px 1px 0px rgba(0, 0, 0, 0.28);
+                        background-color: rgba(226, 226, 226, .28);
+                        background-image: linear-gradient(to bottom, rgba(54, 57, 66, 0), rgba(255, 255, 255, 0.12) 100%);
+                        border: 1px solid transparent;
+                        cursor: pointer; //transition: background 0.15s, color 0.15s;
+                        &:hover {
+                            background: rgba(255, 255, 255, 0.4);
+                        }
+                    }
+                }
+            }
+            .specialoddvalue-text:before {
+                content: attr(data-oddtag);
+                font-size: rem-calc(11);
+                display: block;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                text-align: center;
+                @include breakpoint(large) {
+                    background: #242730;
+                }
+                @include breakpoint(medium down) {
+                    line-height: 1.8;
+                    background: rgba(255, 255, 255, .18);
+                    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.018), rgba(255, 255, 255, 0.17) 100%);
+                }
+            }
+            .specialoddvalue-text.active {
+                border: 1px solid $primary-color;
+                &:before {
+                    background: $primary-color;
+                }
+            }
+        }
+    }
+}

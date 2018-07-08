@@ -1,0 +1,12 @@
+/* align Y */
+.alignY--middle {
+    @include flex-align($y: middle);
+}
+.alignY--stretch {
+    @include flex-align($y: stretch);
+}
+
+/* align XY */
+.alignX--justifyY--middle {
+    @include flex-align($x: justify, $y: middle);
+}

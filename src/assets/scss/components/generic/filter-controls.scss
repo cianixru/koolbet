@@ -1,0 +1,27 @@
+.filter__wrapper {
+    background: $profile-bg-color;
+    border-bottom: 1px solid rgba(101, 102, 109, 0.5);
+    border-top: 1px solid rgba(101, 102, 109, 0.5);
+    // margin: 0 -10px;
+}
+.filter__container {
+    display: flex;
+    flex-flow: row nowrap;
+    @include breakpoint(large down) {
+        flex-wrap: wrap;
+    }
+    .cell {
+        @include xy-cell(auto, false);
+        @include breakpoint(large down) {
+            @include xy-cell(50%, false);
+        }
+        position: relative;
+        padding: 10px;
+        font-weight: 500; 
+        button,
+        li {
+            text-transform: uppercase;
+            font-size: rem-calc(13);
+        }
+    }
+}

@@ -1,0 +1,67 @@
+.account-area__button {
+    margin-left: 8px;
+    &.login {
+        border: 1px solid #fff;
+        color: #fff;
+        background: none;
+        &:hover {
+            background: none;
+            color: $primary-link-color;
+            border-color: $primary-link-color;
+        }
+    }
+    &.login-register {
+        width: 26px;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        height: 16px;
+        cursor: pointer;
+        @include breakpoint(large) {
+            display: none;
+        }
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: $burger-color;
+            box-shadow: 0 7px 0 $burger-color, 0 14px 0 $burger-color;
+            content: '';
+        }
+    }
+    &.search {
+        @extend .ico;
+
+        &::before {
+            content: '\E81F';
+            font-size: rem-calc(21);
+        }
+    }
+    @include breakpoint(medium down) {
+        &.login-register {
+            display: block;
+            cursor: pointer;
+        }
+    }
+}
+
+
+.account-area__button:not(.lang-switcher):not(.login-register) {
+    @include breakpoint(medium down) {
+        font-size: rem-calc(12);
+        margin-left: 5px; 
+        margin-right: 5px; 
+        line-height: 0;
+        padding: 13px;
+        white-space: nowrap;
+    }
+}
+
+.account-area__container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}

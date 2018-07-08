@@ -1,0 +1,36 @@
+{{> header}}
+<div class="page__container profile">
+    <div class="page-grid">
+        <!-- profile__sidebar -->
+        {{> profile-left-menu}}
+        <!-- /.profile__sidebar -->
+        <div class="page-grid__item main profile-grid scroll" data-scrollbar>
+            <div class="scroll_wrap">
+
+                <!-- PROFILE -->
+                <div class="profile">
+                    <!-- .profile -->
+                    <div class="profile__container">
+
+                        <!-- main-section -->
+                        <div class="profile__main">
+                            <div class="header-nav--small h2--small">
+                                    <i class="back__icon"></i>
+                                    <span>My account</span>
+                            </div>                                    
+                            <div class="profile__wrapper">
+                                <div class="profile__inner">
+                                    {{> account-details}}
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.main-section -->
+                    </div>
+                    <!-- /.profile -->
+                </div>
+                <!-- /PROFILE -->
+
+            </div>
+        </div>
+    </div>
+</div>

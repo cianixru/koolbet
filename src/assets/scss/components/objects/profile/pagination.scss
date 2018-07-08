@@ -1,0 +1,32 @@
+$p1: 16px;
+.profile .pagination {
+    margin-top: 10px;
+    @include breakpoint(medium down) {
+        text-align: center;
+    }
+    .link {
+        text-decoration: none;
+        padding: 5px 10px;
+    }
+    li:not(.disabled) .link:hover {
+        cursor: pointer;
+        background: $pagination-item-background-hover;
+        border-radius: $pagination-radius;
+    }
+
+    .pagination-previous,
+    .pagination-next  {
+        font-family: fontello;
+        line-height: $pagination-font-size;
+        font-size: $pagination-font-size;
+    }
+    .pagination-previous .link::before, .pagination-previous.disabled .link::before {
+        content: '\E80E';
+    }
+    .pagination-next .link::before, .pagination-next.disabled .link::before {
+        content: '\E80E';
+    }
+    .pagination-next .link, .pagination-next.disabled .link {
+        transform: rotate(180deg)!important;
+    }
+}

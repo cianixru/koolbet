@@ -1,0 +1,184 @@
+svg {
+    color: #fff;
+    fill: currentcolor;
+    stroke: currentcolor;
+}
+
+.ico,
+.icon-button {
+    cursor: pointer;
+}
+
+.ico {
+    width: rem-calc(40);
+    margin: 0 3px;
+    text-align: center;
+}
+
+.icon0::before,
+.icon0::after,
+.ico::before,
+.ico::after {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: rem-calc(24);
+    padding: 5px 0;
+    margin: 0;
+    text-align: center;
+}
+
+[class$="__icon"]:before,
+[class$="__icon"]:after,
+[class^="icon-"]:before,
+[class*=" icon-"]:before,
+.icon0::before,
+.icon0::after,
+.ico::before,
+.ico::after {
+    color: $body-font-color;
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    // margin-right: .2em;
+    // margin-left: .2em;
+    line-height: 1;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon0::before,
+.icon0::after {
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
+[class^="icon-wear"]:before {
+    font-family: "wear";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+}
+.icon-wear {
+    font-family: "wear";
+    font-style: normal;
+    font-weight: normal;
+}
+.icon-wear-1:before { content: '\e809'; } /* '' */
+.icon-wear-2:before { content: '\e80b'; } /* '' */
+
+
+
+
+i.all_sports:before {
+    content: '\E936';
+}
+
+i.soccer:before {
+    content: '\E939';
+}
+
+i.american_football:before {
+    content: '\E949';
+}
+
+i.baseball:before {
+    content: '\E935';
+}
+
+i.basketball:before {
+    content: '\E805';
+}
+
+i.darts:before {
+    content: '\E811';
+}
+
+i.handball:before {
+    content: '\E93E';
+}
+
+i.ice_hockey:before {
+    content: '\E93F';
+}
+
+i.rugby:before {
+    content: '\E946';
+}
+
+i.snooker:before {
+    content: '\E85C';
+}
+
+i.tennis:before {
+    content: '\E943';
+}
+
+i.volleyball:before {
+    content: '\E947';
+}
+
+i.motorsport:before {
+    content: '\E93C';
+}
+
+i.horses:before {
+    content: '\E841';
+}
+
+/* sidebar icons */
+.myaccount__icon:before {
+    content: '\E88C';
+    font-size: 22px;
+}
+
+.affiliate__icon:before {
+    content: '\E84A';
+    font-size: 22px;
+}
+
+.mybets__icon:before {
+    content: '\E847';
+    font-size: 22px;
+}
+
+.transaction__icon:before {
+    content: '\E88E';
+    font-size: 22px;
+}
+
+.mywallet__icon:before {
+    content: '\E88F';
+    font-size: 20px;
+}
+.back__icon:before {
+    content: '\E813';
+    font-size: 18px;
+}
+.title--live__icon:before {
+      content: '\E914';
+    }
+    
+.period__icon:before {        
+    content: '\E839';
+    margin-right: 3px;
+}
+
+.facebook__icon:before {
+    content: '\F230';
+}
