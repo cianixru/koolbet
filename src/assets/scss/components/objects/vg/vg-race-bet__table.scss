@@ -1,0 +1,73 @@
+.race-bet__table {
+    .row {
+        @extend .grid-container--nowrap;
+        align-items: center;
+        .cell {
+            font-size: rem-calc(14);
+            padding: 5px 0;
+            >div {
+                padding: 0 10px;
+            }
+        }
+    }
+    .head {
+        @extend .table__row--subhead;
+        padding-top: 25px;
+        font-size: rem-calc(12);
+    }
+    .row:not(.head) {
+        border-top: 1px solid rgba(87, 88, 101, 0.35);
+        border-bottom: 1px solid #222;
+    }
+    .team--details__cell {
+        @extend .grid-container--nowrap;
+        align-items: center;
+        .number {}
+        .silk {
+            img {
+                max-width: 50px;
+            }
+        }
+        .team--name {
+            .name {
+                font-size: rem-calc(18);
+            }
+        }
+        .rating {
+            svg {
+                fill: #fff !important;
+                opacity: .75;
+                height: 10px;
+            }
+        }
+    }
+    .last5__cell div {
+        width: 100px;
+        text-align: center;
+    }
+    .last5__list {
+        .Form5 {
+            opacity: 1.0;
+        }
+        .Form4 {
+            opacity: 0.75;
+        }
+        .Form3 {
+            opacity: 0.65;
+        }
+        .Form2 {
+            opacity: 0.55;
+        }
+        .Form1 {
+            opacity: 0.45;
+        }
+    }
+    .win__cell div {
+        width: 100px;
+        text-align: center;
+    }
+    .place__cell div {
+        width: 100px;
+        text-align: center;
+    }
+}

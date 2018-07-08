@@ -1,0 +1,37 @@
+.race-bet__tab {
+    margin-top: 30px;
+    text-transform: uppercase;
+    >ul {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        border-bottom: 1px solid #707280;
+        >li {
+            cursor: pointer;
+            flex: 1 1 auto;
+            text-align: center;
+            position: relative;
+            height: 100%;
+            padding: 10px 0; 
+            color: rgba(255, 255, 255, .7);
+            letter-spacing: .1px;
+            &:after {
+                background: #ffbf00;
+                content: '';
+                height: 3px;
+                width: 100%;
+                left: 0;
+                bottom: 0;
+                position: absolute;
+                opacity: 0;
+                transition: .25s opacity;
+            }
+            &.active {
+                color: $secondary-link-color;
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

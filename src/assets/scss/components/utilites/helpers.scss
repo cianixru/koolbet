@@ -61,3 +61,8 @@
 .nw {
     white-space: nowrap;
 }
+.inline {
+    li {
+        display: inline-block;
+    }
+}
