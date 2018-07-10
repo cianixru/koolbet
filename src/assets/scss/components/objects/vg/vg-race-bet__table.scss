@@ -216,4 +216,10 @@
             font-size: rem-calc(13);
         }
     }
+    .odd--value {
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 4px;
+        padding: 5px;
+        margin-right: 5px;
+    }
 }

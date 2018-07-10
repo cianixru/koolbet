@@ -24,4 +24,8 @@
         color: #a7a7a7;
         font-weight: 500;
     }
+    &:not(.btn-active):not(.btn-unavailable):hover {
+        background: rgba(255,255,255,.4);
+        color: #fff;
+    }
 }
