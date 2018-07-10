@@ -1,14 +1,9 @@
 .bet-button--style1 {
     color: $body-font-color;
     border-radius: 2px;
-    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
-    // background-color: rgba(226, 226, 226, .28);
     background-color: #555566;
-    // background-image: linear-gradient(to bottom, rgba(54, 57, 66, 0), rgba(255, 255, 255, 0.12) 100%);
     background-image: linear-gradient(to bottom, rgba(54, 57, 66, 0), rgba(255, 255, 255, 0.07) 100%);
-    
-    border: 1px solid transparent;
     border: 1px solid rgba(255, 255, 255, 0.19);
     line-height: 1.8;
     font-size: rem-calc(16);
@@ -16,8 +11,6 @@
         cursor: pointer;
     }
     &.highlight {
-        color: $primary-color;
-        color: #fff;
         font-weight: 500;
     }
     &.shading {
@@ -26,6 +19,5 @@
     }
     &:not(.btn-active):not(.btn-unavailable):hover {
         background: rgba(255,255,255,.4);
-        color: #fff;
     }
 }
