@@ -1,6 +1,6 @@
 .race-bet__table {
     .row {
-        @extend .grid-container--nowrap;
+        @extend .grid-container;
         align-items: center;
         .cell {
             font-size: rem-calc(14);
@@ -11,41 +11,122 @@
         }
     }
     .head {
-        @extend .table__row--subhead; // padding-top: 5px;
-        font-size: rem-calc(12);
+        @extend .table__row--head; // padding-top: 5px;
+        div {
+            font-size: rem-calc(12);
+        }
+        @include breakpoint(medium down) {
+            display: none;
+        }
     }
     .row:not(.head) {
-        border-top: 1px solid rgba(87, 88, 101, 0.35);
-        border-bottom: 1px solid #222;
+        background: rgba(0, 0, 0, .2);
+        &:not(:last-child) {
+            margin-bottom: 2px;
+        }
+        &:hover {
+            background: rgba(0, 0, 0, .3);
+        }
     }
     .button-bet {
         padding: 0 !important;
         .specialoddvalue-text {
             @extend .bet-button--style1; // max-width: 60px;
-            margin: 0 auto;
+            margin: 0 auto; // line-height: 2.1!important;
+            height: 31px;
+            @include breakpoint(medium down) {
+                /*  */
+                text-align: right;
+                width: 100%;
+                height: 100%;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0 !important;
+                /*  */
+            }
+            &.btn-active {
+                background: #ffbf00 !important;
+            }
+            @include breakpoint(medium down) {
+                & {
+                    padding: 3px 8px;
+                }
+                &:before {
+                    content: attr(data-oddtag);
+                    color: #fff;
+                    font-weight: 300; // display: inline-block;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    font-size: rem-calc(16); // background: #ffbf00 !important;
+                    // text-align: center;
+                }
+                &.btn-active,
+                &.btn-active:before {
+                    background: #ffbf00 !important;
+                    color: #000;
+                    font-weight: 500;
+                }
+                &,
+                &:before {
+                    font-size: 14px !important;
+                }
+                &.btn-unavailable {
+                    justify-content: center !important;
+                    border-color: #555566!important;
+                    background-color: #555566 !important;
+                }
+            }
         }
     }
     .team--details__cell {
         @extend .grid-container--nowrap;
         align-items: center;
-        @include breakpoint(small down) {
-            width: 100%;
-            flex: none;
+        @include breakpoint(medium down) {
+            width: 100% !important;
+            flex: none !important;
         }
-        .number {}
+        .number {
+            width: 35px;
+            text-align: right;
+            font-weight: 700;
+            font-size: rem-calc(17);
+        }
         .silk {
+            text-align: center;
+            width: 70px;
             img {
                 max-width: 50px;
             }
         }
         .team--name {
-            .name {
-                font-size: rem-calc(18);
-            }
+            @include breakpoint(medium only) {
+                display: flex;
+                flex-flow: row wrap;
+                // justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                >div:not(:last-child) {
+                    margin-right: 20px;
+                }
+                .rating,
+                .last5 {
+                    @include xy-cell(shrink, false);
+                }
+                
+            }    
+        }
+        .name {
+            font-size: rem-calc(18);
+            @include xy-cell(auto, false);
         }
         .rating {
             @include breakpoint(large) {
-                display: none;
+                // display: none;
             }
             svg {
                 fill: #fff !important;
@@ -54,22 +135,13 @@
             }
         }
     }
-    .last5__cell div {
-        width: 100px;
-        text-align: center;
-        @include breakpoint(medium down) {
-            display: none;
-        }
-    }
-    .rating__cell {
-        @include breakpoint(medium down) {
-            display: none;
-        }
+    .last5__cell {
+        display: none;
         div {
-            width: 200px;
+            width: 100px;
             text-align: center;
-            svg {
-                height: 12px;
+            @include breakpoint(medium down) {
+                display: none;
             }
         }
     }
@@ -90,12 +162,59 @@
             opacity: 0.45;
         }
     }
-    .win__cell div {
-        width: 100px;
-        text-align: center;
+    .win__cell {
+        div {
+            width: 100px;
+            text-align: center;
+        }
     }
-    .place__cell div {
-        width: 100px;
-        text-align: center;
+}
+
+.place__cell div {
+    width: 100px;
+    text-align: center;
+}
+
+.place__cell {
+    @include breakpoint(large) {
+        flex: 0 0 auto;
+        width: auto;
+    }
+    @include breakpoint(medium down) {
+        flex: 1 1 0;
+        width: auto;
+    }
+
+
+    
+    padding: 5px 10px!important;
+    @include xy-cell(auto, false);
+    @include breakpoint(medium down) {
+        padding: 5px 3px!important;
+        &:not(:last-child){
+            margin-right: 5px;
+        }
+        div {
+            // width: 65px;
+            width: auto;
+        }
+    }
+}
+
+.place-bets__wrapper {
+    text-align: right;
+}
+.place-bets__button {
+    width: 100%;
+    border-radius: 0 0 4px 4px;
+    font-weight: 700;
+    i {
+        @extend .ico;
+        &:before {      
+            content: '\E813';
+            transform: rotate(180deg);
+            color: $global-button-text-color;
+            font-size: rem-calc(13);
+        }
     }
 }

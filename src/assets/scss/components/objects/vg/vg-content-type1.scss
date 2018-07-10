@@ -12,6 +12,12 @@
     font-weight: 500;
     margin: 0;
     color: $primary-color;
+    @include breakpoint(medium down) {
+        font-size: rem-calc(20);
+    }
+    @include breakpoint(small only) {
+        font-size: rem-calc(18);
+    }
 }
 .vg-meeting--id {
     color: rgba(255,255,255,.5);

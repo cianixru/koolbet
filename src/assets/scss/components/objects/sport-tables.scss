@@ -5,15 +5,18 @@
 .sport-table {
     font-weight: 300;
     @include breakpoint(large) {
-        border: 1px solid $sport-table-border-color;
+        // border: 1px solid $sport-table-border-color;
         border-top: 0;
         &:not(.live-table):not(.bets-block) .row:not(.head):not(.subhead):not(.date) {
-            border-top: 1px solid $row-border-top-color;
+            // border-top: 1px solid $row-border-top-color;
+            background: rgba(0, 0, 0, .16);
+            // margin-top: 1px;
             &:not(:last-child) {
-                border-bottom: 1px solid $row-border-bottom-color;
+                // border-bottom: 1px solid $row-border-bottom-color;
+                border-bottom: 1px solid rgba(255, 255, 255, .1);
             }
             &:hover {
-                border-color: transparent;
+                // border-color: transparent;
             }
         }
     }
@@ -22,6 +25,7 @@
         font-size: rem-calc(14);
         @include breakpoint(xxlarge down) {
             font-size: rem-calc(12);
+            margin-bottom: 0!important;
         }
         &.head {
             @extend .table__row--head;
@@ -41,7 +45,7 @@
                 background-image: linear-gradient(to bottom, rgba(54, 57, 66, 0), rgba(255, 255, 255, 0.07) 100%);
 
                 border: 1px solid transparent;
-                border: 1px solid rgba(255, 255, 255, 0.12);
+                border: 1px solid rgba(255, 255, 255, 0.08);
                 margin: 2px 5px;
                 line-height: 1.7;
                 line-height: 1.8;
@@ -50,11 +54,11 @@
                 }
                 @include breakpoint(xxlarge down) {
                     margin: 2px 3px;
-                    line-height: 1.6;
+                    line-height: 1.7;
                 }
             }
             &:not(.head):not(.subhead):not(.date):not(.bets-block__body):hover {
-                background: rgba(0, 0, 0, 0.15);
+                background: rgba(0, 0, 0, 0.3);
             }
             .specialoddvalue-text:not(.btn-unavailable) {
                 // background: rgba(255, 255, 255, 0.35);
@@ -320,8 +324,8 @@
 .specialoddvalue-text.btn-active {
     cursor: pointer;
     @include breakpoint(large) {
+        font-weight: 500;
         background-color: $primary-color !important;
-        
         color: #000 !important;
     }
     @include breakpoint(medium down) {
@@ -586,4 +590,8 @@
             }
         }
     }
+}
+
+.row:not(.subhead) .match-start-time-value {
+    color: rgba(255, 255, 255, 0.7);
 }

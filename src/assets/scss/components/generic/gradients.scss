@@ -19,53 +19,53 @@ $linear-gradient-to: rgba(255, 255, 255, 0.16);
         &.results {
             background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $linear-gradient-to 100%),
             linear-gradient(to left, $second-gradient-from 3%, $second-gradient-to 61%), 
-            url(/assets/img/sport-title-bg/results.png);        
+            url(../../assets/img/sport-title-bg/results.png);        
             background-position: left, left, right 0 bottom 0;
         }
         &.soccer {
             background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $linear-gradient-to 100%),
             linear-gradient(to left, $second-gradient-from 3%, $second-gradient-to 61%), 
-            url(/assets/img/sport-title-bg/soccer.png);        
+            url(../../assets/img/sport-title-bg/soccer.png);        
         }
         &.american_football {
             background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $linear-gradient-to 100%),
             linear-gradient(to left, $second-gradient-from 3%, $second-gradient-to 61%), 
-            url(/assets/img/sport-title-bg/american_football.png);        
+            url(../../assets/img/sport-title-bg/american_football.png);        
         }
         &.basketball {
             background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $linear-gradient-to 100%),
             linear-gradient(to left, $second-gradient-from 3%, $second-gradient-to 61%), 
-            url(/assets/img/sport-title-bg/basketball.png);        
+            url(../../assets/img/sport-title-bg/basketball.png);        
         }
         &.darts {
             background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $linear-gradient-to 100%),
             linear-gradient(to left, $second-gradient-from 3%, $second-gradient-to 61%), 
-            url(/assets/img/sport-title-bg/darts.png);        
+            url(../../assets/img/sport-title-bg/darts.png);        
         }
         &.handball {
             background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $linear-gradient-to 100%),
             linear-gradient(to left, $second-gradient-from 3%, $second-gradient-to 61%), 
-            url(/assets/img/sport-title-bg/handball.png);        
+            url(../../assets/img/sport-title-bg/handball.png);        
         }
         &.rugby {
             background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $linear-gradient-to 100%),
             linear-gradient(to left, rgba(0, 0, 0, 0.1) 3%, $second-gradient-to 61%), 
-            url(/assets/img/sport-title-bg/rugby.png);        
+            url(../../assets/img/sport-title-bg/rugby.png);        
         }
         &.tennis {
             background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $linear-gradient-to 100%),
             linear-gradient(to left, $second-gradient-from 3%, $second-gradient-to 61%), 
-            url(/assets/img/sport-title-bg/tennis.png);        
+            url(../../assets/img/sport-title-bg/tennis.png);        
         }
         &.volleyball {
             background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $linear-gradient-to 100%),
             linear-gradient(to left, $second-gradient-from 3%, $second-gradient-to 61%), 
-            url(/assets/img/sport-title-bg/volleyball.png);        
+            url(../../assets/img/sport-title-bg/volleyball.png);        
         }
         &.baseball {
             background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $linear-gradient-to 100%),
             linear-gradient(to left, $second-gradient-from 3%, $second-gradient-to 61%), 
-            url(/assets/img/sport-title-bg/baseball.png);        
+            url(../../assets/img/sport-title-bg/baseball.png);        
         }
     }
 }
