@@ -60,12 +60,15 @@
                 opacity: 0;
                 transition: .25s opacity;
             }
+            &.active {
+                color: $header-menu-active-color;
+                &:before {
+                    opacity: 1;
+                }
+            }
             &:hover {
                 color: $header-menu-color;
             }
-        }
-        &.active a {
-            color: $header-menu-active-color;
         }
         &.active a:before,
         &:hover a:before {

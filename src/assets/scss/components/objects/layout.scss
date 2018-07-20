@@ -37,8 +37,9 @@
 .page-grid__item {
     margin: $columns-padding 0 0;
     &.main {
-        padding: 0 $columns-padding;
-        @include xy-cell(auto, $gutters: $columns-gutters, $gutter-position: left right);
+        // padding: 0 $columns-padding;
+        padding: 0;
+        @include xy-cell(auto, false);
         section:not(:first-of-type) {
             margin: 10px 0;
             @include breakpoint(medium down) {
