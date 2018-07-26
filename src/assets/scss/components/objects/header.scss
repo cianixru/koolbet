@@ -70,10 +70,6 @@
                 color: $header-menu-color;
             }
         }
-        &.active a:before,
-        &:hover a:before {
-            opacity: 1;
-        }
     }
     @include breakpoint(medium down) {
         display: none;
