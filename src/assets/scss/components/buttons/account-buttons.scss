@@ -34,7 +34,6 @@
     }
     &.search {
         @extend .ico;
-
         &::before {
             content: '\E81F';
             font-size: rem-calc(21);
@@ -48,12 +47,11 @@
     }
 }
 
-
 .account-area__button:not(.lang-switcher):not(.login-register) {
     @include breakpoint(medium down) {
         font-size: rem-calc(12);
-        margin-left: 5px; 
-        margin-right: 5px; 
+        margin-left: 5px;
+        margin-right: 5px;
         line-height: 0;
         padding: 13px;
         white-space: nowrap;
@@ -66,18 +64,17 @@
     align-items: center;
 }
 
-
 /* Logged user box */
 
 $user-info-height: 34px;
 $user-info-height-md: 28px;
 $user-info-bg-color: #464750;
-
 .logged-account__container {
     @extend .grid-container--nowrap;
     align-items: center;
     margin-left: 5px;
 }
+
 .user-info {
     @extend .ico;
     background: $user-info-bg-color;
@@ -90,7 +87,7 @@ $user-info-bg-color: #464750;
         height: $user-info-height-md;
     }
     &:hover {
-        background-color: rgba(255,255,255,.3);
+        background-color: rgba(255, 255, 255, .3);
     }
     &:before {
         content: '\F007';
@@ -104,6 +101,7 @@ $user-info-bg-color: #464750;
         }
     }
 }
+
 .user-balance {
     align-items: center;
     display: flex;
@@ -118,6 +116,7 @@ $user-info-bg-color: #464750;
         height: $user-info-height-md;
     }
 }
+
 .user-balance--deposit {
     background: $primary-color;
     color: #000;
@@ -137,9 +136,18 @@ $user-info-bg-color: #464750;
         line-height: rem-calc(20);
     }
 }
+
 .user-balance--refresh {
     font-size: rem-calc(15);
     @include breakpoint(xlarge down) {
         font-size: rem-calc(14);
     }
+}
+
+#user-info__menu {
+    z-index: 20;
+}
+
+#menu-list-grow {
+    transition: opacity 0ms, transform 0ms !important;
 }
