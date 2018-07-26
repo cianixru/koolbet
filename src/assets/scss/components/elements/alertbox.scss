@@ -1,0 +1,23 @@
+.alertbox {
+    color: rgba(0, 0, 0, .75);
+    letter-spacing: .3px;
+    margin: 0 24px 15px;
+    padding: 0;
+    position: relative;    
+    padding: 8px 15px 8px 15px;
+    border-radius: 4px;
+    border: 1px solid #ff7a73;
+    background-color: #fff1f0;
+    font-weight: 500;
+}
+
+.alertbox__message {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.alertbox .alert:before {
+    width: auto;
+    font-size: 18px;
+    line-height: 1;
+    margin-right: 0;
+}

@@ -52,6 +52,9 @@
     width: 100%;
     height: auto;
     margin-bottom: 15px;
+    @include breakpoint(large) {
+        display: none;
+    }
 }
 .btn-toggle-hide {
     @extend .ico;   

@@ -65,3 +65,31 @@
     flex-flow: row nowrap;
     align-items: center;
 }
+
+
+/* Logged user box */
+
+.logged-account__container {
+    @extend .grid-container--nowrap;
+    align-items: center;
+}
+.user-info {
+    @extend .ico;
+    background: rgba(255,255,255,.25);
+    align-items: center;
+    display: flex;
+    width: 35px;
+    height: 32px;
+    &:before {
+        content: '\F007';
+        font-size: rem-calc(16);
+        padding: 0;
+        line-height: 32px;
+        margin: 0 auto;
+    }
+}
+.user-balance {
+    background: $primary-color;
+    color: #000;
+    padding: 6px 0;
+}
