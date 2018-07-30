@@ -71,6 +71,7 @@
 
 .live-event-details__wrap {
     @include breakpoint(large) {
+        background: $components-bg-color-secondary;
         @include xy-grid($wrap: true);
     }
     >div {
@@ -172,6 +173,7 @@
     height: 100%;
     margin-bottom: 0;
     border-right: 1px solid $sport-table-border-color;
+    background: $components-bg-color;
     @include breakpoint(medium down) {
         border-right: 0;
     }
