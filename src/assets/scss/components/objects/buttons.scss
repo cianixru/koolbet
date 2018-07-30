@@ -76,7 +76,7 @@ label {
     position: relative;
     z-index: 1;
     padding: 7px 10px;
-    background: rgba(255, 255, 255, 0.02);
+    // background: rgba(255, 255, 255, 0.02);
     @include breakpoint(medium down) {
         background: rgba(255, 255, 255, 0.055);
     }
