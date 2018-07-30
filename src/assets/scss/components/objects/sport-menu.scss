@@ -19,13 +19,11 @@
 	flex-direction: row;
     flex-wrap: nowrap;
     color: $primary-color;
-    border-top: 1px solid rgba(255, 255, 255, 0.04);
-    border-bottom: 1px solid #000;
+    // border-top: 1px solid rgba(255, 255, 255, 0.04);
+    // border-bottom: 1px solid #000;
+    border-top: 1px solid #ffbf00;
     @extend .header-gradient-1;
     line-height: 1.5;
-}
-.header__sport-menu 
-{
     .arr-down {
         margin-right: 8px;
         @extend .ico;
@@ -128,7 +126,7 @@
         line-height: 2.2;
     }
     > li {     
-        background: $menu-color;
+        // background: $components-bg-color;
         // margin-bottom: 1px;
         @include breakpoint(medium down) {
             margin-bottom: 0;
@@ -315,8 +313,6 @@
     @include breakpoint(small down) {  
         height: 35px;
     }
-    &::placeholder {
-        }
 }
 
 .icon-search {

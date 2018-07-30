@@ -20,7 +20,7 @@ $global-button-text-color: #000;
 $global-button-background-color: $primary-color;
 $border-color: scale-color($secondary-link-color, $lightness: -70%);
 $header-border: scale-color($border-color, $lightness: -20%);
-$menu-color: scale-color($body-background, $lightness: 3%);
+$components-bg-color: scale-color($body-background, $lightness: 3%);
 $menu-active-color: scale-color($body-background, $lightness: 10%);
 $loading-background: rgba(26, 23, 33, 0.9);
 $profile-menu-color: scale-color($secondary-link-color, $lightness: -23%);
@@ -219,7 +219,7 @@ $table-border-color: scale-color($header-background, $lightness: 50%);
 $go-to-all-markets-bg: #383843;
 $sport-table-border-color: #4e4f5d;
 $row-border-bottom-color: #22232E;
-$row-border-top-color: rgba(87, 88, 101, 0.2);
+$row-border-light-color: rgba(87, 88, 101, 0.2);
 $subhead-bg-color: rgba(0, 0, 0, 0.35);
 $go-to-all-markets-padding: 0 7px;
 

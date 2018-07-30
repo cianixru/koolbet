@@ -5,19 +5,13 @@
 .sport-table {
     font-weight: 300;
     @include breakpoint(large) {
-        // border: 1px solid $sport-table-border-color;
         border-top: 0;
         &:not(.live-table):not(.bets-block) .row:not(.head):not(.subhead):not(.date) {
-            // border-top: 1px solid $row-border-top-color;
-            background: rgba(0, 0, 0, .16);
-            // margin-top: 1px;
+            background: $components-bg-color;
             &:not(:last-child) {
-                // border-bottom: 1px solid $row-border-bottom-color;
                 border-bottom: 1px solid rgba(255, 255, 255, .1);
             }
-            &:hover {
-                // border-color: transparent;
-            }
+            &:hover {}
         }
     }
     .row {
@@ -25,7 +19,7 @@
         font-size: rem-calc(14);
         @include breakpoint(xxlarge down) {
             font-size: rem-calc(12);
-            margin-bottom: 0!important;
+            margin-bottom: 0 !important;
         }
         &.head {
             @extend .table__row--head;
@@ -37,17 +31,12 @@
             .specialoddvalue-text {
                 color: $body-font-color;
                 border-radius: 2px;
-                box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.5);
                 box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
-                // background-color: rgba(226, 226, 226, .28);
                 background-color: #555566;
-                // background-image: linear-gradient(to bottom, rgba(54, 57, 66, 0), rgba(255, 255, 255, 0.12) 100%);
                 background-image: linear-gradient(to bottom, rgba(54, 57, 66, 0), rgba(255, 255, 255, 0.07) 100%);
-
                 border: 1px solid transparent;
                 border: 1px solid rgba(255, 255, 255, 0.08);
                 margin: 2px 5px;
-                line-height: 1.7;
                 line-height: 1.8;
                 @include breakpoint(xxxlarge only) {
                     margin: 2px 5px;
@@ -58,10 +47,9 @@
                 }
             }
             &:not(.head):not(.subhead):not(.date):not(.bets-block__body):hover {
-                background: rgba(0, 0, 0, 0.3);
+                background: $components-bg-color--hover;
             }
             .specialoddvalue-text:not(.btn-unavailable) {
-                // background: rgba(255, 255, 255, 0.35);
                 &:not(.btn-unavailable):not(.btn-active):hover {
                     cursor: pointer;
                     background: rgba(255, 255, 255, 0.4);
@@ -353,7 +341,7 @@
     width: 100%;
     color: $primary-color;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-    
+    border-bottom: 1px solid $row-border-light-color;
     @include breakpoint(large) {
         background: linear-gradient(to right, rgba(255, 255, 255, 0.05) 0%, $subhead-bg-color 20%);
         line-height: 1.2;
@@ -368,7 +356,6 @@
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         width: 100%;
         color: $body-font-color;
-        
     }
 }
 
@@ -402,7 +389,6 @@
     background: #000;
     padding: 5px 10px;
     font-size: rem-calc(13);
-    
     color: $primary-color;
     letter-spacing: .5px;
     text-transform: uppercase;
@@ -423,6 +409,7 @@
 }
 
 /* all-markets */
+
 .all-markets {
     // button
     @include breakpoint(large) {
