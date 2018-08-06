@@ -58,15 +58,25 @@
 .bs-checkboxes {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
 	align-items: center;
     color: $body-font-color;
     height: 34px;
     background: $betslip-bg-color-2;
+    padding: 0 15px;
+    svg {
+        color: $primary-color;
+        width: 18px;
+        height: 18px;
+    }
     @include breakpoint(xxlarge) {
         // border-bottom: 1px solid #555;
     }
-    label {
+    span:last-of-type {
+        color: #fff;
+        margin-left: 5px;
+    }
+    label, span {
         font-size: rem-calc(13);
             letter-spacing: .2px;
         &:before {
@@ -184,8 +194,9 @@
         @extend .ico;
         width: auto;
         height: 18px;
-        margin: 0;
-        margin-top: -6px;
+        margin: 0;       
+        margin-top: -4px;
+        align-self: flex-start;
         &:before {
             margin: 0;
             content: '\E829';
