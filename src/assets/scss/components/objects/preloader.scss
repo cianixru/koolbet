@@ -19,7 +19,7 @@
     background: $loading-background;
     // display: none;
     &::after {
-        animation: load .65s infinite linear;
+        animation: load .5s infinite linear;
         background: transparent;
         border: $loading-border-size solid hsla(0,0%,39%,.8);
         border-radius: 100%;
