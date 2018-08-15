@@ -80,7 +80,6 @@ label {
     position: relative;
     z-index: 1;
     padding: 7px 10px;
-    background: $components-bg-color-secondary;
     @include breakpoint(medium down) {
         background: rgba(255, 255, 255, 0.055);
     }

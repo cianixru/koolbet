@@ -7,7 +7,7 @@
     @extend .header-sports-gradient;
     @include xy-grid(horizontal, false);
     .cell {
-        @include xy-cell(shrink, false);       
+        @include xy-cell(shrink, false);
     }
     .title-cell {
         @include xy-cell(auto, false);
@@ -15,7 +15,7 @@
         line-height: 1;
         letter-spacing: .15px;
         font-weight: 500;
-        color: $primary-color;       
+        color: $primary-color;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
@@ -39,7 +39,7 @@
             font-size: rem-calc(28);
         }
     }
-    .controls-cell {       
+    .controls-cell {
         height: 100%;
         @include xy-grid(horizontal, false);
         align-items: center;
@@ -74,7 +74,7 @@
                 transform: rotate(270deg);
             }
             &.arr-up:before {
-                transform: rotate(180deg)!important;
+                transform: rotate(180deg) !important;
             }
             @include breakpoint(medium down) {
                 display: none;
@@ -89,20 +89,19 @@
             padding: 0;
             background: #fff;
             height: 20px;
+            width: 29px;
             &:before {
                 // background: #fff;
                 content: '\E860';
                 font-size: rem-calc(35);
                 line-height: 10px;
                 margin-left: -5px;
-                color:  #fb8585;
+                color: #fb8585;
             }
             &.active:before {
                 color: red;
             }
-            &:hover:before {
-
-            }
+            &:hover:before {}
         }
     }
 }
