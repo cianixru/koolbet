@@ -149,15 +149,28 @@
         }
     }
 }
+.system-letter {
+    text-align: center;
+    margin-left: 0;
+    width: 25px;
+    display: block;
+    margin-right: 5px;
+    color: #3b92d2;
+//     &::before {
+//     content: counter(section, upper-alpha);
+//   }
+}
 
 .bs-list__wrapper {
     width: 100%;
     background: $betslip-bg-color-3;
     color: #333;
+    // counter-reset: section; 
 }
 .bs__item {
     @extend .grid-container;
-    padding: 5px 8px 5px 5px;
+    padding: 5px 8px 5px 3px;
+    // counter-increment: section;
     &:not(:last-child) {
         border-bottom: 1px dotted rgba(0,0,0,.25);
     }
@@ -210,7 +223,7 @@
 
 .bs-icon-banker {
     @extend .ico;
-    margin-right: 5px;
+    margin-right: 2px;
     &:before {
         content: '\E836';
         font-size: rem-calc(16);
