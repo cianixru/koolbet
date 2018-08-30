@@ -228,7 +228,7 @@
         content: '\E836';
         font-size: rem-calc(16);
         line-height: 9px;
-        color: #000;
+        color: #1d1d28;
         opacity: .4;
         height: 18px;
     }
@@ -575,7 +575,7 @@
     // max-height: 116px;
 }
 .systems-list li {
-    padding: 5px 10px;
+    padding: 5px 0 5px 10px;
 }
 .systems-list [class*=-label] [type=radio] {
     opacity: 0;
@@ -610,4 +610,6 @@
     line-height: 1;
 }
 
-
+.systems-list label {
+    display: block;
+}

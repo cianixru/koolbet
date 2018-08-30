@@ -1,19 +1,25 @@
-#categoriesMenu {
-    @include breakpoint(medium down) {
-        
-    }
+#root {
+    overflow: hidden
 }
+
+#categoriesMenu {
+    @include breakpoint(medium down) {}
+}
+
 .page__container,
 .header__container {
     max-width: $global-width;
     min-width: $global-min-width;
     margin: 0 auto;
 }
+
 .page__container {
     background: $body-background;
+
     &.profile {
         // background: $profile-bg-color;
     }
+
     @include breakpoint(small only) {
         // margin-top: 35px;
     }
@@ -23,50 +29,61 @@
     @extend .grid-container;
     @include xy-gutters($gutters: $page-grid-gutters, $gutter-type: padding, $gutter-position: left right top);
     height: calc(100vh - 70px);
+
     @include breakpoint(large down) {
         height: calc(100vh - 50px);
         padding-left: 0;
         padding-right: 0;
         // padding-top: 0;
     }
+
     &.loading-blur {
         transition: .2s filter linear;
         filter: blur(1px);
     }
 }
+
 .page-grid__item {
     margin: $columns-padding 0 0;
+
     &.main {
         padding: 0;
         @include xy-cell(auto, false);
+
         section:not(:first-of-type) {
             margin: 10px 0;
+
             @include breakpoint(medium down) {
                 margin-top: 6px;
             }
         }
+
         &.profile {
             padding: 0 5px;
             margin-left: .15625rem;
             margin-right: .15625rem;
         }
     }
+
     &.profile-grid {
         @include breakpoint(medium down) {
             margin: 0;
             padding: 0;
         }
     }
+
     .categories-menu__container,
     .betslip-area__container {
         width: $left-right-column-width;
         height: 100%;
         padding: 0 $columns-padding;
     }
+
     &.betslip-area {
         @include breakpoint(xxlarge) {
             @include xy-cell(shrink, false);
         }
+
         @include breakpoint(large down) {
             display: none;
         }
@@ -75,19 +92,24 @@
 
 .categories-menu__container.mini {
     width: auto;
+
     ul ul,
     span,
     .sport-menu__title {
-        display: none!important;
+        display: none !important;
     }
+
     li[aria-expanded='true'] {
         background: #4d4e65;
     }
+
     .sport-menu__collapse-all:before {
-     transform: rotate(-90deg);
+        transform: rotate(-90deg);
     }
+
     .sport-menu__item {
         padding: 6px 0;
+
         i {
             text-align: center;
             width: 100%;
