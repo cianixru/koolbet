@@ -236,6 +236,12 @@
         //color: $primary-color;
         opacity: 1;
     }
+    &.lock {
+        cursor: not-allowed;
+        &:before {
+        opacity: .18;
+        }
+    }
 }
 
 .bs-options__option-odds {
