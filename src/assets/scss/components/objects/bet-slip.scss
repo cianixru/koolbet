@@ -56,6 +56,9 @@
 }
 
 .bs-checkboxes {
+    [class^='.MuiTouchRipple-root'] {
+        display: none;
+    }
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;

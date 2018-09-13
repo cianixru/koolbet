@@ -134,7 +134,7 @@
             border-bottom: 1px solid $header-border;
         }
         &:hover,
-        &[aria-expanded='true'] {
+        &.opened {
             background: $menu-active-color;
             .sport-menu__item {
                 border-bottom-color: transparent !important;
@@ -207,7 +207,7 @@
         display: inline-block;
         padding: 0 10px;
     }
-    li[aria-expanded='true'] .icon:before {
+    li.opened .icon:before {
         transform: rotate(0deg);
     }
     >li {
@@ -276,6 +276,7 @@
     .icon.active-tournament:before {
         @include breakpoint(large) {
             content: "\E81A";
+            color: $primary-color;
         }
     }
 }
