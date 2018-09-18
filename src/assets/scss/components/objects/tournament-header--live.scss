@@ -5,37 +5,44 @@
     // border-radius: 5px 5px 0 0;
     @extend .header-sports-gradient;
     @include xy-grid(horizontal, false);
-    &.soccer {
+    &.Soccer {
         border-top: 2px solid #A9C144;
     }
-    &.american_football {
-        border-top: 2px solid #A9C144;
+    &.Tennis {
+        border-top: 2px solid #ee6531;
     }
-    &.baseball {
-        border-top: 2px solid #A9C144;
+    &.Baseball {
+        border-top: 2px solid #acacac;
     }
-    &.basketball {
-        border-top: 2px solid #A9C144;
+    &.Basketball {
+        border-top: 2px solid #ffa600;
     }
-    &.darts {
-        border-top: 2px solid #A9C144;
+    &.IceHockey {
+        border-top: 2px solid #c0c8cb;
     }
-    &.handball {
-        border-top: 2px solid #A9C144;
+    &.Volleyball {
+        border-top: 2px solid #82aec2;
     }
-    &.ice_hockey {
-        border-top: 2px solid #A9C144;
+    &.Handball {
+        border-top: 2px solid #5094ab;
     }
-    &.rugby {
-        border-top: 2px solid #EE6531;
+    &.Badminton {
+        border-top: 2px solid #348a5b;
     }
-    &.snooker {
-        border-top: 2px solid #A9C144;
+    &.Darts {
+        border-top: 2px solid #b66d28;
     }
-    &.tennis {
-        border-top: 2px solid #A9C144;
+    &.AmericanFootball {
+        border-top: 2px solid #6b9122;
     }
-    &.volleyball {
+    &.Rugby {
+        border-top: 2px solid #acacac;
+    }
+    &.Snooker {
+        border-top: 2px solid #acacac;
+    }
+
+    &.TopTournaments {
         border-top: 2px solid #A9C144;
     }
     .cell {
@@ -152,7 +159,7 @@
     background: #fff;
     height: 12px;
     width: 19px;
-    margin-right: 3px;
+    margin-right: 6px;
     border-radius: 5px;
     &::before {       
         content: '\E830';
