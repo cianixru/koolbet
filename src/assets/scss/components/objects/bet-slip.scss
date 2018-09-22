@@ -190,6 +190,51 @@
             margin-bottom: 5px;
         }
     }
+    &.closed {
+        background: #ffeae3;
+        position: relative;
+        .bs-icon-banker:before {
+            opacity: .4;
+        }
+        input {
+            opacity: .4;
+        }
+        .bet-event .row .bet-close:before {
+            color: #fff;            
+            position: relative;
+            z-index: 2;
+        }
+        &:before {
+            background:#666;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            display: block;
+            content: '';
+            top: 0;
+            left: 0;
+            z-index: 1;
+            opacity: .75;
+        }
+        & .error-message {
+            z-index: 1;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            width: 100%;
+            color: #fff;
+        }
+        & .error-message__title {
+            font-size: rem-calc(22);
+            font-weight: 700;
+        }
+        & .error-message__countdown {
+            font-size: rem-calc(16);
+        }
+        
+    }
 }
 
 
