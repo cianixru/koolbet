@@ -100,8 +100,8 @@
     input[type=text],
     input[type=tel],
     input[type=email],
-    input[type=password],
-    input {
+    input[type=password]
+    {
         @extend .input-w;
     }
     .control-select {
