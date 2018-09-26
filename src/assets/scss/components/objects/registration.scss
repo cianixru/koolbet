@@ -100,7 +100,8 @@
     input[type=text],
     input[type=tel],
     input[type=email],
-    input[type=password] {
+    input[type=password],
+    .registration-form input {
         @extend .input-w;
     }
     .control-select {
