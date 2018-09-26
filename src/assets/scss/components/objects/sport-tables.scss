@@ -287,14 +287,24 @@
     }
 }
 
-.go-to-all-markets.active {
-    background: $go-to-all-markets-bg;
-    color: $primary-color;
-    & .go-to-all-markets__button {
+.go-to-all-markets {
+    &:hover a {
+        color: $primary-color !important;
+    }
+    .go-to-all-markets__button {
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+        &.active {
+        background: $go-to-all-markets-bg;
         color: $primary-color;
+        & .go-to-all-markets__button {
+            color: $primary-color;
+        }
     }
 }
-
 .specialoddvalue-text.btn-unavailable {
     opacity: .5;
     color: rgba(255, 255, 255, .7) !important;
