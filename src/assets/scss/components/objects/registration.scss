@@ -101,7 +101,7 @@
     input[type=tel],
     input[type=email],
     input[type=password],
-    .registration-form input {
+    input {
         @extend .input-w;
     }
     .control-select {
