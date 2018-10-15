@@ -1,5 +1,8 @@
 .categories-menu__container {
     height: 100%;
+    @include breakpoint(medium down) {
+        padding-bottom: 90px;
+    }
 }
 
 .categories-menu__inner>div:not(.header__sport-menu),
@@ -9,7 +12,7 @@
 }
 
 .header__sport-menu {
-    padding: 6px 15px;
+    padding: 6px 20px;
     margin: 0;
     font-size: rem-calc(14);
     text-transform: uppercase;
@@ -20,6 +23,9 @@
     border-top: 1px solid #ffbf00;
     @extend .header-gradient-1;
     line-height: 1.5;
+    @include breakpoint(medium down) {
+        border-top: 0; 
+    }
     .arr-down {
         margin-right: 8px;
         @extend .ico;
@@ -55,7 +61,15 @@
 .tournaments-menu__title {
     cursor: pointer;
 }
-
+.js-drilldown-back a:before,
+.sport-submenu a:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    @include breakpoint(medium down) {
+        line-height: rem-calc(22);
+    }
+}
 .sport-menu {
     &:not(:last-child) {
         margin-bottom: 10px;
@@ -95,15 +109,14 @@
         text-transform: uppercase;
         @include breakpoint(medium down) {
             line-height: rem-calc(22);
-            font-size: rem-calc(16);
+            font-size: rem-calc(14);
         }
     }
     ul span.title {
-        font-size: rem-calc(13);
         font-size: rem-calc(12);
     }
     span.count {
-        color: $third-color;
+        color: #e2e2e2;
         font-size: rem-calc(11);
         @include breakpoint(medium down) {
             font-size: rem-calc(12);
@@ -113,6 +126,15 @@
             background: rgba(255, 255, 255, .1);
             width: 25px;
             border-radius: 4px;
+        }
+    }
+    @include breakpoint(medium down) {
+        .is-submenu-item .icon > .count {
+            margin-right: 0;
+        }
+        .sport-submenu__events-menu a {
+            padding: .7rem 20px;
+            // padding: 6px 17px 6px 0;
         }
     }
     &,
@@ -131,7 +153,7 @@
             margin-bottom: 0;
             background: rgba(0, 0, 0, .1);
             background: none;
-            border-bottom: 1px solid $header-border;
+            // border-bottom: 1px solid $header-border;
         }
         &:hover,
         &.opened {
@@ -153,15 +175,14 @@
     }
     .sport-menu__item {
         padding: 11px $global-el-padding;
-        @include breakpoint(large) {
-            border-bottom: 1px solid rgba(22, 29, 38, 0.85);
-            border-top: 1px solid rgb(66, 66, 81);
-            i::before {
-                font-size: rem-calc(20);
-                color: $primary-icon-color;
-                line-height: 0;
-            }
+        border-bottom: 1px solid rgba(22, 29, 38, 0.85);
+        border-top: 1px solid rgb(66, 66, 81);
+        i::before {
+            font-size: rem-calc(20);
+            color: $primary-icon-color;
+            line-height: 0;
         }
+    
         @include breakpoint(medium down) {
             padding: 15px 20px;
             font-size: rem-calc(20);
@@ -186,22 +207,27 @@
 
 .sport-submenu {
     padding: 0 3px 1px 2px;
+    @include breakpoint(large) {
+        .is-submenu-itemopened {
+            background: #101016!important;
+        }
+    }
     @include breakpoint(medium down) {
         padding: 0;
     }
     >li>a.icon:before {
-        @include breakpoint(large) {
+        // @include breakpoint(large) {
             content: '\E801';
             transform: rotate(-90deg);
             transition: $global-transition;
-        }
+        // }
     }
     >li>a.icon:after {
-        @include breakpoint(medium down) {
-            content: '\E80F';
-            transform: rotate(180deg);
-            font-size: rem-calc(28);
-        }
+        // @include breakpoint(medium down) {
+        //     content: '\E80F';
+        //     transform: rotate(180deg);
+        //     font-size: rem-calc(28);
+        // }
     }
     .icon:before {
         display: inline-block;
@@ -210,7 +236,7 @@
     li.opened .icon:before {
         transform: rotate(0deg);
     }
-    >li {
+    li {
         &:not(:last-child) {
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
@@ -222,22 +248,25 @@
             display: flex;
         }
         &.is-submenu-item {
-            background: $header-background;
-            @include breakpoint(medium down) {
-                background: $body-background;
-            }
+            // background: $header-background;
+            // @include breakpoint(medium down) {
+            //     background: $body-background;
+            // }
         }
     }
     .sport-submenu__item {
         display: flex;
         padding: 0 17px 0 10px;
+        @include breakpoint(medium down) {
+            padding: 5px 17px 5px 10px;
+        }
         .title {
             padding-left: 0 !important;
         }
     }
 }
 
-.sport-submenu>li.is-submenu-item {
+.sport-submenu li.is-submenu-item {
     transition: border $global-transition;
     &:hover {
         background: $body-background;
@@ -258,26 +287,26 @@
         padding-left: 0 !important;
     }
     .icon:before {
-        @include breakpoint(large) {
+        // @include breakpoint(large) {
             content: "\F0C8";
             font-size: rem-calc(13);
             padding-right: 8px;
             padding-left: 8px;
             transform: rotate(0deg) !important;
-        }
+        // }
     }
     .icon:after {
-        @include breakpoint(small down) {
-            content: '\E80F';
-            font-size: rem-calc(22);
-            transform: rotate(-180deg) !important;
-        }
+        // @include breakpoint(small down) {
+        //     content: '\E80F';
+        //     font-size: rem-calc(22);
+        //     transform: rotate(-180deg) !important;
+        // }
     }
     .icon.active-tournament:before {
-        @include breakpoint(large) {
+        // @include breakpoint(large) {
             content: "\E81A";
             color: $primary-color;
-        }
+        // }
     }
 }
 
@@ -290,8 +319,8 @@
     align-content: stretch;
     align-items: center;
     padding: 15px;
-    @include breakpoint(small down) {
-        padding: 35px;
+    @include breakpoint(medium down) {
+        padding: 15px;
     }
 }
 
@@ -359,13 +388,23 @@
 }
 
 .drilldown .js-drilldown-back>a::before {
-    content: "\E816";
-    transform: rotate(90deg);
-    margin-right: 15px;
+    content: "\E813";
+    margin-right: 10px;
+    color: #fff;
 }
 
 .js-drilldown-back {
-    background: $menu-active-color !important;
+    list-style: none;
+    // background: $menu-active-color !important;
+    // margin-left: 10px; 
+    font-size: rem-calc(14);
+    a {
+        padding: 15px 20px;
+        text-transform: uppercase;
+        &:before {
+            line-height: rem-calc(17) !important;
+        }
+    }
 }
 
 .drilldown .is-drilldown-submenu {
@@ -394,6 +433,9 @@
         width: auto;
         height: 20px;
     }
+    @include breakpoint(medium down) {
+        display: none;
+    }
 }
 
 .sport-menu__collapse-mini {
@@ -411,4 +453,45 @@
     @extend .grid-container;
     justify-content: space-between;
     @include xy-cell(shrink, false);
+}
+
+.sub-sub-menu {
+    .sport-submenu__item {
+        padding: 12px 20px 12px 20px!important;
+    }
+    span.title {
+        font-size: rem-calc(14) !important;
+    }
+    a.icon:after {
+        content: '\E80F';
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+        font-size: 1.75rem;
+        font-family: "fontello";
+        color: #dadada;
+    }
+    a.icon:before {
+        content: none!important;
+    }
+    a.icon>.count {
+        color: #e2e2e2;
+        margin-right: 12px!important;
+    }
+    &.last {
+        a.icon {
+            padding-left: 20px;
+        }
+        li:not(:last-child) {
+            border-bottom: 1px solid rgba(255,255,255,.1);
+        }
+    }
+}
+
+.sport-menu li {
+    ul.sport-submenu .is-submenu-item {
+        @include breakpoint(large) {
+           background: #101016!important;
+        }
+    }
 }

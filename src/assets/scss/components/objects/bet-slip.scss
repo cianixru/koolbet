@@ -253,10 +253,11 @@
     }
     .bet-close {
         @extend .ico;
-        width: auto;
-        height: 18px;
+        width: 20px;
+        height: 20px;
         margin: 0;       
         margin-top: -4px;
+        margin-right: -5px;
         align-self: flex-start;
         &:before {
             margin: 0;

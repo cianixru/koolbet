@@ -24,7 +24,7 @@
     }
     .catName {
         @include breakpoint(medium down) {
-            display: none;
+            // display: none;
         }
     }
     .icon-cell {

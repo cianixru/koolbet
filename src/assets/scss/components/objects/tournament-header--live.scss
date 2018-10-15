@@ -141,7 +141,7 @@
     color: $body-font-color;
     letter-spacing: .55px;
     @include breakpoint(medium down) {
-        padding: 3px 25px;
+        padding: 3px 25px 2px;
         width: 100%;
         text-align: center;
     }
@@ -163,7 +163,7 @@
     border-radius: 5px;
     &::before {       
         content: '\E830';
-        font-size: 21px;
+        font-size: 22px;
         line-height: 1px;
         left: -1px;
         top: 1px;

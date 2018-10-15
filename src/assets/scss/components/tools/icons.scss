@@ -90,7 +90,9 @@ i.Soccer:before {
     content: '\E939';
 }
 
-i.Football:before {
+i.Football:before,
+i.AmericanFootball:before,
+ {
     content: '\E949';
 }
 
@@ -137,6 +139,9 @@ i.Volleyball:before {
 i.MotorRacing:before {
     content: '\E93C';
 }
+i.Motorsport:before {
+    content: '\E8AC';
+}
 
 i.CycleRacing:before {
     content: '\E93A';
@@ -166,6 +171,21 @@ i.Cricket:before {
     content: '\E81E';
 }
 
+i.Biathlon:before {
+    content: '\E885';
+}
+i.SkiJumping:before {
+    content: '\E80C';
+}
+i.AlpineSkiing:before {
+    content: '\E83C';
+}
+i.DashingDerby:before {
+    content: '\E841';
+}
+i.PlatinumHounds:before {
+    content: '\E8B3'; 
+}
 /* sidebar icons */
 .myaccount__icon:before {
     content: '\E88C';

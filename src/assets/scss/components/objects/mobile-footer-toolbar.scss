@@ -2,8 +2,10 @@
     @extend .grid-container;
     @include flex-align($x: justify, $y: middle);
     height: $footer-toolbar-height;
+    flex-wrap: nowrap;
     @include breakpoint(medium down) {
-        background: $footer-toolbar-bg-color;
+        background-color: $footer-toolbar-bg-color!important;
+        //background-image: linear-gradient(to bottom,rgba(255,255,255,0),rgba(255, 255, 255, 0.07) 100%);
     }
     @include breakpoint(xlarge) {
         justify-content: flex-end;
@@ -13,7 +15,8 @@
     }
 }
 
-.footer-menu__item {
+.footer-menu__item {    
+    padding: 5px 0 !important;
     border-top: $header-border;
     position: relative;
     cursor: pointer;
@@ -38,9 +41,9 @@
     left: 0;
     width: 100%;
     color: $header-menu-color;
-    z-index: 15;
+    z-index: 1301;
     @include breakpoint(xxlarge) {
-        display: none;
+        display: none!important;
     }
     @include breakpoint(xxlarge down) {
         .footer-menu__item {
@@ -56,38 +59,39 @@
     @include breakpoint(medium down) {
         .footer-menu__item {
             display: none;
-            font-size: rem-calc(11);
+            font-size: rem-calc(11)!important;
             text-transform: uppercase;
             display: flex;
             flex-flow: column nowrap;
             text-align: center;
             align-content: center;
             color: #ccc;
+            min-width: 50px!important;
             &::before {
                 height: 24px;
                 align-self: flex-start;
                 display: flex;
-                font-size: rem-calc(22);
+                font-size: rem-calc(22)!important;
                 margin-right: 10px;
                 margin: 0 auto;
                 color: #ccc;
             }
-            &.active {
-                color: $primary-color;
-                background: #25282a;
-                &::before {
-                    color: $primary-color;
-                }
+            & span {
+                font-size: rem-calc(11)!important;
+                font-family: $body-font-family!important; 
+                margin-top: 2px!important;
             }
         }
         .footer-menu__label {
             display: block;
-            margin-top: 4px;
+            margin-top: 2px;
         }
     }
     @include breakpoint(small only) {
         .footer-menu__item {
-            font-size: 9px;
+            & span {
+                font-size: rem-calc(9)!important;
+            }
         }
     }
     .live {
@@ -96,7 +100,7 @@
         }
         &::before {
             content: '\E8C7';
-            font-size: 25px; // line-height: 0;
+            font-size: 25px; // line-height: 0!important;
         }
     }
     .categories {
@@ -120,10 +124,10 @@
             &::before {
                 color: #000;
                 margin-right: 5px;
-                font-size: 24px;
+                font-size: 24px!important;
             }
             .footer-menu__label {
-                font-size: 16px;
+                font-size: 16px!important;
                 font-weight: 700;
                 letter-spacing: .3px;
             }
@@ -134,7 +138,7 @@
         }
         &::before {
             content: '\e91f';
-            font-size: 25px; // line-height: 0;
+            font-size: 25px; // line-height: 0!important;
         }
     }
     .search {
@@ -142,7 +146,7 @@
             display: block;
         }
         &::before {
-            content: '\E820'; // font-size: 25px;
+            content: '\E820'; // font-size: 25px!important;
             // line-height: 0;
         }
     }
@@ -152,8 +156,11 @@
         }
         &::before {
             content: '\E8C8'; 
-            font-size: 27px;
+            font-size: rem-calc(27) !important;
             line-height: 0.93;
+            @include breakpoint(small only) {
+                font-size: rem-calc(26) !important;
+            }
         }
     }
     .coupon {
@@ -161,7 +168,7 @@
             display: block;
         }
         &::before {
-            content: '\E910'; // font-size: 25px;
+            content: '\E910'; // font-size: 25px!important;
             // line-height: 0;
         }
     }
@@ -183,10 +190,10 @@
             &::before {
                 color: #000;
                 margin-right: 5px;
-                font-size: 24px;
+                font-size: 24px!important;
             }
             .footer-menu__label {
-                font-size: 16px;
+                font-size: 16px!important;
                 font-weight: 700;
                 letter-spacing: .3px;
             }
@@ -239,6 +246,11 @@
     }
 }
 
+.button-counter__wrapper {
+    @include breakpoint(large) {
+        display: none;
+    }
+}
 .off-canvas.position-bottom {
     &.right {
         right: 0;

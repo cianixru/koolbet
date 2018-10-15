@@ -1,3 +1,8 @@
+html,
+body {
+    overflow: hidden !important;
+}
+
 #root {
     overflow: hidden
 }
@@ -15,26 +20,27 @@
 
 .page__container {
     background: $body-background;
-
-    &.profile {
-        // background: $profile-bg-color;
-    }
-
-    @include breakpoint(small only) {
-        // margin-top: 35px;
-    }
 }
 
 .page-grid {
     @extend .grid-container;
     @include xy-gutters($gutters: $page-grid-gutters, $gutter-type: padding, $gutter-position: left right top);
     height: calc(100vh - 70px);
-
     @include breakpoint(large down) {
         height: calc(100vh - 50px);
-        padding-left: 0;
-        padding-right: 0;
+        // padding-left: 0;
+        // padding-right: 0;
         // padding-top: 0;
+    }
+
+    @include breakpoint(medium down) {
+        background: $components-bg-color;
+    }
+    @include breakpoint(small only) {
+        height: calc(100vh - 148px);
+        &.is-authorised {
+            height: calc(100vh - 100px);
+        }
     }
 
     &.loading-blur {
@@ -77,6 +83,11 @@
         width: $left-right-column-width;
         height: 100%;
         padding: 0 $columns-padding;
+        @include breakpoint(medium down) {
+            width: 100%;
+            height: calc(100vh - 55px);
+            padding: 0; 
+        } 
     }
 
     &.betslip-area {
@@ -84,8 +95,10 @@
             @include xy-cell(shrink, false);
         }
 
-        @include breakpoint(large down) {
-            display: none;
+        @include breakpoint(medium down) {
+            // display: none;
+            overflow: hidden;
+            margin: 0;
         }
     }
 }
@@ -109,11 +122,18 @@
 
     .sport-menu__item {
         padding: 6px 0;
-
         i {
             text-align: center;
             width: 100%;
             margin: 0;
         }
+    }
+}
+
+
+@include breakpoint(medium down) {
+    div[class*=MuiDrawer-paperAnchorBottom] {
+        max-height: calc(100vh - 50px);
+        margin-bottom: $footer-toolbar-height;
     }
 }
