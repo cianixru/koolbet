@@ -12,7 +12,7 @@
 }
 
 .header__sport-menu {
-    padding: 6px 20px;
+    padding: 6px 15px;
     margin: 0;
     font-size: rem-calc(14);
     text-transform: uppercase;
@@ -20,7 +20,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     color: $primary-color; // border-top: 1px solid rgba(255, 255, 255, 0.04);
-    border-top: 1px solid #ffbf00;
+    border-top: 1px solid $primary-color;
     @extend .header-gradient-1;
     line-height: 1.5;
     @include breakpoint(medium down) {
@@ -155,7 +155,9 @@
             background: none;
             // border-bottom: 1px solid $header-border;
         }
-        &:hover,
+        &:hover {
+            background: $components-bg-color--hover;
+        }
         &.opened {
             background: $menu-active-color;
             .sport-menu__item {
@@ -206,15 +208,7 @@
 }
 
 .sport-submenu {
-    padding: 0 3px 1px 2px;
-    @include breakpoint(large) {
-        .is-submenu-itemopened {
-            background: #101016!important;
-        }
-    }
-    @include breakpoint(medium down) {
-        padding: 0;
-    }
+    padding: 0 2px 1px 2px;
     >li>a.icon:before {
         // @include breakpoint(large) {
             content: '\E801';
@@ -222,13 +216,29 @@
             transition: $global-transition;
         // }
     }
-    >li>a.icon:after {
-        // @include breakpoint(medium down) {
-        //     content: '\E80F';
-        //     transform: rotate(180deg);
-        //     font-size: rem-calc(28);
-        // }
+    @include breakpoint(large) {
+        .sport-submenu__item.icon:hover {
+            background: rgba(255,255,255,.04);
+        }
+        .is-submenu-itemopened {
+            background: #101016!important;
+            .sport-submenu__item.icon:before {
+                transform: rotate(0deg);
+                color: $primary-color;
+            } 
+        }
     }
+    @include breakpoint(medium down) {
+        padding: 0;
+    }
+
+    // >li>a.icon:after {
+    //     // @include breakpoint(medium down) {
+    //     //     content: '\E80F';
+    //     //     transform: rotate(180deg);
+    //     //     font-size: rem-calc(28);
+    //     // }
+    // }
     .icon:before {
         display: inline-block;
         padding: 0 10px;
@@ -247,12 +257,12 @@
             font-size: rem-calc(13);
             display: flex;
         }
-        &.is-submenu-item {
-            // background: $header-background;
-            // @include breakpoint(medium down) {
-            //     background: $body-background;
-            // }
-        }
+        // &.is-submenu-item {
+        //     // background: $header-background;
+        //     // @include breakpoint(medium down) {
+        //     //     background: $body-background;
+        //     // }
+        // }
     }
     .sport-submenu__item {
         display: flex;
@@ -268,9 +278,6 @@
 
 .sport-submenu li.is-submenu-item {
     transition: border $global-transition;
-    &:hover {
-        background: $body-background;
-    }
     &[aria-expanded="true"] {
         border-bottom: 0;
     }

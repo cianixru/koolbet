@@ -86,11 +86,10 @@ i.all_sports:before {
     content: '\E936';
 }
 
-i.Soccer:before {
+i.Soccer:before,
+i.Football:before {
     content: '\E939';
 }
-
-i.Football:before,
 i.AmericanFootball:before,
  {
     content: '\E949';
@@ -185,6 +184,9 @@ i.DashingDerby:before {
 }
 i.PlatinumHounds:before {
     content: '\E8B3'; 
+}
+i.Cross-Country:before {
+    content: '\E85A';
 }
 /* sidebar icons */
 .myaccount__icon:before {

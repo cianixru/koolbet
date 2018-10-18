@@ -34,7 +34,7 @@ body {
     }
 
     @include breakpoint(medium down) {
-        background: $components-bg-color;
+        // background: $components-bg-color;
     }
     @include breakpoint(small only) {
         height: calc(100vh - 148px);
