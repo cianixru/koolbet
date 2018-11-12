@@ -1,0 +1,13 @@
+.share-buttons {
+    ul {        
+        display: flex;
+        align-items: center;
+        flex-flow: row;
+        li {
+            padding: 3px;
+            svg {
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -41,7 +41,7 @@
     left: 0;
     width: 100%;
     color: $header-menu-color;
-    z-index: 1301;
+    z-index: 20;
     @include breakpoint(xxlarge) {
         display: none!important;
     }

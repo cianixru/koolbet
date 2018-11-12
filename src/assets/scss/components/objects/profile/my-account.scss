@@ -1,5 +1,12 @@
 .profile__sidebar {
     width: 220px;
+    @include breakpoint(medium down) {
+        display: none;
+    }
+}
+
+.show-ProfileSidebar .profile__sidebar {
+    display: block
 }
 .profile__sidebar,
 .profile__main {

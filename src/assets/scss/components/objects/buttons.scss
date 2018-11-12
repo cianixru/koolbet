@@ -97,11 +97,36 @@ $mobile-app-toggle-color: $primary-color;
 $mobile-app-toggle-border-color: rgba(255,255,255,.2);
 $mobile-app-toggle-border-color: transparent;
 .mobile-app-toggle {
-    display: flex;
+    display: flex!important;
     width: 100%;
     border: 1px solid $mobile-app-toggle-border-color;
     border-radius: $mobile-app-toggle-radius;
     overflow: hidden;
+    .ant-radio-button-wrapper {
+        border: 0!important;
+        background: #434553!important;
+        color: #fff!important;
+        margin-right: 1px!important;
+        text-align: center;
+        letter-spacing: 0;
+        font-size: 11px;
+        flex: 1 0;
+        padding: 0!important;
+        &:before {
+            background-color: transparent!important;
+        }
+        &:last-of-type {
+            margin-right: 0!important;
+        }
+    }
+    .ant-radio-button-wrapper-checked {
+        border: 0!important;
+        background: #ffbf00!important;
+        color: #000!important; 
+        &:hover {
+            box-shadow: none;
+        }
+    }
     .button {
         // background: transparent;
         background: $switch-input-color;;

@@ -4,11 +4,12 @@ body {
 }
 
 #root {
-    overflow: hidden
-}
-
-#categoriesMenu {
-    @include breakpoint(medium down) {}
+    overflow: hidden;
+    @include breakpoint(medium down) {
+        display: flex;
+        flex-direction: column;
+        max-height: 100vh;
+    }
 }
 
 .page__container,
@@ -20,9 +21,14 @@ body {
 
 .page__container {
     background: $body-background;
+    @include breakpoint(medium down) {
+        flex-direction: column;
+        width: 100%;
+    }
 }
 
 .page-grid {
+    overflow-x: hidden;
     @extend .grid-container;
     @include xy-gutters($gutters: $page-grid-gutters, $gutter-type: padding, $gutter-position: left right top);
     height: calc(100vh - 70px);
@@ -35,12 +41,14 @@ body {
 
     @include breakpoint(medium down) {
         // background: $components-bg-color;
-    }
-    @include breakpoint(small only) {
-        height: calc(100vh - 148px);
+        //height: 100%;
+        height: calc(100vh - 150px);
         &.is-authorised {
             height: calc(100vh - 100px);
         }
+    }
+    @include breakpoint(small only) {
+        // height: calc(100vh - 148px);
     }
 
     &.loading-blur {
@@ -65,9 +73,12 @@ body {
         }
 
         &.profile {
-            padding: 0 5px;
+            padding: 0 0 0 5px;
             margin-left: .15625rem;
             margin-right: .15625rem;
+            @include breakpoint(medium down) {
+                padding: 0;
+            }
         }
     }
 

@@ -1,25 +1,31 @@
 .account-area__button {
-    margin-left: 8px;
+    margin-left: 0px;
+    margin-right: 10px;
+
     &.login {
         border: 1px solid #fff;
         color: #fff;
         background: none;
+
         &:hover {
             background: none;
             color: $primary-link-color;
             border-color: $primary-link-color;
         }
     }
+
     &.login-register {
-        width: 26px;
+        width: 25px;
         position: relative;
         display: inline-block;
         vertical-align: middle;
         height: 16px;
         cursor: pointer;
+
         @include breakpoint(large) {
             display: none;
         }
+
         &::before {
             position: absolute;
             top: 0;
@@ -32,13 +38,16 @@
             content: '';
         }
     }
+
     &.search {
         @extend .ico;
+
         &::before {
             content: '\E81F';
             font-size: rem-calc(21);
         }
     }
+
     @include breakpoint(medium down) {
         &.login-register {
             display: block;
@@ -69,6 +78,7 @@
 $user-info-height: 34px;
 $user-info-height-md: 28px;
 $user-info-bg-color: #464750;
+
 .logged-account__container {
     @extend .grid-container--nowrap;
     align-items: center;
@@ -83,18 +93,24 @@ $user-info-bg-color: #464750;
     width: 35px;
     height: $user-info-height;
     border-radius: 3px;
+
     @include breakpoint(xlarge down) {
         height: $user-info-height-md;
+    }
+    @include breakpoint(small down) {
+        display: none;
     }
     &:hover {
         background-color: rgba(255, 255, 255, .3);
     }
+
     &:before {
         content: '\F007';
         font-size: rem-calc(15);
         padding: 0;
         line-height: $user-info-height;
         margin: 0 auto;
+
         @include breakpoint(xlarge down) {
             font-size: rem-calc(14);
             line-height: $user-info-height-md;
@@ -112,26 +128,60 @@ $user-info-bg-color: #464750;
     background-color: $user-info-bg-color;
     border-radius: 3px;
     height: $user-info-height;
+
     @include breakpoint(xlarge down) {
         height: $user-info-height-md;
     }
 }
 
 .user-balance--deposit {
-    background: $primary-color;
-    color: #000;
-    margin: 0 0 0 10px;
+    // color: #000;
+    margin-left: 10px;
+    border-left: 1px solid rgba(255, 255, 255, .2);
+    padding-left: 5px;
     text-transform: uppercase;
-    font-size: rem-calc(12);
-    line-height: rem-calc(22);
-    letter-spacing: .2px;
-    font-weight: 500;
-    padding: 0 5px;
-    border-radius: 3px;
-    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.15);
-    &:hover {
-        background: scale-color($primary-color, $lightness: 14%);
+    // background: $primary-color;
+    // box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.15);
+    // letter-spacing: .2px;
+    // font-weight: 500;
+    // padding: 0 5px;
+    // border-radius: 3px;
+    a {
+        color: #fff;
+        text-decoration: none;
+        &:hover {
+            color: $primary-color;
+        }
     }
+    .deposit__icon {
+        content: '';
+        position: relative;
+        width: 28px;
+        height: 16px;
+        display: inline-block;
+        &:before {
+            font-size: rem-calc(26);
+            line-height: rem-calc(16);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            width: 23px;
+            position: absolute;
+            top: 3px;
+        }
+    }
+    &:hover i:before {
+        color: $primary-color;
+    }
+    .deposit__name {
+        font-size: rem-calc(14);
+        @include breakpoint(large down) {
+            display: none;
+        }
+    }
+    // &:hover {
+    //     // background: scale-color($primary-color, $lightness: 14%);
+    // }
+
     @include breakpoint(xlarge down) {
         line-height: rem-calc(20);
     }
@@ -139,6 +189,7 @@ $user-info-bg-color: #464750;
 
 .user-balance--refresh {
     font-size: rem-calc(15);
+
     @include breakpoint(xlarge down) {
         font-size: rem-calc(14);
     }

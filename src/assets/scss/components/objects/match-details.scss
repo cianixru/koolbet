@@ -43,12 +43,13 @@
         padding: 10px 5px;
     }
     span {
-        padding: 5px 5px;
+        padding: 5px 5px 3px;
     }
     .sport__title {
         margin-left: 5px;
         color: $primary-color;
         line-height: 1.2;
+        text-transform: uppercase;
         @include breakpoint(small only) {
             line-height: 1.5;
             font-size: rem-calc(14);
@@ -371,6 +372,7 @@
             }
             &:before {
                 content: attr(data-oddtag);
+                text-transform: uppercase;
                 padding: 3px 8px;
             }
             .odd--up {

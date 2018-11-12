@@ -22,26 +22,27 @@
 //@import 'components/tools/fonts';
 
 // ELEMENTS
-@include foundation-forms;
-@include foundation-off-canvas;
-@include foundation-menu;
+//@include foundation-off-canvas;
 //@include foundation-drilldown-menu;
 //@include foundation-tooltip;
+//@import 'components/elements/flickity';
+// @import 'components/elements/flickity-customs';
+// @import 'components/elements/scrollbar';
+// @import 'components/elements/custom-selectbox';
+@include foundation-forms;
+@include foundation-menu;
 @include foundation-button;
 @include foundation-dropdown;
 @include foundation-progress-bar;
 @include foundation-pagination;
-@include foundation-reveal; // Модалки
+@include foundation-reveal; // Модалки, потом удалить!
 @import 'components/elements/odds-up-down';
-@import 'components/elements/scrollbar';
-//@import 'components/elements/flickity';
-@import 'components/elements/flickity-customs';
 @import 'components/elements/responsive-card-table';
 @import 'components/elements/mybets-responsive-table';
 @import 'components/elements/inputs';
 @import 'components/elements/separator';
-@import 'components/elements/custom-selectbox';
 @import 'components/elements/alertbox';
+@import 'components/elements/share-buttons';
 
 // OBJECTS
 @import 'components/objects/menu';
@@ -68,6 +69,7 @@
 @import 'components/objects/profile/transitions';
 @import 'components/objects/profile/transitions-history';
 @import 'components/objects/profile/affiliate';
+@import 'components/objects/profile/datePickers__ant';
 @import 'components/objects/toolBar';
 @import 'components/objects/registration';
 @import 'components/objects/vg/vg-view-panel';

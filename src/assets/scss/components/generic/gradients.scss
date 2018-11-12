@@ -12,7 +12,7 @@ $linear-gradient-to: rgba(255, 255, 255, 0.16);
     background-color: #000;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $linear-gradient-to 100%);
     background-repeat: no-repeat, no-repeat;
-    background-position: left, left, right 50px bottom 0;
+    background-position: left, left, right 40px bottom 0;
     &:not(.tournament__title) {
         border-top: 0!important;
     }

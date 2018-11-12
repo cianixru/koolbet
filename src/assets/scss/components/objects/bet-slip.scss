@@ -17,14 +17,43 @@
         justify-content: flex-start;
         align-items: stretch;
         align-content: stretch;
+        position: absolute;
+        right: 0;
     }
 }
 .bs__title {
     padding: 0 $global-padding;
-    font-size: rem-calc(18);
+    font-size: rem-calc(16);
     letter-spacing: .2px;
-    color: #fff;
+    color: #fff;   
+    margin: 0 auto;
+    text-transform: uppercase;
 }
+
+.bs__message {
+    padding: 5px $global-padding;
+    font-size: rem-calc(14);
+    color: #fff;   
+    background: #4a4c5a;
+    border-radius: 3px;
+    margin: 4px;
+    text-align: center
+}
+.betslip--empty {
+    border-top: 3px solid $primary-color;
+    background-color: #1c1f29;
+    .bs__title {
+        text-align: center;       
+        color: $primary-color;        
+        padding: 8px 10px;
+        color: #ffbf00;
+        font-size: rem-calc(14);
+        @include breakpoint(xlarge down) {
+            display: none;
+        }
+    }
+}
+
 .bs-type-switcher {
     position: relative;
     z-index: 1;
@@ -99,7 +128,7 @@
         transform: rotate(-90deg);
         font-size: rem-calc(32);
         width: 22px;
-        color: #fff;
+        color: $primary-color;
         display: inline-block;
         vertical-align: middle;
         margin-left: 0;
@@ -136,7 +165,7 @@
         padding: 8px;
         letter-spacing: .2px;
         text-transform: uppercase;
-        font-size: 14px;
+        font-size: rem-calc(14);
         color: scale-color($body-font-color, $lightness: -5%);
         transition: all $global-transition;
         border-top: 3px solid transparent;
@@ -190,6 +219,7 @@
             margin-bottom: 5px;
         }
     }
+
     &.closed {
         background: #ffeae3;
         position: relative;
@@ -215,6 +245,11 @@
             left: 0;
             z-index: 1;
             opacity: .75;
+        }
+        .error-message__wp {
+            height: 100%;
+            left: 0;
+            z-index: 1;
         }
         & .error-message {
             z-index: 1;
@@ -478,6 +513,12 @@
         border-top: 1px solid #333;
         padding-top: 10px;
     }
+    &.slipMessgeFooter { 
+        padding-bottom: 10px;
+        padding-top: 10px;
+        border-top: 1px solid #232532;
+        background: #464750;
+    }
     > div  {
         text-align: center;
         width: calc(50% - 10px);
@@ -495,6 +536,16 @@
      .btn-place-bet {
          font-size: rem-calc(16);
          letter-spacing: .5px;
+     }
+     .bs-btn--continue,
+     .bs-btn--print {
+        width: 100%;
+        background-color: #ececec;
+        color: #000;
+        padding: 6px; 
+        &:hover {
+            background-color: $primary-color;
+         }
      }
      .bs-btn--clear,
      .bs-btn--save {
@@ -632,39 +683,58 @@
 .systems-list li {
     padding: 5px 0 5px 10px;
 }
-.systems-list [class*=-label] [type=radio] {
-    opacity: 0;
-    pointer-events: all;
-    left: 0;
-    top: 0;
-    height: 1px;
-    width: 1px;
-    display: none;
-}
-
-.systems-list input[type="radio"] {
-    font-family: fontello;
-    color: #333;
-    display: inline-block;
-}
-.systems-list input[type="radio"] + label,
-.systems-list label > input[type="radio"] + span {
-    background-image:url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'%0A	 viewBox='-61 63 20 20' enable-background='new -61 63 20 20' xml:space='preserve'%3E%0A%3Csymbol  id='b' viewBox='-10 -10 20 20'%3E%0A	%3Cpath fill='%2fff' fill-opacity='0' d='M0-9.5c-5.2,0-9.5,4.3-9.5,9.5S-5.2,9.5,0,9.5S9.5,5.2,9.5,0S5.2-9.5,0-9.5z'/%3E%0A	%3Cpath fill='%23B2B2B2' d='M0,9c5,0,9-4,9-9S5-9,0-9s-9,4-9,9S-5,9,0,9 M0,10c-5.5,0-10-4.5-10-10s4.5-10,10-10S10-5.5,10,0%0A		S5.5,10,0,10z'/%3E%0A%3C/symbol%3E%0A%3Cuse xlink:href='%23b'  width='20' height='20' id='XMLID_1_' x='-10' y='-10' transform='matrix%281 0 0 -1 -51 73%29' overflow='visible'/%3E%0A%3C/svg%3E");
-	background-repeat:no-repeat;
-	display:block;
-}
-
-.systems-list input[type=radio]:checked+label,
-.systems-list label>input[type=radio]:checked+span { 
-    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%0A%3Csvg version='1.1' id='a' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'%0A  viewBox='-61 63 20 20' enable-background='new -61 63 20 20' xml:space='preserve'%3E%0A%3Csymbol  id='b' viewBox='-10 -10 20 20'%3E%0A %3Cpath fill='%23FFBF00' fill-opacity='0' d='M0-9.5c-5.2,0-9.5,4.3-9.5,9.5S-5.2,9.5,0,9.5S9.5,5.2,9.5,0S5.2-9.5,0-9.5z'/%3E%0A %3Cpath fill='%23FFBF00' d='M0,9c5,0,9-4,9-9S5-9,0-9s-9,4-9,9S-5,9,0,9 M0,10c-5.5,0-10-4.5-10-10s4.5-10,10-10S10-5.5,10,0%0A  S5.5,10,0,10z'/%3E%0A %3Cpath fill='%23FFBF00' d='M5,0c0-2.8-2.2-5-5-5s-5,2.2-5,5s2.2,5,5,5S5,2.8,5,0z'/%3E%0A%3C/symbol%3E%0A%3Cg%3E%0A %0A  %3Cuse xlink:href='%23b'  width='20' height='20' id='XMLID_1_' x='-10' y='-10' transform='matrix%281 0 0 -1 -51 73%29' overflow='visible'/%3E%0A%3C/g%3E%0A%3C/svg%3E%0A")
-}
-.systems-list .radio > input[type="radio"] + label,
-.systems-list label > input[type="radio"] + span {
-    height: 14px;
-    padding-left: 23px;
-    line-height: 1;
-}
 
 .systems-list label {
     display: block;
+}
+
+
+// BetSlip Done Message
+
+.slipMessgeContent {
+    background-color: #464750;
+    color: #fff;
+    padding: 20px 10px;
+    text-align: center;
+    a {
+        color: #fff;
+        &:hover {
+            color: $primary-color;            
+        }
+    }
+    h3 {
+        font-size: rem-calc(17);
+        text-transform: uppercase;
+        font-weight: 500;
+        margin: 0;
+    }
+    p {
+        color: rgba(255, 255, 255, .85);
+        font-size: rem-calc(14);
+        padding: 10px 10px 13px;
+        line-height: 1.25;
+        margin: 0;
+    }
+    .share__icon {
+        cursor: pointer;
+        margin: 0 10px;
+        &:before {
+            color:  $primary-color;
+            font-size: rem-calc(19);
+        }
+    }
+    .links {
+        
+    }
+    .code {
+        font-size: rem-calc(20);
+        color: $primary-color;
+        border-bottom: 1px dashed $primary-color;
+        &:hover {
+            cursor: pointer;
+            // color: #fff;
+            // border-color: #fff;
+            border-bottom-style: solid;
+        }
+    }
 }
