@@ -444,7 +444,7 @@
         }
     }
 }
-.bs__limit-message 
+.bs-message__wp
 {
     padding: 15px;
     > div {
@@ -452,8 +452,25 @@
         padding: 8px;   
         background-color: #eee;
         color: #0a0a0a;
-            font-size: rem-calc(14);
+        font-size: rem-calc(14);
         line-height: 1.15;
+    }
+    .confirm {
+        text-align: center;
+        button {
+            background-color: #4d4e57;
+            color: #fff;
+            border-radius: 4px;
+            padding: 5px 10px;
+            margin: 5px 6px 2px;
+            font-size: rem-calc(12);
+            text-transform: uppercase;
+        }
+    }
+    .title {
+        margin-top: 6px;
+        text-transform: uppercase;
+        color: red;
     }
 }
 
@@ -462,7 +479,7 @@
     &:before {
         display: inline-block;
         content: '\E837';
-        font-size: rem-calc(15);
+        font-size: rem-calc(16);
         width: 10px;
         color: #ff181c;
         vertical-align: middle;
