@@ -61,6 +61,10 @@
             line-height: 33px;
             font-weight: 600;
         }
+        .collapse:before {
+            content: '\E952';
+            font-size: rem-calc(16);
+        }
         .reload:before {
             content: '\E825';
             font-size: rem-calc(13);

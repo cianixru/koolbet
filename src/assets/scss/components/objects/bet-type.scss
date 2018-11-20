@@ -21,7 +21,7 @@
         cursor: pointer;
         font-size: rem-calc(12);
         font-weight: 300;
-        background: rgba(255, 255, 255, .17);
+        background: rgba(255, 255, 255, .19);
         border: 1px solid rgba(255, 255, 255, 0.14);
         &:hover {
             border: 1px solid rgba(255,255,255,.35);
@@ -42,6 +42,17 @@
         }
         @include breakpoint(small only) {
             @include xy-cell(1 of 3, $gutter-type: margin, $gutters: 4px, $gutter-position: top bottom left right);
+        }
+    }
+    &.TopTournaments {
+        .item {
+            width: auto;
+            padding: 4px 15px;
+            @include breakpoint(large down) {
+                padding: 4px 10px;
+                font-size: rem-calc(13);
+                font-weight: 300;
+            }
         }
     }
 }

@@ -1,5 +1,7 @@
 .odd--up,
-.odd--down {
+.odd--down,
+.bs__odd--down,
+.bs__odd--up {
     @extend .icon0;
     position: relative;
     width: 100%;
@@ -37,7 +39,6 @@
         top: 1px;
         color: #47A946;
         @include breakpoint(medium down) {
-            top: 1px;
             content: '\E801';               
             font-size: 15px;
             transform: translateY(100%) translateX(10px) rotate(180deg);
@@ -45,12 +46,39 @@
     }
 }
 
-.odd--up:before {
-    animation: blink 1000ms linear 3
+// BETSLIP
+.bs__odd--down,
+.bs__odd--up {
+    color: #fff!important;
+    padding: 0 3px;
+    &::before {
+        left: -28px;
+        font-size: rem-calc(16);
+    }
 }
-.odd--down:before {
-    animation: blink 1000ms linear 3
+.bs__odd--down {
+    background: #f44336;
+    &::before {
+        content: '\E90D';
+        bottom: 2px;
+        color: #f44336;
+        bottom: 1px;
+        content: '\E801';
+        transform: translateY(-100%) translateX(10px);
+    }
 }
+.bs__odd--up {
+    background: #47A946;
+    &::before {
+        content: '\E90E';
+        top: 1px;
+        color: #47A946;
+        content: '\E801';
+        transform: translateY(100%) translateX(10px) rotate(180deg);
+    }
+}
+
+
 @keyframes blink {
     0%,
     10% {
