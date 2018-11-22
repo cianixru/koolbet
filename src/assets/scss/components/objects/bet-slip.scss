@@ -219,23 +219,67 @@
             margin-bottom: 5px;
         }
     }
-
-    &.closed {
-        background: #ffeae3;
+    &.lock {
         position: relative;
         .bs-icon-banker:before {
-            opacity: .4;
+            opacity: .5;
         }
         input {
-            opacity: .4;
+            opacity: .5;
         }
         .bet-event .row .bet-close:before {
-            color: #fff;            
+            color: #333;            
             position: relative;
             z-index: 2;
         }
         &:before {
-            background:#666;
+            background:#fffff4;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            display: block;
+            content: '';
+            top: 0;
+            left: 0;
+            z-index: 1;
+            opacity: .75;
+        }
+        .lock__icon {
+            height: 100%;
+            display: block;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            &:before {
+                font-size: 50px;
+                color: #999;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &.closed {       
+        position: relative;
+        .bs-icon-banker:before {
+            opacity: .5;
+        }
+        input {
+            opacity: .5;
+        }
+        .bet-event .row .bet-close:before {
+            color: #333;            
+            position: relative;
+            z-index: 2;
+        }
+        &:before {
+            background:#dcdcd4;
             position: absolute;
             height: 100%;
             width: 100%;
@@ -259,7 +303,7 @@
             transform: translateY(-50%);
             text-align: center;
             width: 100%;
-            color: #fff;
+            color: #1c1f29;
         }
         & .error-message__title {
             font-size: rem-calc(22);
@@ -272,6 +316,26 @@
     }
 }
 
+.message-close {
+    @extend .ico;
+    width: 20px;
+    height: 20px;
+    margin: 0;       
+    right: 0;
+    top: 0;
+    position: absolute;
+    &:before {
+        margin: 0;
+        content: '\E829';
+        font-size: rem-calc(8);
+        line-height: 1;
+        font-weight: 600;
+        color: #555;
+        @include breakpoint(medium down) {
+            font-size: rem-calc(9);
+        }
+    }
+}
 
 .bet-event .row {
     @extend .grid-container;
@@ -446,14 +510,21 @@
 }
 .bs-message__wp
 {
-    padding: 15px;
+    padding: 0 15px;
+    position: relative;
+    margin-bottom: 10px;
+    position: relative;
     > div {
+        border-radius: 3px;
         position: relative;
         padding: 8px;   
         background-color: #eee;
         color: #0a0a0a;
         font-size: rem-calc(14);
         line-height: 1.15;
+        a {
+            color: #ff181c;
+        }
     }
     .confirm {
         text-align: center;
@@ -494,7 +565,7 @@
 .bs__stake {
     @extend .grid-container;
     align-items: center;
-    padding: 5px 0 10px;
+    padding: 5px 0;
     >div {
         @include xy-cell(auto, false);
         padding: 0 3px;
@@ -545,6 +616,11 @@
         .button {       
             width: 100%;
             padding: 10px;
+            &.add-funds {
+                background-color: #39b02e;
+                color: #fff;
+                font-size: rem-calc(16);
+            }
         }
     }
     .button {
@@ -553,6 +629,14 @@
      .btn-place-bet {
          font-size: rem-calc(16);
          letter-spacing: .5px;
+         &.loading__icon {
+             opacity: .6!important;
+             &:before { 
+                color: #000;
+                animation: spin 2s infinite linear;
+                font-size: rem-calc(16);
+             }
+         }
      }
      .bs-btn--continue,
      .bs-btn--print {
@@ -754,4 +838,9 @@
             border-bottom-style: solid;
         }
     }
+}
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
 }
