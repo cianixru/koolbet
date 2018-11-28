@@ -275,17 +275,31 @@
             }
         }
     }
-    &.templ--CORRECT_SCORE {
+    &.templ--OUTRIGHT {
         flex-flow: row wrap!important;
-
-            @include xy-grid-layout($n: 6, $selector: '.cell', $gutters: 4px, $gutter-position: right left top bottom);
+        @include breakpoint(medium down) {
+            .lineBreak {
+                display: none!important;
+            }
+            @include xy-grid-layout($n: 3, $selector: '.cell', $gutters: 10px, $gutter-position: right left top bottom);
+        }
+        @include breakpoint(small only) {
+            @include xy-grid-layout($n: 2, $selector: '.cell', $gutters: 10px, $gutter-position: right left top bottom);
+        }
+        @include breakpoint(large) {
+            @include xy-grid-layout($n: 4, $selector: '.cell', $gutters: 4px, $gutter-position: right left top bottom);
+        }
             .cell {
                 padding: 1px 0;
                 flex: 0 0 auto;
-                min-width: 40px;
-
-
- 
+                
+                @include breakpoint(large) {
+                    min-width: 60px;
+                }
+                @include breakpoint(medium down) {
+                    flex: 1 1;
+                    width: auto;
+                }
                 .specialoddvalue-text {
                     border: 1px solid $secondary-color;
                     line-height: 2;
@@ -297,8 +311,46 @@
                     @include breakpoint(large) {
                         line-height: 1.7;
                     }
-                    &:hover {
-                        
+                }
+                .specialoddvalue-text:before {
+                    content: attr(data-oddtag);
+                    text-transform: uppercase;
+                    font-size: rem-calc(11);
+                    display: block;
+                    background: rgba(255, 255, 255, .18);
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    text-align: center;
+                    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.018), rgba(255, 255, 255, 0.17) 100%);
+                }
+                .specialoddvalue-text.active {
+                    border: 1px solid $primary-color;
+                    background: #343649;
+                    &:before {
+                        background: $primary-color;
+                    }
+                }
+            }
+    }
+    &.templ--CORRECT_SCORE {
+        flex-flow: row wrap!important;
+
+            @include xy-grid-layout($n: 6, $selector: '.cell', $gutters: 4px, $gutter-position: right left top bottom);
+            .cell {
+                padding: 1px 0;
+                flex: 0 0 auto;
+                min-width: 40px;
+                .specialoddvalue-text {
+                    border: 1px solid $secondary-color;
+                    line-height: 2;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    text-align: center;
+                    background: #343649;
+                    @include breakpoint(large) {
+                        line-height: 1.7;
                     }
                 }
                 .specialoddvalue-text:before {
