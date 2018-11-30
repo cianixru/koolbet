@@ -1,28 +1,112 @@
-
 .footer-wp {
-    max-width: 1578px;
+    max-width: $global-width;
     margin: 0 auto;
     width: 100%;
+    padding: 0 11px;
 }
 
 .footerExpander {
+    display: block;
+    @include breakpoint(medium down) {
+        display: none;
+    }
     position: fixed;
     bottom: 0;
     left: 50%;
-    display: block;
-    background: red;
-    padding: 5px;
-    border-radius: 3px 3px 0 0;    
-    width: 30px;
-    height: 15px;
-    cursor: pointer;
-    &.inner {
-        bottom: auto;
-        top: 0;
+    transform: translateX(-50%);
+    padding: 0 10px;
+    border-radius: 3px 3px 0 0;
+    width: auto;
+    height: 22px;
+    cursor: pointer; 
+    background-color: $footer-background-color;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-bottom: 0;
+    background-image: linear-gradient(to top,rgba(255,255,255,0),rgba(255,255,255,.18) 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+    &.expand__icon {
+        &::before {
+            content: '\E832'; 
+            transform: rotate(180deg);
+            font-size: 24px;
+            text-align: center;
+            color: $primary-color; 
+        }
+        &.down {
+            bottom: auto;
+            top: 0;
+            &::before {
+                transform: rotate(0);
+            }
+        }
     }
 }
 .footerInner {
-    background: #000;
+    background: $footer-background-color;
     width: 100%;
-    margin-top: 16px;
+    margin-top: 21px;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+
+.footer__menu {
+
+    padding: 20px 15px 5px;
+    background: #101016;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    &>.footer__menu-item {
+        margin-bottom: 15px;
+        display: flex;  
+        flex-direction: row;
+        align-items: center;
+        a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.8);
+            &:hover {
+                color: $primary-color;
+                text-decoration: underline;
+            }
+        }
+        h2 {
+            margin: 0;
+            font-size: rem-calc(15);
+            color: rgba(255, 255, 255, 0.45);
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        ul {
+            flex-flow: row wrap;
+            display: flex;
+            li {
+                font-size: rem-calc(15);
+                margin-left: 5px;
+                &:before {
+                    content: " | ";
+                    display: inline-block;
+                    width: 10px;
+                    margin-right: 5px;
+                    text-align: center;
+                    color: rgba(255, 255, 255, 0.35);
+                }
+            }
+        }
+    }
+}
+
+.footer__sub-menu {
+    background: #1b1b24;
+    text-align: center;
+    border-top: 1px solid #333;
+    padding: 8px 55px;
+    .footer__sub-menu-item {
+        display: inline;
+        img {
+            max-height: 50px;
+            margin: 0 5px;
+            border: 1px solid #333;
+        }
+    }
 }
