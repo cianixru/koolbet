@@ -189,8 +189,12 @@
     }
     .f-password {
         text-align: right;
+        color: #333;
         a {
-            color: $anchor-color;
+            color: #333;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
     .control-group {

@@ -397,21 +397,7 @@
     width: 100%;
 }
 
-.block-search__input {
-    padding: 2px 7px 4px 7px;
-    font-size: 15px;
-    height: 30px;
-    width: 200px;
-    line-height: 24px;
-    background: $header-background;
-    border: 1px solid $border-color;
-    margin: 0;
-    width: 100%;
 
-    @include breakpoint(small down) {
-        height: 35px;
-    }
-}
 
 .icon-search {
     position: absolute;

@@ -76,6 +76,21 @@
     @include breakpoint(xlarge down) {
         border: 1px solid #62646b;
     }
+    .enter__input {
+        background: #0f1016;
+        color: $primary-color;
+        border: 1px solid #6d6d6d;
+        border-left: 0;
+        cursor: pointer;
+        &:hover {
+            background-color: $primary-color;
+            color: #000;
+        }
+    }
+    .input-group { 
+        width: 100%;
+        margin-bottom: 0;
+    }
 }
 
 #betslipArea {
@@ -605,7 +620,18 @@
         padding-bottom: 10px;
         padding-top: 10px;
         border-top: 1px solid #232532;
-        background: #464750;
+        background: #474956;
+        position: relative;
+        &:before {
+            display: block;
+            content: '';
+            height: 1px;
+            width: 100%;
+            background: #5c5c5e;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
     }
     > div  {
         text-align: center;
@@ -793,9 +819,9 @@
 // BetSlip Done Message
 
 .slipMessgeContent {
-    background-color: #464750;
+    background-color: #474956;
     color: #fff;
-    padding: 20px 10px;
+    padding: 15px 10px;
     text-align: center;
     a {
         color: #fff;

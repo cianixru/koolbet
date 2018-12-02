@@ -9,10 +9,12 @@ $body-background: #343749;
 $body-background: #343649;
 $body-background: #353349;
 $body-background: #323349;
+$body-background: #333549;
 
+$dark-background: #22232e;
 $wrap-body-background: $body-background;
 $header-background: scale-color($body-background, $lightness: -70%);
-$columns-background-color: scale-color($body-background, $lightness: -32%);
+$columns-background-color: $dark-background;
 $body-font-color: #fff;
 $primary-color: #FFC400;
 $primary-color: #ffbf00;
@@ -26,7 +28,7 @@ $global-button-text-color: #000;
 $global-button-background-color: $primary-color;
 $border-color: scale-color($secondary-link-color, $lightness: -70%);
 $header-border: scale-color($border-color, $lightness: -20%);
-$components-bg-color: #232532;
+$components-bg-color: $dark-background;
 $components-bg-color-secondary: #2c2d3d;
 $components-bg-color--hover: #1b1d27;
 $menu-active-color: #484958;
@@ -53,7 +55,7 @@ $global-button-cursor: pointer;
 $global-radius: 4px;
 $global-input-radius: 3px;
 $global-transition: 0;
-$anchor-color: #1a4880;
+$anchor-color: $primary-color;
 $anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
 
 
@@ -234,7 +236,7 @@ $go-to-all-markets-bg: #383843;
 $sport-table-border-color: #4e4f5d;
 $row-border-bottom-color: #222;
 $row-border-light-color: rgba(255,255,255,.1);
-$subhead-bg-color: rgba(0, 0, 0, 0.35);
+$subhead-bg-color: $dark-background;
 $go-to-all-markets-padding: 0 7px;
 $table-row-head-color: #434553;
 $table-date-value-bg-gradient: linear-gradient(to right, rgba(255, 255, 255, 0.05) 0%, $subhead-bg-color 20%);
@@ -333,7 +335,7 @@ $grid-column-gutter: (
 );
 // Profile
 // -----------
-$profile-bg-color: #22232e;
+$profile-bg-color: $dark-background;
 $profile-section-padding: 25px;
 $profile-section-margin: 25px;
 $profile-gutters-size: rem-calc(25);

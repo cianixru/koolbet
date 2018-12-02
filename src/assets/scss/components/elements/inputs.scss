@@ -18,3 +18,35 @@
     transition: box-shadow 0.5s, border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s;
     appearance: none;    
 }
+
+.block-search__input {
+    padding: 2px 7px 4px 7px;
+    font-size: 15px;
+    height: 30px;
+    width: 200px;
+    line-height: 24px;
+    background: $header-background;
+    border: 1px solid $border-color;
+    margin: 0;
+    width: 100%;
+
+    @include breakpoint(small down) {
+        height: 35px;
+    }
+}
+
+.additional-bs__input {
+    padding: 2px 7px 4px 7px;
+    font-size: 15px;
+    height: 30px;
+    width: 200px;
+    line-height: 24px;
+    background: $header-background;
+    border: 1px solid #6d6d6d;
+    margin: 0;
+    width: 100%;
+
+    @include breakpoint(small down) {
+        height: 35px;
+    }
+}
