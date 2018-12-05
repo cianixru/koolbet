@@ -105,13 +105,15 @@
             a {
                 color: $profile-menu-color;
                 color: #fff;
+                border-left: 3px solid transparent;
                 &:not(.is-active):hover {
                     background-color: rgba(255, 255, 255, .07);
                     color: $profile-menu-active-color;
                 }
                 &.is-active {
-                    color: #fff;
+                    color: $primary-color;
                     background: rgba(255, 255, 255, 0.1);
+                    border-left: 3px solid $primary-color;
                         [class$="__icon"]:before {
                             color: $primary-color;
                         }

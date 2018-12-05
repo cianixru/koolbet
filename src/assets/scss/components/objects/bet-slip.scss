@@ -688,8 +688,13 @@
      }
      .bs-btn--save {
          &:hover {
-            background-color: #39b02e;
-         }
+             background-color: #39b02e;
+        }
+        &[disabled]:hover {
+            background-color: #4d4e57;
+            color: $body-font-color;
+        }
+         
      }
 }
 

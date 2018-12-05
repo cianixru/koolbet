@@ -28,7 +28,7 @@ body {
 }
 
 .page-grid {
-    overflow-x: hidden;
+    overflow: hidden;
     @extend .grid-container;
     @include xy-gutters($gutters: $page-grid-gutters, $gutter-type: padding, $gutter-position: left right top);
     height: calc(100vh - 70px);
