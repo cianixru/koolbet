@@ -602,7 +602,14 @@
         border: 2px solid $primary-color;
     }
 }
-
+.loading__icon {
+    opacity: .6!important;
+    &:before { 
+       color: #000;
+       animation: spin 2s infinite linear;
+       font-size: rem-calc(16);
+    }
+}
 .bs-btn-block {
     display: flex;
     flex-flow: row wrap;
@@ -655,14 +662,6 @@
      .btn-place-bet {
          font-size: rem-calc(16);
          letter-spacing: .5px;
-         &.loading__icon {
-             opacity: .6!important;
-             &:before { 
-                color: #000;
-                animation: spin 2s infinite linear;
-                font-size: rem-calc(16);
-             }
-         }
      }
      .bs-btn--continue,
      .bs-btn--print {
