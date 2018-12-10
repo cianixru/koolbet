@@ -14,6 +14,7 @@
     padding: 30px 10px;
     background-color: #FFF;
     width: 400px;
+
     @include breakpoint(medium down) {
         width: auto;
         padding-top: 15px;
@@ -207,6 +208,30 @@
         }
         .countrycode {
             width: 80px;
+        }
+    }
+    &.complete {
+        position: relative;
+        padding: 30px 25px 30px 110px;
+        
+        .complete__icon {
+            // border: 3px solid #070;
+            border-radius: 50%;
+            padding: 4px;
+            position: absolute;
+            left: 15px;
+            top: 35px;
+            &:before {
+                color: #070;
+                font-size: rem-calc(60)
+            }
+        }
+        h3 {
+            text-align: left;
+            color: #070;
+        }
+        .complete-msg {
+            font-size: rem-calc(14);
         }
     }
 }

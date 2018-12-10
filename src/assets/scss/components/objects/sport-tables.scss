@@ -335,7 +335,7 @@
     }
     &.templ--CORRECT_SCORE {
         flex-flow: row wrap!important;
-
+           
             @include xy-grid-layout($n: 6, $selector: '.cell', $gutters: 4px, $gutter-position: right left top bottom);
             .cell {
                 padding: 1px 0;
@@ -725,5 +725,18 @@
 .sport-table.templ--CORRECT_SCORE {
     .cell-s {
         padding: 10px;
+    }
+}
+
+
+.templ--CORRECT_SCORE.details {
+    border: 1px solid #4e4f5d;
+    .sport-table {
+        @include breakpoint(large) {
+            padding: 8px 0px;
+        }
+        .row {
+            background: transparent!important
+        }
     }
 }
