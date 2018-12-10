@@ -212,23 +212,31 @@
     }
     &.complete {
         position: relative;
-        padding: 30px 25px 30px 110px;
+        //padding: 30px 25px 30px 10px;
         
         .complete__icon {
             // border: 3px solid #070;
             border-radius: 50%;
-            padding: 4px;
-            position: absolute;
-            left: 15px;
-            top: 35px;
+            padding: 0 15px 0 8px;
+            @include breakpoint(medium down) {
+                padding: 0 10px 0 3px;
+            }
             &:before {
+                @include breakpoint(medium down) {
+                    font-size: rem-calc(40);
+                }
+                font-size: rem-calc(60);
                 color: #070;
-                font-size: rem-calc(60)
             }
         }
         h3 {
             text-align: left;
             color: #070;
+            margin-bottom: 10px;
+            @include breakpoint(medium down) {
+                font-size: rem-calc(20);
+                line-height: 1.3
+            }
         }
         .complete-msg {
             font-size: rem-calc(14);
