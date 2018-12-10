@@ -610,6 +610,10 @@
        font-size: rem-calc(16);
     }
 }
+.bs-btn--save.loading__icon::before {
+    color: #fff;
+    font-size: rem-calc(14)!important;
+}
 .bs-btn-block {
     display: flex;
     flex-flow: row wrap;
