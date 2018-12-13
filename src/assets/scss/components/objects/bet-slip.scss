@@ -28,6 +28,7 @@
     color: #fff;   
     margin: 0 auto;
     text-transform: uppercase;
+    @extend .header-gradient-1;
 }
 
 .bs__message {
@@ -39,18 +40,19 @@
     margin: 4px;
     text-align: center
 }
-.betslip--empty {
-    border-top: 3px solid $primary-color;
+.betslip--panel {
+    border-top: 1px solid $primary-color;
     background-color: #1c1f29;
     .bs__title {
-        text-align: center;       
         color: $primary-color;        
         padding: 8px 10px;
-        color: #ffbf00;
         font-size: rem-calc(14);
         @include breakpoint(xlarge down) {
             display: none;
         }
+    }
+    &:not(:last-of-type) {
+        margin-bottom: 15px
     }
 }
 
@@ -90,6 +92,7 @@
     .input-group { 
         width: 100%;
         margin-bottom: 0;
+
     }
 }
 
@@ -628,11 +631,17 @@
         padding-top: 10px;
     }
     &.slipMessgeFooter { 
-        padding-bottom: 10px;
-        padding-top: 10px;
+        background: #474956;
+        position: relative;
+        padding: 10px;
+        padding-top: 0;
+
+    }
+    &.slipMessgeFooter.type2 { 
         border-top: 1px solid #232532;
         background: #474956;
         position: relative;
+        padding: 10px;
         &:before {
             display: block;
             content: '';
@@ -830,7 +839,11 @@
     background-color: #474956;
     color: #fff;
     padding: 15px 10px;
-    text-align: center;
+    font-size: rem-calc(14);
+    line-height: 1.25;
+    &.center{
+        text-align: center;
+    }
     a {
         color: #fff;
         &:hover {

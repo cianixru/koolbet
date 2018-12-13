@@ -198,6 +198,12 @@ i.TopTournaments:before {
     font-size: 22px;
 }
 
+.logout__icon:before {
+    content: '\E82C';
+    font-size: 22px;
+    transform: rotate(180deg);
+}
+ 
 .mybets__icon:before {
     content: '\E847';
     font-size: 22px;
