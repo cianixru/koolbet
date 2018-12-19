@@ -135,17 +135,20 @@ $user-info-bg-color: #464750;
 }
 
 .user-balance--deposit {
-    // color: #000;
     margin-left: 10px;
     border-left: 1px solid rgba(255, 255, 255, .2);
     padding-left: 5px;
-    text-transform: uppercase;
+    // color: #000;
     // background: $primary-color;
     // box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.15);
     // letter-spacing: .2px;
     // font-weight: 500;
     // padding: 0 5px;
     // border-radius: 3px;
+    text-transform: uppercase;
+    @include breakpoint(small only) {
+        display: none;
+    }
     a {
         color: #fff;
         text-decoration: none;

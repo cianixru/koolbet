@@ -10,6 +10,7 @@
     font-weight: 700;
     margin-left: 10px;
     display: inline-block;
+
     @include breakpoint(small only) {
         font-weight: 500;
         font-size: 10px;
@@ -23,9 +24,11 @@
     padding: 10px;
     cursor: pointer; // background-color: rgba(255, 255, 255, .07);
     border-right: 1px solid rgba(255, 255, 255, 0.08);
+
     @include breakpoint(small only) {
         padding: 5px 8px;
     }
+
     &:hover {
         background-color: rgba(255, 255, 255, .045);
     }
@@ -39,27 +42,33 @@
     border-bottom: 1px solid #000;
     border-radius: $global-radius $global-radius 0 0;
     flex-flow: row nowrap;
+
     .cell {
         padding: 10px 5px;
     }
+
     span {
         padding: 5px 5px 3px;
     }
+
     .sport__title {
         margin-left: 5px;
         color: $primary-color;
         line-height: 1.2;
         text-transform: uppercase;
+
         @include breakpoint(small only) {
             line-height: 1.5;
             font-size: rem-calc(14);
         }
     }
+
     i,
     i:before {
         color: $primary-color;
         font-size: rem-calc(15); // line-height: 1.5;
     }
+
     .title--live__icon {
         &:before {
             content: '\E914';
@@ -72,66 +81,13 @@
 
 /* компонент match-display для лайва и прематча */
 
-.match-display__wrapper {
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: 0px -20px, top;
-    background-size: auto 1000px, cover;
-    &{
-        background-image: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 100%), url(img/sport-bg/default-big.jpg);
-    }
-    &.Soccer,
-    &.Football,
-    &.soccer,
-    &.football
-    {
-        background-image: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 100%), url(img/sport-bg/soccer-big.jpg);
-    }
-    &.AmericanFootball,
-    &.americanFootball
-    {
-        background-image: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 100%), url(img/sport-bg/american-football-big.jpg);
-    }
-    &.Baseball,
-    &.baseball
-    {
-        background-image: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 100%), url(img/sport-bg/baseball-big.jpg);
-    }
-    &.Basketball,
-    &.basketball
-    {
-        background-image: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 100%), url(img/sport-bg/basketball-big.jpg);
-    }
-    &.Handball,
-    &.handball
-    {
-        background-image: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 100%), url(img/sport-bg/handball-big.jpg);
-    }
-    &.IceHockey,
-    &.iceHockey
-    {
-        background-image: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 100%), url(img/sport-bg/ice-hockey-big.jpg);
-    }
-    &.Tennis,
-    &.tennis
-    {
-        background-image: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 100%), url(img/sport-bg/tennis-big.jpg);
-    }
-    &.Volleyball,
-    &.volleyball
-    {
-        background-image: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 100%), url(img/sport-bg/volleyball-big.jpg);
-    }
-    @include breakpoint(small only) {
-        background-size: auto 1000px, auto 200%;
-    }
-}
-
 .match-display {
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
     flex-flow: row wrap;
+
     @include breakpoint(small only) {
         flex-direction: column;
     }
@@ -139,10 +95,12 @@
 
 /* /компонент match-display для лайва и прематча */
 
-.live-match-display__wrapper {
-    @extend .match-display__wrapper;
-    padding: 15px 0;
+.match-display__wrapper {
+    @include breakpoint(small only) {
+        background-size: auto 1000px, auto 200%;
+    }
 }
+
 
 .period_wrapper {
     display: flex;
@@ -151,6 +109,7 @@
     justify-content: center;
     align-items: stretch;
     align-content: stretch;
+
     .period {
         background: rgba(0, 0, 0, 0.5);
         padding: 3px 5px;
@@ -162,6 +121,7 @@
 
 .live-match-display__inner {
     @extend .match-display;
+
     >div {
         &.live-match__player-name {
             font-size: rem-calc(24);
@@ -172,23 +132,28 @@
             display: flex;
             align-items: center;
             justify-content: flex-end;
+
             @include breakpoint(medium down) {
                 font-size: rem-calc(18);
             }
+
             .player-name {
                 word-break: break-word;
                 padding: 0 10px;
             }
+
             &:last-child {
                 @include breakpoint(medium) {
                     direction: rtl;
                 }
             }
+
             & {
                 @include breakpoint(small only) {
                     direction: rtl;
                 }
             }
+
             .gear {
                 width: 20px;
                 float: none;
@@ -199,18 +164,22 @@
                 line-height: 18px;
             }
         }
+
         &.live-match__player-name:first-child {
             @include xy-cell(auto, false);
             text-align: right;
         }
+
         &.live-match__player-name:last-child {
             @include xy-cell(auto, false);
             text-align: left;
         }
+
         &.live-match__score-box {
             @include xy-cell(shrink, false);
             text-align: center;
         }
+
         .score-total {
             background: #212121;
             padding: 5px 12px;
@@ -221,20 +190,25 @@
             flex-flow: row nowrap;
             align-items: center;
             background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15) 100%);
+
             span {
                 font-size: rem-calc(33);
+
                 @include breakpoint(medium down) {
                     font-size: rem-calc(28);
                 }
             }
+
             .divider {
                 display: flex;
                 align-self: center;
+
                 span {
                     font-size: 20px;
                     padding: 5px 8px;
                 }
             }
+
             &.basketball {
                 background: #000;
                 color: #ffbf00;
@@ -244,10 +218,7 @@
     }
 }
 
-// prematch-display
-.match-display__wrapper {
-    @extend .match-display__wrapper;
-}
+
 
 .match-display__inner {
     text-align: center;
@@ -260,6 +231,7 @@
     font-weight: 500;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
     line-height: 1.2;
+
     @include breakpoint(small only) {
         font-size: rem-calc(18);
     }
@@ -271,6 +243,7 @@
     line-height: 1.3;
     text-transform: uppercase;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+
     @include breakpoint(small only) {
         font-size: rem-calc(13);
     }
@@ -281,11 +254,14 @@
     margin-top: 15px;
     margin-left: -10px;
     margin-right: -10px;
+
     >.cell {
         margin: 0 10px;
+
         @include breakpoint(large) {
             width: calc(50% - 20px);
         }
+
         @include breakpoint(medium down) {
             width: calc(100% - 20px);
         }
@@ -299,9 +275,11 @@
     margin-bottom: 5px;
     font-size: rem-calc(14);
     text-transform: uppercase;
+
     @include breakpoint(large) {
         border: 1px solid #4e4f5d;
     }
+
     &:last-child {
         margin-bottom: 0;
     }
@@ -320,6 +298,7 @@
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.12) 100%);
     border-bottom: 1px solid #000;
     font-weight: 500;
+
     @include breakpoint(medium down) {
         display: none;
     }
@@ -331,32 +310,39 @@
     justify-content: space-between;
     align-content: flex-start;
     background: $body-background;
+
     @include breakpoint(medium down) {
         .market-odds {
             height: auto;
         }
     }
+
     @include breakpoint(large) {
         padding: 8px 3px 0;
+
         .match-group {
             .cell {
                 // flex: 0 0 auto;
             }
         }
+
         .market-odds {
             margin: 0;
             flex-wrap: wrap;
         }
+
         .market-odds .cell {
             margin: 0 5px;
             width: auto;
             max-width: calc(100% - 10px);
             min-width: calc(33.33333% - 10px);
             margin-bottom: 8px;
+
             &:nth-child(n+4):last-child:not(:nth-child(odd)) {
                 max-width: calc(33.33333% - 10px);
             }
         }
+
         .specialoddvalue-text {
             cursor: pointer;
             text-align: right;
@@ -367,16 +353,20 @@
             justify-content: space-between;
             align-items: center;
             margin: 0 !important;
+
             >span {
                 padding: 3px 10px;
             }
+
             &:before {
                 content: attr(data-oddtag);
                 text-transform: uppercase;
                 padding: 3px 8px;
             }
+
             .odd--up {
                 width: auto;
+
                 &:before {
                     height: 23px;
                     color: #47A946;
@@ -386,13 +376,16 @@
                     bottom: 0;
                     left: 5px;
                     top: -1px;
+
                     @include breakpoint(xxlarge down) {
                         top: -2px;
                     }
                 }
             }
+
             .odd--down {
                 width: auto;
+
                 &:before {
                     height: 23px;
                     font-size: 16px;
@@ -401,6 +394,7 @@
                     transform: translateX(-100%);
                     bottom: -1px;
                     left: 5px;
+
                     @include breakpoint(xxlarge down) {
                         bottom: -2px;
                     }
@@ -444,42 +438,52 @@
     margin: 15px auto 0;
     max-width: 650px;
     border-radius: 5px 5px 0 0;
+
     table {
         width: 100%;
         border-spacing: 0;
+
         th {
             background: rgba(0, 0, 0, .45);
             font-weight: 500;
             text-transform: uppercase;
+
             &.player-name {
                 font-size: rem-calc(11);
                 color: $primary-color;
                 padding: 0 10px;
             }
+
             &:first-child {
                 border-top-left-radius: 5px;
             }
+
             &:last-child {
                 border-top-right-radius: 5px;
             }
         }
+
         th,
         td {
             text-align: center; // padding: 5px 10px;
             font-size: rem-calc(14);
         }
+
         tbody tr td {
             border-top: 1px solid rgba(255, 255, 255, .15);
             padding: 8px;
             background: rgba(0, 0, 0, 0.3);
         }
+
         .player-name {
             width: 70%;
             text-align: left;
+
             @include breakpoint(medium down) {
                 width: 50%;
             }
         }
+
         .yellow-card,
         .red-card {
             margin: 0 auto;
@@ -496,6 +500,7 @@
     border-color: #fff;
     overflow: hidden;
     margin: 0 auto;
+
     &:before {
         content: '';
         display: inherit;
@@ -539,6 +544,7 @@
 .penalties__icon {
     height: 20px;
     line-height: 28px;
+
     &:before {
         transform: translateX(-5px);
         content: '\E858';
@@ -553,82 +559,103 @@
 .md-tennis-scoreboard {
     border-right: 0;
     margin: 10px 0;
+
     div {
         padding: 2px 5px;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, .4);
+
         @include breakpoint(large) {
             font-size: rem-calc(16);
         }
     }
+
     .scoreboard__item--team {
         width: calc(60vw);
+
         @include breakpoint(small down) {
             display: none;
         }
+
         @include breakpoint(medium) {
             width: 350px;
         }
     }
+
     .scoreboard__item--team--name {
         position: relative;
         width: 180px;
         font-size: rem-calc(12);
         padding: 0;
+
         @include breakpoint(medium) {
             font-size: rem-calc(14);
+
             &:only-child {
                 width: auto;
                 font-size: rem-calc(18);
             }
         }
     }
+
     .scoreboard__item--team--for-small {
         display: none;
         text-align: center;
         margin: 0 auto;
+
         @include breakpoint(small down) {
             display: block;
             font-size: rem-calc(18);
         }
+
         &.team1 {
             margin-bottom: 10px;
         }
+
         &.team2 {
             margin-top: 10px;
         }
     }
+
     .scoreboard__item--points {
         border-right: 1px solid rgba(255, 255, 255, .2);
         font-weight: 700;
+
         >div {
             text-align: right;
             color: $primary-color;
             width: 35px;
+
             @include breakpoint(small down) {
                 width: 20px;
             }
         }
     }
+
     .scoreboard__item-set {
         >div {
             text-align: center;
             width: 35px;
+
             @include breakpoint(small down) {
                 width: 20px;
             }
         }
     }
+
     .scoreboard__row--team:not(:last-child) {
         border-bottom: 0;
     }
+
     .scoreboard__row--team:not(:first-child):not(.head) {
         border-top: 1px solid rgba(255, 255, 255, 0.25);
     }
+
     .head {
         >div>div {
             font-size: 13px;
             font-weight: 300;
         }
+
         .scoreboard__item--points {
             border: 0;
         }
@@ -637,6 +664,7 @@
 
 .md-volleyball-scoreboard {
     @extend .md-tennis-scoreboard;
+
     .scoreboard__item--team {
         width: 180px;
     }

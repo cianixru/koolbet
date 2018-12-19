@@ -878,6 +878,7 @@
         font-size: rem-calc(20);
         color: $primary-color;
         border-bottom: 1px dashed $primary-color;
+        text-decoration: none;
         &:hover {
             cursor: pointer;
             // color: #fff;
@@ -890,4 +891,11 @@
 @keyframes spin {
     from {transform:rotate(0deg);}
     to {transform:rotate(360deg);}
+}
+
+.mt15 {
+    margin-top: 15px
+}
+.mb15 {
+    margin-bottom: 15px
 }

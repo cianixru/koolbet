@@ -1,6 +1,5 @@
 .header-gradient-1 {
     background-color: #000;
-    // background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.17) 100%);
     background-image: linear-gradient(to bottom,rgba(255,255,255,0),rgba(255,255,255,.12) 100%);
 }
 
@@ -15,93 +14,5 @@ $linear-gradient-to: rgba(255, 255, 255, 0.16);
     background-position: left, left, right 40px bottom 0;
     &:not(.tournament__title) {
         border-top: 0!important;
-    }
-    @include breakpoint(xxlarge) {
-        &.results {
-            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $linear-gradient-to 100%),
-            linear-gradient(to left, $second-gradient-from 3%, $second-gradient-to 61%), 
-            url(../../assets/img/sport-title-bg/results.png);        
-            background-position: left, left, right 0 bottom 0;
-        }
-        &.Soccer {
-            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $linear-gradient-to 100%),
-            linear-gradient(to left, $second-gradient-from 3%, $second-gradient-to 61%), 
-            url(../../assets/img/sport-title-bg/soccer.png);        
-        }
-        &.AmericanFootball {
-            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $linear-gradient-to 100%),
-            linear-gradient(to left, $second-gradient-from 3%, $second-gradient-to 61%), 
-            url(../../assets/img/sport-title-bg/american_football.png);        
-        }
-        &.Basketball {
-            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $linear-gradient-to 100%),
-            linear-gradient(to left, $second-gradient-from 3%, $second-gradient-to 61%), 
-            url(../../assets/img/sport-title-bg/basketball.png);        
-        }
-        &.Darts {
-            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $linear-gradient-to 100%),
-            linear-gradient(to left, $second-gradient-from 3%, $second-gradient-to 61%), 
-            url(../../assets/img/sport-title-bg/darts.png);        
-        }
-        &.Handball {
-            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $linear-gradient-to 100%),
-            linear-gradient(to left, $second-gradient-from 3%, $second-gradient-to 61%), 
-            url(../../assets/img/sport-title-bg/handball.png);        
-        }
-        &.Rugby {
-            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $linear-gradient-to 100%),
-            linear-gradient(to left, rgba(0, 0, 0, 0.1) 3%, $second-gradient-to 61%), 
-            url(../../assets/img/sport-title-bg/rugby.png);        
-        }
-        &.Tennis {
-            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $linear-gradient-to 100%),
-            linear-gradient(to left, $second-gradient-from 3%, $second-gradient-to 61%), 
-            url(../../assets/img/sport-title-bg/tennis.png);        
-        }
-        &.Volleyball {
-            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $linear-gradient-to 100%),
-            linear-gradient(to left, $second-gradient-from 3%, $second-gradient-to 61%), 
-            url(../../assets/img/sport-title-bg/volleyball.png);        
-        }
-        &.Baseball {
-            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $linear-gradient-to 100%),
-            linear-gradient(to left, $second-gradient-from 3%, $second-gradient-to 61%), 
-            url(../../assets/img/sport-title-bg/baseball.png);        
-        }
-        &.IceHockey {
-            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $linear-gradient-to 100%),
-            linear-gradient(to left, $second-gradient-from 3%, $second-gradient-to 61%), 
-            url(../../assets/img/sport-title-bg/icehockey.png);        
-        }
-        &.Boxing {
-            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $linear-gradient-to 100%),
-            linear-gradient(to left, $second-gradient-from 3%, $second-gradient-to 61%), 
-            url(../../assets/img/sport-title-bg/boxing.png);        
-        }
-        &.Golf {
-            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $linear-gradient-to 100%),
-            linear-gradient(to left, $second-gradient-from 3%, $second-gradient-to 61%), 
-            url(../../assets/img/sport-title-bg/golf.png);        
-        }
-        &.Snooker {
-            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $linear-gradient-to 100%),
-            linear-gradient(to left, $second-gradient-from 3%, $second-gradient-to 61%), 
-            url(../../assets/img/sport-title-bg/snooker.png);        
-        }
-        &.AlpineSkiing {
-            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $linear-gradient-to 100%),
-            linear-gradient(to left, $second-gradient-from 3%, $second-gradient-to 61%), 
-            url(../../assets/img/sport-title-bg/alpineskiing.png);        
-        }
-        &.Motorsport {
-            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $linear-gradient-to 100%),
-            linear-gradient(to left, $second-gradient-from 3%, $second-gradient-to 61%), 
-            url(../../assets/img/sport-title-bg/motorsport.png);        
-        }
-        &.TopTournaments {
-            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $linear-gradient-to 100%),
-            linear-gradient(to left, $second-gradient-from 3%, $second-gradient-to 61%), 
-            url(../../assets/img/sport-title-bg/TopTournaments.png);        
-        }
     }
 }

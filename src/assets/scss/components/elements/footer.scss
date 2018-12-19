@@ -50,18 +50,21 @@
 
 
 .footer__menu {
-
     padding: 20px 15px 5px;
     background: #101016;
-
     align-items: center;
     display: flex;
     flex-direction: column;
     &>.footer__menu-item {
-        margin-bottom: 15px;
-        display: flex;  
-        flex-direction: row;
-        align-items: center;
+        @include breakpoint(medium down) {            
+            text-align: center;
+        }
+        @include breakpoint(large) {
+            margin-bottom: 15px;
+            display: flex;  
+            flex-direction: row;
+        }
+        // align-items: center;
         a {
             text-decoration: none;
             color: rgba(255, 255, 255, 0.8);
@@ -76,20 +79,32 @@
             color: rgba(255, 255, 255, 0.45);
             text-transform: uppercase;
             font-weight: 500;
+            @include breakpoint(medium down) {
+                margin-bottom: 3px;
+            }
         }
         ul {
-            flex-flow: row wrap;
-            display: flex;
+            margin-bottom: 15px;
+            @include breakpoint(large) {
+                flex-flow: row wrap;
+                display: flex;
+            }
             li {
                 font-size: rem-calc(15);
-                margin-left: 5px;
-                &:before {
-                    content: " | ";
+                @include breakpoint(medium down) {
+                    padding: 0 5px;
                     display: inline-block;
-                    width: 10px;
-                    margin-right: 5px;
-                    text-align: center;
-                    color: rgba(255, 255, 255, 0.35);
+                }
+                @include breakpoint(large) {
+                    margin-left: 5px;
+                    &:before {
+                        content: " | ";
+                        display: inline-block;
+                        width: 10px;
+                        margin-right: 5px;
+                        text-align: center;
+                        color: rgba(255, 255, 255, 0.35);
+                    }
                 }
             }
         }
@@ -105,6 +120,9 @@
         display: inline;
         img {
             max-height: 50px;
+            @include breakpoint(medium down) {
+                max-height: 40px;
+            }
             margin: 0 5px;
             border: 1px solid #333;
         }

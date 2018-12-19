@@ -1,11 +1,40 @@
 .lang-switcher {
-    display: inline-block;
-    vertical-align: middle;
+    // display: inline-block;
+    // vertical-align: middle;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
     cursor: pointer;
-    font-size: rem-calc(15);
+    font-size: rem-calc(14);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    height: 30px;
     @include breakpoint(small only) {
-        margin-right: 5px;
+        margin-right: 0;
         line-height: 1;
+    }
+    select {
+        background-image: none; 
+        border: 0;
+        font-size: rem-calc(14);
+        cursor: pointer;
+        height: auto;
+        // @include breakpoint(large down) {
+            // height: 28px;
+            // width: 42px;
+            // padding: 0 .45rem;
+            // background-position: right center;
+            // background-color: $profile-button-bg-color;
+        // }
+        option {
+            color: #000;
+        }
+        &:focus {
+            border: 0;
+            background-color: transparent;
+
+        }
+
     }
     /* .flag {
         display: inline-block;
@@ -16,6 +45,12 @@
         background-repeat: no-repeat;
         vertical-align: middle;
     } */
+
+    .icon-arrow {
+        margin-left: -22px;
+        position: relative;
+        z-index: -1;
+    }
     .icon-arrow:before {
         content: '\E80F';
         transform: rotate(-90deg);
@@ -25,6 +60,7 @@
         display: inline-block;
         vertical-align: middle;
         margin-left: 0;
+        margin-right: 3px;
         @include breakpoint(medium down) {
             margin: 0;
         }
