@@ -383,10 +383,10 @@
     justify-content: center;
     align-content: stretch;
     align-items: center;
-    padding: 15px;
+    padding: 10px 15px;
 
     @include breakpoint(medium down) {
-        padding: 15px;
+        padding: 10px 15px;
     }
 }
 

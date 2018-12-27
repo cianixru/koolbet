@@ -42,3 +42,39 @@
         }
     }
 }
+
+
+/* ========= */
+
+
+.selectedLive {
+    color: #ffbf00!important;
+}
+.flexContainerLive {
+    flex: 1 1 auto!important;
+}
+.tabsRootLive {
+    position: relative!important;
+}
+.tabsIndicatorLive {
+    background-color: #ffbf00!important;
+    height: 3!important;
+}
+.tabLabelLive {
+    font-size: 14!important;
+    text-overflow: ellipsis!important;
+}
+.tabRootLive {
+    min-height: 40!important;
+    min-width: 72!important;
+    max-width: 99.9%!important;
+    font-family: inherit!important;
+    color: #fff!important;
+    &:hover {
+        color: #fff!important;
+        opacity: 1!important;
+    }
+    &:focus {
+        color: #fff!important;
+    }
+}

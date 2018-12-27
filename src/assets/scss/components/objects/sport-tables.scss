@@ -38,6 +38,7 @@
                 border: 1px solid rgba(255, 255, 255, 0.08);
                 margin: 2px 5px;
                 line-height: 1.8;
+                font-weight: 500;
                 @include breakpoint(xxxlarge only) {
                     margin: 2px 5px;
                 }
@@ -254,6 +255,7 @@
                 text-overflow: ellipsis;
                 overflow: hidden;
                 text-align: center;
+                font-weight: 500;
             }
             .specialoddvalue-text:before {
                 content: attr(data-oddtag);

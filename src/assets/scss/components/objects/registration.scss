@@ -208,36 +208,54 @@
             width: 80px;
         }
     }
-    &.complete {
+    &.messageBox {
         position: relative;
-        //padding: 30px 25px 30px 10px;
         
-        .complete__icon {
-            // border: 3px solid #070;
+        .message__icon {
             border-radius: 50%;
             padding: 0 15px 0 8px;
             @include breakpoint(medium down) {
                 padding: 0 10px 0 3px;
             }
             &:before {
-                @include breakpoint(medium down) {
+                    @include breakpoint(medium down) {
                     font-size: rem-calc(40);
                 }
                 font-size: rem-calc(60);
-                color: #070;
             }
         }
         h3 {
             text-align: left;
-            color: #070;
             margin-bottom: 10px;
             @include breakpoint(medium down) {
                 font-size: rem-calc(20);
-                line-height: 1.3
+                line-height: 1.3;
             }
         }
         .complete-msg {
             font-size: rem-calc(14);
+        }
+    }
+    &.complete {
+        .message__icon {
+            &:before {
+                color: #070;
+                content: '\E823';
+            }
+        }
+        h3 {
+            color: #070;
+        }
+    }
+    &.error {
+        .message__icon {
+            &:before {
+                color: red;
+                content: '\E824';
+            }
+        }
+        h3 {
+            color: red;
         }
     }
 }

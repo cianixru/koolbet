@@ -8,9 +8,10 @@
     justify-content: space-between;
 	align-items: center;
     align-content: stretch;
-    background: #14151d;
+    // background: #14151d;
     color: $global-button-text-color;
     border-radius: 3px 3px 0 0;
+    @extend .header-gradient-1;
     .left-col {
         display: flex;
         flex-flow: row nowrap;
@@ -124,11 +125,12 @@
     }
     span:last-of-type {
         color: #fff;
-        margin-left: 5px;
+        // margin-left: 5px;
     }
     label, span {
         font-size: rem-calc(13);
-            letter-spacing: .2px;
+        letter-spacing: .2px;
+        padding: 1px;
         &:before {
             color: $primary-color !important;
         }
@@ -898,4 +900,72 @@
 }
 .mb15 {
     margin-bottom: 15px
+}
+
+
+
+
+
+
+
+
+
+
+.betSlipStyledHeader {
+    color: $primary-color;
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.betslip-indicator {
+    background: $primary-color;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    width: 19px;
+    height: 19px;
+    border-radius: 10px;
+    margin-left: 4px;
+    flex: 0 0 19px;
+}
+
+.tabsRoot {
+    min-height: 36px!important;
+    background-color: #4e4f58!important;
+}
+.tabsIndicator {
+    border-top: 3px solid #ffbf00!important;
+    background-color: #1c1f29!important;
+    top: 0!important;
+    height: 100%!important;
+}
+.labelContainer {
+    font-size: 14px!important;
+    padding: 0!important;
+    letter-spacing: .2px!important;
+}
+.label {
+    font-size: 14px!important;
+}
+.tabRoot {
+    min-height: 36px!important;
+    position: relative!important;
+    z-index: 2!important;
+    margin-top: 2px!important;
+    text-transform: uppercase!important;
+    min-width: 22px!important;
+    max-width: 100%!important;
+    color: #fff!important;
+    transition: border .2s!important;
+    flex: 1 1!important;
+    font-family: 'Roboto Condensed'!important;
+        &:hover {
+            opacity: 1!important;
+        }
 }
