@@ -48,6 +48,7 @@
 
 // OBJECTS
 @import 'components/objects/menu';
+@import 'components/objects/offcanvas';
 @import 'components/objects/preloader';
 @import 'components/objects/layout';
 @import 'components/objects/header';
@@ -64,7 +65,9 @@
 @import 'components/objects/match-details';
 @import 'components/objects/results-table';
 @import 'components/objects/profile/profile-generic';
+@import 'components/objects/profile/affiliate-chart';
 @import 'components/objects/profile/my-account';
+@import 'components/objects/profile/modals';
 @import 'components/objects/profile/open-bets-cards';
 @import 'components/objects/profile/add-funds';
 @import 'components/objects/profile/pagination';
@@ -72,6 +75,7 @@
 @import 'components/objects/profile/transitions-history';
 @import 'components/objects/profile/affiliate';
 @import 'components/objects/profile/datePickers__ant';
+@import 'components/objects/profile/datePicker';
 @import 'components/objects/toolBar';
 @import 'components/objects/registration';
 @import 'components/objects/vg/vg-view-panel';

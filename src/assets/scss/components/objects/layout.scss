@@ -59,7 +59,7 @@ body {
 
 .page-grid__item {
     margin: $columns-padding 0 0;
-
+    height: 100vh;
     &.main {
         padding: 0;
         @include xy-cell(auto, false);
