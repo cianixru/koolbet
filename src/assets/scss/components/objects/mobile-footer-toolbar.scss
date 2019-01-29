@@ -172,6 +172,15 @@
             // line-height: 0;
         }
     }
+    .help {
+        @include breakpoint(medium down) {
+            display: block;
+        }
+        &::before {
+            content: '\E806'; // font-size: 25px!important;
+            // line-height: 0;
+        }
+    }
     .betslip {
         @include breakpoint(large) {
             background: #fff;
