@@ -1,177 +1,238 @@
 .footer-menu__container {
-    @extend .grid-container;
-    @include flex-align($x: justify, $y: middle);
-    height: $footer-toolbar-height;
-    flex-wrap: nowrap;
-    @include breakpoint(medium down) {
-        background-color: $footer-toolbar-bg-color!important;
-        //background-image: linear-gradient(to bottom,rgba(255,255,255,0),rgba(255, 255, 255, 0.07) 100%);
-    }
-    @include breakpoint(xlarge) {
-        justify-content: flex-end;
-    }
-    @include breakpoint(small down) {
-        border-top: 1px solid #4d4d4d;
-    }
+  @extend .grid-container;
+  @include flex-align($x: justify, $y: middle);
+  height: $footer-toolbar-height;
+  flex-wrap: nowrap;
+  @include breakpoint(medium down) {
+    background-color: $footer-toolbar-bg-color !important;
+    //background-image: linear-gradient(to bottom,rgba(255,255,255,0),rgba(255, 255, 255, 0.07) 100%);
+  }
+  @include breakpoint(xlarge) {
+    justify-content: flex-end;
+  }
+  @include breakpoint(small down) {
+    border-top: 1px solid #4d4d4d;
+  }
 }
 
-.footer-menu__item {    
-    padding: 5px 0 !important;
-    border-top: $header-border;
-    position: relative;
-    cursor: pointer;
-    @include breakpoint(xlarge down) {
-        @include xy-cell($size: 1 of 3, $gutters: $columns-gutters, $gutter-type: padding, $gutter-position: left right top bottom);
+.footer-menu__item {
+  padding: 5px 0 !important;
+  border-top: $header-border;
+  position: relative;
+  cursor: pointer;
+  @include breakpoint(xlarge down) {
+    @include xy-cell(
+      $size: 1 of 3,
+      $gutters: $columns-gutters,
+      $gutter-type: padding,
+      $gutter-position: left right top bottom
+    );
+  }
+  @include breakpoint(medium down) {
+    @include xy-cell(
+      $size: 1 of 2,
+      $gutters: $columns-gutters,
+      $gutter-type: padding,
+      $gutter-position: left right top bottom
+    );
+    &.search {
+      // display: none;
     }
-    @include breakpoint(medium down) {
-        @include xy-cell($size: 1 of 2, $gutters: $columns-gutters, $gutter-type: padding, $gutter-position: left right top bottom);
-        &.search {
-            // display: none;
-        }
-    }
-    @include breakpoint(medium down) {
-        @include xy-cell(auto, $gutters: $columns-gutters, $gutter-type: padding, $gutter-position: left right);
-        padding-top: 5px;
-    }
+  }
+  @include breakpoint(medium down) {
+    @include xy-cell(
+      auto,
+      $gutters: $columns-gutters,
+      $gutter-type: padding,
+      $gutter-position: left right
+    );
+    padding-top: 5px;
+  }
 }
 
 .footer-menu__container {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    color: $header-menu-color;
-    z-index: 20;
-    @include breakpoint(xxlarge) {
-        display: none!important;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: $header-menu-color;
+  z-index: 20;
+  @include breakpoint(xxlarge) {
+    display: none !important;
+  }
+  @include breakpoint(xxlarge down) {
+    .footer-menu__item {
+      display: none;
+      font-size: rem-calc(18);
+      text-transform: uppercase;
+      &::before {
+        font-size: rem-calc(18);
+        margin-right: 10px;
+      }
     }
-    @include breakpoint(xxlarge down) {
-        .footer-menu__item {
-            display: none;
-            font-size: rem-calc(18);
-            text-transform: uppercase;
-            &::before {
-                font-size: rem-calc(18);
-                margin-right: 10px;
-            }
-        }
+  }
+  @include breakpoint(medium down) {
+    .footer-menu__item {
+      display: none;
+      font-size: rem-calc(11) !important;
+      text-transform: uppercase;
+      display: flex;
+      flex-flow: column nowrap;
+      text-align: center;
+      align-content: center;
+      color: #ccc;
+      min-width: 50px !important;
+      &::before {
+        height: 24px;
+        align-self: flex-start;
+        display: flex;
+        font-size: rem-calc(22) !important;
+        margin-right: 10px;
+        margin: 0 auto;
+        color: #ccc;
+      }
+      & span {
+        font-size: rem-calc(11) !important;
+        font-family: $body-font-family !important;
+        margin-top: 2px !important;
+      }
     }
+    .footer-menu__label {
+      display: block;
+      margin-top: 2px;
+    }
+  }
+  @include breakpoint(small only) {
+    .footer-menu__item {
+      & span {
+        font-size: rem-calc(9) !important;
+      }
+    }
+  }
+  .live {
     @include breakpoint(medium down) {
-        .footer-menu__item {
-            display: none;
-            font-size: rem-calc(11)!important;
-            text-transform: uppercase;
-            display: flex;
-            flex-flow: column nowrap;
-            text-align: center;
-            align-content: center;
-            color: #ccc;
-            min-width: 50px!important;
-            &::before {
-                height: 24px;
-                align-self: flex-start;
-                display: flex;
-                font-size: rem-calc(22)!important;
-                margin-right: 10px;
-                margin: 0 auto;
-                color: #ccc;
-            }
-            & span {
-                font-size: rem-calc(11)!important;
-                font-family: $body-font-family!important; 
-                margin-top: 2px!important;
-            }
-        }
-        .footer-menu__label {
-            display: block;
-            margin-top: 2px;
-        }
+      display: block;
     }
-    @include breakpoint(small only) {
-        .footer-menu__item {
-            & span {
-                font-size: rem-calc(9)!important;
-            }
-        }
+    &::before {
+      content: "\E8C7";
+      font-size: 25px; // line-height: 0!important;
     }
-    .live {
-        @include breakpoint(medium down) {
-            display: block;
-        }
-        &::before {
-            content: '\E8C7';
-            font-size: 25px; // line-height: 0!important;
-        }
+  }
+  .categories {
+    @include breakpoint(large only) {
+      &:not(.live) {
+        display: block;
+      }
+      background: #fff;
+      color: #333;
+      width: auto;
+      position: fixed;
+      left: 30px;
+      bottom: 20px;
+      padding: 10px 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      transition: all 0.2s;
+      border-radius: 5px;
+      &:hover {
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.9);
+      }
+      &::before {
+        color: #000;
+        margin-right: 5px;
+        font-size: 24px !important;
+      }
+      .footer-menu__label {
+        font-size: 16px !important;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+      }
     }
-    .categories {
-        @include breakpoint(large only) {
-            &:not(.live) {
-                display: block;
-            }
-            background: #fff;
-            color: #333;
-            width: auto;
-            position: fixed;
-            left: 30px;
-            bottom: 20px;
-            padding: 10px 20px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, .5);
-            transition: all .2s;
-            border-radius: 5px;
-            &:hover{
-                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.9);
-            }
-            &::before {
-                color: #000;
-                margin-right: 5px;
-                font-size: 24px!important;
-            }
-            .footer-menu__label {
-                font-size: 16px!important;
-                font-weight: 700;
-                letter-spacing: .3px;
-            }
-        }
 
-        @include breakpoint(medium down) {
-            display: block;
-        }
-        &::before {
-            content: '\e91f';
-            font-size: 25px; // line-height: 0!important;
-        }
+    @include breakpoint(medium down) {
+      display: block;
     }
-    .search {
-        @include breakpoint(medium down) {
-            display: block;
-        }
-        &::before {
-            content: '\E820'; // font-size: 25px!important;
-            // line-height: 0;
-        }
+    &::before {
+      content: "\e91f";
+      font-size: 25px; // line-height: 0!important;
     }
-    .virtual {
-        @include breakpoint(medium down) {
-            display: block;
-        }
-        &::before {
-            content: '\E8C8'; 
-            font-size: rem-calc(27) !important;
-            line-height: 0.93;
-            @include breakpoint(small only) {
-                font-size: rem-calc(26) !important;
-            }
-        }
+  }
+  .search {
+    @include breakpoint(medium down) {
+      display: block;
     }
-    .coupon {
-        @include breakpoint(medium down) {
-            display: block;
-        }
-        &::before {
-            content: '\E910'; // font-size: 25px!important;
-            // line-height: 0;
-        }
+    &::before {
+      content: "\E820"; // font-size: 25px!important;
+      // line-height: 0;
     }
+  }
+  .virtual {
+    @include breakpoint(medium down) {
+      display: block;
+    }
+    &::before {
+      content: "\E8C8";
+      font-size: rem-calc(27) !important;
+      line-height: 0.93;
+      @include breakpoint(small only) {
+        font-size: rem-calc(26) !important;
+      }
+    }
+  }
+  .coupon {
+    @include breakpoint(medium down) {
+      display: block;
+    }
+    &::before {
+      content: "\E910"; // font-size: 25px!important;
+      // line-height: 0;
+    }
+  }
+  .help {
+    @include breakpoint(medium down) {
+      display: block;
+    }
+    &::before {
+      content: "\E8B0";
+      // font-size: 25px!important;
+      // line-height: 0;
+    }
+  }
+  .betslip {
+    @include breakpoint(large) {
+      background: #fff;
+      color: #333;
+      width: auto;
+      position: fixed;
+      right: 30px;
+      bottom: 20px;
+      padding: 10px 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      transition: all 0.2s;
+      border-radius: 5px;
+      &:hover {
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.9);
+      }
+      &::before {
+        color: #000;
+        margin-right: 5px;
+        font-size: 24px !important;
+      }
+      .footer-menu__label {
+        font-size: 16px !important;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+      }
+      .button-counter {
+        right: 15px;
+        top: -7px;
+      }
+      .button-counter span {
+        height: 20px;
+        width: 20px;
+        line-height: 16px;
+      }
+    }
+<<<<<<< HEAD
     .help {
         @include breakpoint(medium down) {
             display: block;
@@ -222,63 +283,71 @@
         &::before {
             content: '\E892';
         }
+=======
+    @include breakpoint(xxlarge down) {
+      display: block;
+>>>>>>> 1b36f9e5c45ab1cf1cc5bbfe5a1341c30821d3f3
     }
+    &::before {
+      content: "\E892";
+    }
+  }
 }
 
 .button-counter {
-    z-index: 1;
-    opacity: 1;
+  z-index: 1;
+  opacity: 1;
+  text-align: center;
+  position: absolute;
+  width: 0;
+  right: calc(50% - 5px);
+  top: -1px;
+  span {
+    border: 1px solid $betslip-counter-bg-color;
+    border-radius: 20px;
+    display: block;
+    height: 18px;
+    width: 18px;
+    color: #fff;
     text-align: center;
-    position: absolute;
-    width: 0;
-    right: calc(50% - 5px);
-    top: -1px;
-    span {
-        border: 1px solid $betslip-counter-bg-color;
-        border-radius: 20px;
-        display: block;
-        height: 18px;
-        width: 18px;
-        color: #fff;
-        text-align: center;
-        line-height: 15px;
-        font-size: 13px;
-        font-weight: 700;
-        cursor: pointer;
-        transform: scale(1);
-        transition: all 0.3s;
-        background: $betslip-counter-bg-color;
-        box-shadow: 1.5px 2.5px 2.8px 0.18px rgba(0, 0, 0, .4);
-        @include breakpoint(medium down) {
-            font-weight: 500;
-        }
+    line-height: 15px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transform: scale(1);
+    transition: all 0.3s;
+    background: $betslip-counter-bg-color;
+    box-shadow: 1.5px 2.5px 2.8px 0.18px rgba(0, 0, 0, 0.4);
+    @include breakpoint(medium down) {
+      font-weight: 500;
     }
+  }
 }
 
 .button-counter__wrapper {
-    @include breakpoint(large) {
-        display: none;
-    }
+  @include breakpoint(large) {
+    display: none;
+  }
 }
 .off-canvas.position-bottom {
-    &.right {
-        right: 0;
-        left: auto;
-    }
-    @include breakpoint(medium down) {
-        width: 100%;
-    }
-    @include breakpoint(large) {
-        width: 33.333%;
-    }
+  &.right {
+    right: 0;
+    left: auto;
+  }
+  @include breakpoint(medium down) {
+    width: 100%;
+  }
+  @include breakpoint(large) {
+    width: 33.333%;
+  }
 }
 
 #betslipArea.position-bottom {
-    @include breakpoint(xlarge down) {
-        height: calc(100% - 81px);
-    }
-    @include breakpoint(large down) {
-        height: 100vh;
-        height: calc(100% - 50px); // z-index: 200;
-    }
+  @include breakpoint(xlarge down) {
+    height: calc(100% - 81px);
+  }
+  @include breakpoint(large down) {
+    height: 100vh;
+    height: calc(100% - 50px); // z-index: 200;
+  }
 }

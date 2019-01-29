@@ -48,8 +48,8 @@
     }
     &.TopTournaments {
         .item {
-            width: auto;
-            padding: 4px 15px;
+            width: calc(25% - 4px);
+            padding: 5px 15px;
             @include breakpoint(large down) {
                 padding: 4px 10px;
                 font-size: rem-calc(13);
