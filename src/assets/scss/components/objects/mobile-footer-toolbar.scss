@@ -232,7 +232,6 @@
         line-height: 16px;
       }
     }
-<<<<<<< HEAD
     .help {
         @include breakpoint(medium down) {
             display: block;
@@ -283,10 +282,6 @@
         &::before {
             content: '\E892';
         }
-=======
-    @include breakpoint(xxlarge down) {
-      display: block;
->>>>>>> 1b36f9e5c45ab1cf1cc5bbfe5a1341c30821d3f3
     }
     &::before {
       content: "\E892";
