@@ -232,8 +232,56 @@
         line-height: 16px;
       }
     }
-    @include breakpoint(xxlarge down) {
-      display: block;
+    .help {
+        @include breakpoint(medium down) {
+            display: block;
+        }
+        &::before {
+            content: '\E806'; // font-size: 25px!important;
+            // line-height: 0;
+        }
+    }
+    .betslip {
+        @include breakpoint(large) {
+            background: #fff;
+            color: #333;
+            width: auto;
+            position: fixed;
+            right: 30px;
+            bottom: 20px;
+            padding: 10px 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, .5);
+            transition: all .2s;
+            border-radius: 5px;
+            &:hover{
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.9);
+            }
+            &::before {
+                color: #000;
+                margin-right: 5px;
+                font-size: 24px!important;
+            }
+            .footer-menu__label {
+                font-size: 16px!important;
+                font-weight: 700;
+                letter-spacing: .3px;
+            }
+            .button-counter {
+                right: 15px;
+                top: -7px;
+            }
+            .button-counter span {
+                height: 20px;
+                width: 20px;
+                line-height: 16px;
+            }
+        }
+        @include breakpoint(xxlarge down) {
+            display: block;
+        }
+        &::before {
+            content: '\E892';
+        }
     }
     &::before {
       content: "\E892";

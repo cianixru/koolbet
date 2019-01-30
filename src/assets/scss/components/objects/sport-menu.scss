@@ -251,7 +251,7 @@
 
     >li>a.icon:before {
         // @include breakpoint(large) {
-        content: '\E801';
+        content: '\E802';
         transform: rotate(-90deg);
         transition: $global-transition;
         // }
@@ -316,7 +316,7 @@
 
     .sport-submenu__item {
         display: flex;
-        padding: 0 17px 0 10px;
+        padding: 0 17px 0 5px;
 
         @include breakpoint(medium down) {
             padding: 5px 17px 5px 10px;
