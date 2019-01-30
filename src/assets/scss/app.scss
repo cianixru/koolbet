@@ -1,24 +1,24 @@
 @charset 'utf-8';
 
 // SETTINGS
-@import 'foundation';
-@import 'settings';  // Global foundation settings
-@import 'components/template/template1'; //custom settings
+@import "foundation";
+@import "settings"; // Global foundation settings
+@import "components/template/template1"; //custom settings
 
 // GENERIC
 @include foundation-global-styles;
-@import 'components/generic/gradients';
-@import 'components/generic/resets';
-@import 'components/generic/table-styles';
-@import 'components/generic/filter-controls';
-@import 'components/generic/page-titles';
-@import 'components/generic/grids';
-@import 'components/generic/buttons';
+@import "components/generic/gradients";
+@import "components/generic/resets";
+@import "components/generic/table-styles";
+@import "components/generic/filter-controls";
+@import "components/generic/page-titles";
+@import "components/generic/grids";
+@import "components/generic/buttons";
 
 // TOOLS
-@import 'components/tools/icons';
-@import 'components/tools/clearfix';
-@import 'components/tools/align';
+@import "components/tools/icons";
+@import "components/tools/clearfix";
+@import "components/tools/align";
 //@import 'components/tools/fonts';
 
 // ELEMENTS
@@ -28,7 +28,7 @@
 //@import 'components/elements/flickity';
 // @import 'components/elements/flickity-customs';
 // @import 'components/elements/scrollbar';
-@import 'components/elements/custom-selectbox';
+@import "components/elements/custom-selectbox";
 @include foundation-forms;
 @include foundation-menu;
 @include foundation-button;
@@ -36,59 +36,59 @@
 @include foundation-progress-bar;
 @include foundation-pagination;
 // @include foundation-reveal; // Модалки, потом удалить!
-@import 'components/elements/odds-up-down';
-@import 'components/elements/responsive-card-table';
-@import 'components/elements/mybets-responsive-table';
-@import 'components/elements/inputs';
-@import 'components/elements/separator';
-@import 'components/elements/alertbox';
-@import 'components/elements/share-buttons';
-@import 'components/elements/footer';
-@import 'components/elements/anchor';
+@import "components/elements/odds-up-down";
+@import "components/elements/responsive-card-table";
+@import "components/elements/mybets-responsive-table";
+@import "components/elements/inputs";
+@import "components/elements/separator";
+@import "components/elements/alertbox";
+@import "components/elements/share-buttons";
+@import "components/elements/footer";
+@import "components/elements/anchor";
 
 // OBJECTS
-@import 'components/objects/menu';
-@import 'components/objects/offcanvas';
-@import 'components/objects/preloader';
-@import 'components/objects/layout';
-@import 'components/objects/header';
-@import 'components/objects/buttons';
-@import 'components/objects/sport-menu';
-@import 'components/objects/sport-menu--live';
-@import 'components/objects/sport-tables';
-@import 'components/objects/sport-tables--live';
-@import 'components/objects/bet-type';
-@import 'components/objects/breadcrumbs';
-@import 'components/objects/tournament-header--live';
-@import 'components/objects/mobile-footer-toolbar';
-@import 'components/objects/bet-slip';
-@import 'components/objects/match-details';
-@import 'components/objects/results-table';
-@import 'components/objects/profile/profile-generic';
-@import 'components/objects/profile/affiliate-chart';
-@import 'components/objects/profile/my-account';
-@import 'components/objects/profile/modals';
-@import 'components/objects/profile/open-bets-cards';
-@import 'components/objects/profile/add-funds';
-@import 'components/objects/profile/pagination';
-@import 'components/objects/profile/transitions';
-@import 'components/objects/profile/transitions-history';
-@import 'components/objects/profile/affiliate';
-@import 'components/objects/profile/datePickers__ant';
-@import 'components/objects/profile/datePicker';
-@import 'components/objects/toolBar';
-@import 'components/objects/registration';
-@import 'components/objects/vg/vg-view-panel';
-@import 'components/objects/vg/vg-timeline';
-@import 'components/objects/vg/vg-content-type1';
-@import 'components/objects/vg/vg-race-bet__tab';
-@import 'components/objects/vg/vg-race-bet__table';
+@import "components/objects/menu";
+@import "components/objects/offcanvas";
+@import "components/objects/preloader";
+@import "components/objects/layout";
+@import "components/objects/header";
+@import "components/objects/buttons";
+@import "components/objects/sport-menu";
+@import "components/objects/sport-menu--live";
+@import "components/objects/sport-tables";
+@import "components/objects/sport-tables--live";
+@import "components/objects/bet-type";
+@import "components/objects/breadcrumbs";
+@import "components/objects/tournament-header--live";
+// @import 'components/objects/mobile-footer-toolbar';
+@import "components/objects/bet-slip";
+@import "components/objects/match-details";
+@import "components/objects/results-table";
+@import "components/objects/profile/profile-generic";
+@import "components/objects/profile/affiliate-chart";
+@import "components/objects/profile/my-account";
+@import "components/objects/profile/modals";
+@import "components/objects/profile/open-bets-cards";
+@import "components/objects/profile/add-funds";
+@import "components/objects/profile/pagination";
+@import "components/objects/profile/transitions";
+@import "components/objects/profile/transitions-history";
+@import "components/objects/profile/affiliate";
+@import "components/objects/profile/datePickers__ant";
+@import "components/objects/profile/datePicker";
+@import "components/objects/toolBar";
+@import "components/objects/registration";
+@import "components/objects/vg/vg-view-panel";
+@import "components/objects/vg/vg-timeline";
+@import "components/objects/vg/vg-content-type1";
+@import "components/objects/vg/vg-race-bet__tab";
+@import "components/objects/vg/vg-race-bet__table";
 
 // BUTTONS
-@import 'components/buttons/account-buttons';
-@import 'components/buttons/language-switcher';
-@import 'components/buttons/selectboxes';
-@import 'components/buttons/bet-buttons';
+@import "components/buttons/account-buttons";
+@import "components/buttons/language-switcher";
+@import "components/buttons/selectboxes";
+@import "components/buttons/bet-buttons";
 
 // UTILITIES
-@import 'components/utilites/helpers';
+@import "components/utilites/helpers";
