@@ -124,6 +124,9 @@
     white-space: nowrap;
     max-width: 100%;
     padding-right: 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
   }
   .custom-selectbox-no-arrow .custom-selectbox-selection-selected-value {
     padding-right: 0;
@@ -520,7 +523,7 @@
   }
   .custom-selectbox-dropdown-menu-item-selected,
   .custom-selectbox-dropdown-menu-item-selected:hover {
-    font-weight: 500;
+    font-weight: 400;
     background: rgba(0, 0, 0, 0.08);
   }
   .custom-selectbox-dropdown-menu-item-active {

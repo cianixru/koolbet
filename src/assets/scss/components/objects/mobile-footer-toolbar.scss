@@ -314,7 +314,7 @@
     background: $betslip-counter-bg-color;
     box-shadow: 1.5px 2.5px 2.8px 0.18px rgba(0, 0, 0, 0.4);
     @include breakpoint(medium down) {
-      font-weight: 500;
+      font-weight: 400;
     }
   }
 }
