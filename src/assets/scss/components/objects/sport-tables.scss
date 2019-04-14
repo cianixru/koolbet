@@ -38,7 +38,7 @@
                 border: 1px solid rgba(255, 255, 255, 0.08);
                 margin: 2px 5px;
                 line-height: 1.8;
-                font-weight: 500;
+                font-weight: 400;
                 @include breakpoint(xxxlarge only) {
                     margin: 2px 5px;
                 }
@@ -106,7 +106,7 @@
         align-items: center;
         >div {
             width: 160px;
-            font-weight: 500;
+            font-weight: 400;
             @include breakpoint(xxxlarge) {
                 width: 220px;
             }
@@ -213,7 +213,7 @@
             display: block;
             text-transform: uppercase;
             margin: 10px;
-            font-weight: 500;
+            font-weight: 400;
         }
     }
 }
@@ -255,7 +255,7 @@
                 text-overflow: ellipsis;
                 overflow: hidden;
                 text-align: center;
-                font-weight: 500;
+                font-weight: 400;
             }
             .specialoddvalue-text:before {
                 content: attr(data-oddtag);
@@ -449,7 +449,7 @@
 .specialoddvalue-text.btn-active {
     cursor: pointer;
     @include breakpoint(large) {
-        font-weight: 500;
+        font-weight: 400;
         background-color: $primary-color !important;
         color: #000 !important;
     }
@@ -471,7 +471,7 @@
 }
 
 .date-value {
-    font-weight: 500;
+    font-weight: 400;
     padding: 3px 10px;
     font-size: rem-calc(13);
     background: rgba(69, 70, 80, 0.3);
@@ -535,7 +535,7 @@
         padding: 5px 25px;
         width: 100%;
         text-align: center;
-        font-weight: 500;
+        font-weight: 400;
     }
 }
 

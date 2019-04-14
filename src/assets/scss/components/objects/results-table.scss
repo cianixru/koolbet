@@ -20,7 +20,7 @@
         @include breakpoint(small only) {
             padding: 0 10px;
             font-size: rem-calc(16);
-            font-weight: 500;
+            font-weight: 400;
         }
     }
     .league {
@@ -30,7 +30,7 @@
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
-        font-weight: 500;
+        font-weight: 400;
         font-size: rem-calc(14);
         text-transform: uppercase;
         color: $primary-color;
@@ -75,7 +75,7 @@
             width: 70px;
         }
         .score {
-            font-weight: 500;
+            font-weight: 400;
             background: rgba(255, 255, 255, 0.15);
             padding: 5px;
             border-radius: 5px;

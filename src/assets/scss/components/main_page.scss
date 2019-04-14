@@ -1,0 +1,24 @@
+.main-categories-with-pics {
+}
+.main-slider__wp {
+    height: 432px;
+    background: #000;
+    margin: 5px 0
+}
+.main-categories-with-pics {
+    display: flex;
+    margin-left: -4px;
+    margin-right: -4px;
+    .cell {
+        width: calc(33.33333% - 8px);
+        background: #000;
+        flex: 1 1 0px;
+        margin-left: 4px;
+        margin-right: 4px;
+        &:first-of-type,
+        &:last-of-type {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
