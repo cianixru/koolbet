@@ -1,0 +1,86 @@
+/* Top Tournaments */
+.TopTournaments {
+  & > .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ins {
+      padding-left: 3px;
+      text-decoration: none;
+    }
+    i {
+      height: 22px;
+      width: 25px;
+      content: "";
+      position: relative;
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -12px;
+        height: 22px;
+        width: 25px;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+    // Super Lig
+    &.id9 i:before {
+      background-image: url(/assets/img/top-tournament/default-logo.png);
+    }
+    // UEFA Champions League
+    &.id7 i:before {
+      background-image: url(/assets/img/top-tournament/uefa-champions-league-logo.png);
+    }
+    // UEFA Europa League
+    &.id34 i:before {
+      background-image: url(/assets/img/top-tournament/uefa-europa-league-logo.png);
+    }
+    // Premier League
+    &.id61 i:before {
+      background-image: url(/assets/img/top-tournament/premier-league-logo.png);
+    }
+    // Bundesliga
+    &.id92 i:before {
+      background-image: url(/assets/img/top-tournament/bundesliga-logo.png);
+    }
+    // Serie A
+    &.id82 i:before {
+      background-image: url(/assets/img/top-tournament/serie-a-logo.png);
+    }
+    // LaLiga
+    &.id78 i:before {
+      background-image: url(/assets/img/top-tournament/laliga-logo.png);
+    }
+    // Primeira Liga
+    &.id65 i:before {
+      background-image: url(/assets/img/top-tournament/default-logo.png);
+    }
+    // NHL
+    &.id93 i:before {
+      background-image: url(/assets/img/top-tournament/default-logo.png);
+    }
+    // KHL
+    &.id62 i:before {
+      background-image: url(/assets/img/top-tournament/default-logo.png);
+    }
+    // NBA
+    &.id67 i:before {
+      background-image: url(/assets/img/top-tournament/default-logo.png);
+    }
+    // National Soccer
+    &.id1 i:before {
+      background-image: url(/assets/img/top-tournament/default-logo.png);
+    }
+    // Handball
+    &.id4 i:before {
+      background-image: url(/assets/img/top-tournament/default-logo.png);
+    }
+    // World Cup 2018
+    &.id80 i:before {
+      background-image: url(/assets/img/top-tournament/default-logo.png);
+    }
+  }
+}
