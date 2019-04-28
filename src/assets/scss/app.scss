@@ -19,15 +19,8 @@
 @import "components/tools/icons";
 @import "components/tools/clearfix";
 @import "components/tools/align";
-//@import 'components/tools/fonts';
 
 // ELEMENTS
-//@include foundation-off-canvas;
-//@include foundation-drilldown-menu;
-//@include foundation-tooltip;
-//@import 'components/elements/flickity';
-// @import 'components/elements/flickity-customs';
-// @import 'components/elements/scrollbar';
 @import "components/elements/custom-selectbox";
 @include foundation-forms;
 @include foundation-menu;
@@ -35,7 +28,6 @@
 @include foundation-dropdown;
 @include foundation-progress-bar;
 @include foundation-pagination;
-// @include foundation-reveal; // Модалки, потом удалить!
 @import "components/elements/odds-up-down";
 @import "components/elements/responsive-card-table";
 @import "components/elements/mybets-responsive-table";
@@ -60,7 +52,6 @@
 @import "components/objects/bet-type";
 @import "components/objects/breadcrumbs";
 @import "components/objects/tournament-header--live";
-// @import 'components/objects/mobile-footer-toolbar';
 @import "components/objects/bet-slip";
 @import "components/objects/match-details";
 @import "components/objects/results-table";
@@ -94,4 +85,5 @@
 // UTILITIES
 @import "components/utilites/helpers";
 
+// TOP TOURNAMENTS
 @import "components/top-tournaments";
